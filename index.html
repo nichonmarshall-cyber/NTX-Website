@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NTX Automation Co — Stop Missing Calls. Start Capturing More Jobs.</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --black: #0c0c0c;
+    --white: #f4f1eb;
+    --orange: #d94f0a;
+    --orange-light: #e8621f;
+    --gray: #161616;
+    --card: #1e1e1e;
+    --border: rgba(255,255,255,0.07);
+    --muted: rgba(244,241,235,0.46);
+    --body: rgba(244,241,235,0.70);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 6%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,12,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem; letter-spacing: 3px;
+    color: var(--white); text-decoration: none;
+  }
+  .nav-logo span { color: var(--orange); }
+  .nav-cta {
+    background: var(--orange); color: #fff;
+    padding: 10px 24px; border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.87rem; font-weight: 600;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--orange-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 130px 6% 90px;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; top: -10%; right: -5%;
+    width: 55vw; height: 55vw; max-width: 700px;
+    background: radial-gradient(circle, rgba(217,79,10,0.10) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-location {
+    font-size: 0.73rem; font-weight: 600;
+    letter-spacing: 3.5px; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 22px;
+    opacity: 0; animation: fadeUp 0.5s 0.1s forwards;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.2rem, 8.5vw, 7.2rem);
+    line-height: 0.93; letter-spacing: 0.5px; max-width: 880px;
+    opacity: 0; animation: fadeUp 0.6s 0.22s forwards;
+  }
+  .hero h1 em { font-style: normal; color: var(--orange); display: block; }
+  .hero-sub {
+    margin-top: 28px;
+    font-size: 1.12rem; font-weight: 300;
+    color: var(--body); max-width: 520px; line-height: 1.72;
+    opacity: 0; animation: fadeUp 0.6s 0.36s forwards;
+  }
+  .hero-sub strong { color: var(--white); font-weight: 500; }
+  .hero-actions {
+    margin-top: 40px;
+    display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
+    opacity: 0; animation: fadeUp 0.6s 0.5s forwards;
+  }
+  .btn-primary {
+    background: var(--orange); color: #fff;
+    padding: 15px 38px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.97rem; font-weight: 600;
+    text-decoration: none; display: inline-block;
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
+  .hero-note { font-size: 0.82rem; color: var(--muted); align-self: center; }
+  .hero-divider {
+    margin-top: 88px; border: none; border-top: 1px solid var(--border);
+    opacity: 0; animation: fadeIn 1s 0.75s forwards;
+  }
+
+  /* SHARED */
+  section { padding: 96px 6%; }
+  .label {
+    font-size: 0.71rem; font-weight: 600;
+    letter-spacing: 3.5px; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 16px;
+  }
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.9rem);
+    line-height: 0.97; letter-spacing: 0.3px;
+    max-width: 680px; margin-bottom: 18px;
+  }
+  .section-body {
+    font-size: 1rem; color: var(--body);
+    max-width: 540px; font-weight: 300; line-height: 1.72;
+  }
+
+  /* PROBLEM */
+  .problem { background: var(--gray); }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px; margin-top: 52px; background: var(--border);
+  }
+  .problem-card {
+    padding: 36px 30px; background: var(--gray); transition: background 0.2s;
+  }
+  .problem-card:hover { background: #1c1c1c; }
+  .problem-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem; color: var(--orange);
+    opacity: 0.4; line-height: 1; margin-bottom: 16px;
+  }
+  .problem-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem; letter-spacing: 0.5px;
+    color: var(--white); margin-bottom: 10px;
+  }
+  .problem-card p { font-size: 0.91rem; color: var(--body); line-height: 1.65; }
+
+  /* SOLUTION */
+  .solution { background: var(--black); }
+  .solution-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 72px; align-items: start; margin-top: 52px;
+  }
+  @media(max-width: 780px) { .solution-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .solution-list { list-style: none; }
+  .solution-item {
+    display: flex; gap: 18px;
+    padding: 22px 0; border-bottom: 1px solid var(--border);
+  }
+  .solution-item:first-child { border-top: 1px solid var(--border); }
+  .dot {
+    width: 6px; height: 6px; background: var(--orange);
+    border-radius: 50%; flex-shrink: 0; margin-top: 10px;
+  }
+  .solution-item strong {
+    display: block; font-weight: 600; color: var(--white);
+    margin-bottom: 4px; font-size: 0.96rem;
+  }
+  .solution-item span { font-size: 0.91rem; color: var(--body); }
+
+  /* WHO */
+  .who { background: var(--gray); }
+  .who-grid {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+  }
+  .who-item {
+    padding: 15px 20px;
+    border: 1px solid var(--border);
+    font-size: 0.92rem; font-weight: 500;
+    color: rgba(244,241,235,0.78);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .who-item:hover { border-color: var(--orange); color: var(--white); }
+  .who-note {
+    margin-top: 34px; font-size: 0.97rem;
+    color: var(--body); max-width: 520px; line-height: 1.7;
+  }
+  .who-note strong { color: var(--white); }
+
+  /* PRICING */
+  .pricing { background: var(--black); }
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px; margin-top: 52px; max-width: 860px;
+  }
+  .price-card {
+    padding: 40px 36px;
+    border: 1px solid var(--border);
+    background: var(--card); position: relative;
+  }
+  .price-card.featured { border-color: var(--orange); background: #180e08; }
+  .price-badge {
+    position: absolute; top: -11px; left: 28px;
+    background: var(--orange); color: #fff;
+    font-size: 0.67rem; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px;
+  }
+  .price-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem; letter-spacing: 1px;
+    color: var(--white); margin-bottom: 14px;
+  }
+  .price-desc {
+    font-size: 0.90rem; color: var(--body);
+    line-height: 1.65; margin-bottom: 26px;
+    padding-bottom: 26px; border-bottom: 1px solid var(--border);
+  }
+  .price-range {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem; line-height: 1; color: var(--white);
+    margin-bottom: 4px;
+  }
+  .price-cadence {
+    font-size: 0.79rem; color: var(--muted); margin-bottom: 26px;
+  }
+  .price-features {
+    list-style: none; border-top: 1px solid var(--border);
+    padding-top: 22px; display: flex; flex-direction: column; gap: 11px;
+  }
+  .price-features li {
+    font-size: 0.90rem; color: var(--body);
+    padding-left: 16px; position: relative; line-height: 1.55;
+  }
+  .price-features li::before {
+    content: ''; position: absolute; left: 0; top: 8px;
+    width: 5px; height: 5px; background: var(--orange); border-radius: 50%;
+  }
+  .price-required {
+    margin-top: 26px; padding: 14px 18px;
+    border: 1px solid rgba(217,79,10,0.35);
+    background: rgba(217,79,10,0.07);
+    font-size: 0.85rem; color: rgba(244,241,235,0.75);
+    line-height: 1.6;
+  }
+  .price-required strong { color: var(--white); font-weight: 600; }
+  .pricing-note {
+    margin-top: 28px; font-size: 0.84rem;
+    color: var(--muted); max-width: 520px; line-height: 1.65;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--orange); padding: 108px 6%; text-align: center;
+  }
+  .final-cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    color: #fff; line-height: 0.95;
+    max-width: 700px; margin: 0 auto 20px; letter-spacing: 0.5px;
+  }
+  .final-cta p {
+    font-size: 1.03rem; color: rgba(255,255,255,0.82);
+    max-width: 440px; margin: 0 auto 36px;
+    font-weight: 300; line-height: 1.7;
+  }
+  .btn-white {
+    background: #fff; color: var(--orange);
+    padding: 15px 42px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.97rem; font-weight: 700;
+    text-decoration: none; display: inline-block;
+    border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-white:hover { opacity: 0.92; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: var(--black); padding: 28px 6%;
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem; letter-spacing: 3px; color: var(--white);
+  }
+  .footer-logo span { color: var(--orange); }
+  footer small { font-size: 0.79rem; color: var(--muted); }
+
+  /* SMS DEMO SECTION */
+  .sms-demo { background: var(--gray); }
+  .sms-demo-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 64px; align-items: center; margin-top: 52px;
+  }
+  @media(max-width: 780px) { .sms-demo-inner { grid-template-columns: 1fr; gap: 40px; } }
+  .sms-demo-cta-box {
+    padding: 40px 36px;
+    border: 1px solid rgba(217,79,10,0.4);
+    background: rgba(217,79,10,0.06);
+  }
+  .sms-demo-keyword {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem; line-height: 1;
+    color: var(--orange); letter-spacing: 4px;
+    margin-bottom: 6px;
+  }
+  .sms-demo-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.9rem; color: var(--white);
+    letter-spacing: 2px; margin-bottom: 20px;
+  }
+  .sms-demo-instruction {
+    font-size: 0.93rem; color: var(--body);
+    line-height: 1.65; margin-bottom: 0;
+  }
+  .sms-demo-disclosure {
+    margin-top: 22px; padding: 18px 20px;
+    border: 1px solid var(--border);
+    background: #111;
+    font-size: 0.82rem; color: var(--muted);
+    line-height: 1.7;
+  }
+  .sms-demo-disclosure strong { color: rgba(244,241,235,0.7); font-weight: 500; }
+  .sms-demo-links {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .sms-demo-links a {
+    font-size: 0.79rem; color: var(--orange);
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .sms-demo-links a:hover { opacity: 0.75; }
+  .sms-demo-links span {
+    font-size: 0.79rem; color: rgba(244,241,235,0.2);
+  }
+  .sms-demo-right h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem; letter-spacing: 0.5px;
+    color: var(--white); margin-bottom: 20px;
+  }
+  .sms-demo-steps { list-style: none; display: flex; flex-direction: column; }
+  .sms-demo-step {
+    display: flex; gap: 16px;
+    padding: 18px 0; border-bottom: 1px solid var(--border);
+  }
+  .sms-demo-step:first-child { border-top: 1px solid var(--border); }
+  .sms-demo-step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem; color: var(--orange);
+    opacity: 0.5; flex-shrink: 0; width: 28px; line-height: 1.3;
+  }
+  .sms-demo-step strong {
+    display: block; font-weight: 600; color: var(--white);
+    margin-bottom: 3px; font-size: 0.94rem;
+  }
+  .sms-demo-step span { font-size: 0.89rem; color: var(--body); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .reveal {
+    opacity: 0; transform: translateY(26px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media(max-width: 580px) {
+    .nav-cta { display: none; }
+    .hero h1 { font-size: 3rem; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">NTX <span>AUTOMATION</span> CO</a>
+  <a class="nav-cta" href="https://calendly.com/nichonmarshall/15min" target="_blank">Book a Free Demo</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-location">Denton &amp; North Texas</p>
+  <h1>Every Missed Call <em>Is a Lost Job.</em></h1>
+  <p class="hero-sub">We set up a system that <strong>automatically responds to missed calls, collects customer info, and keeps leads moving toward a booking</strong> — without you having to do anything.</p>
+  <div class="hero-actions">
+    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" class="btn-primary">Book a Free Demo</a>
+    <span class="hero-note">Free 15-minute call. No pressure.</span>
+  </div>
+  <hr class="hero-divider"/>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="reveal">
+    <p class="label">The Problem</p>
+    <h2>You're Losing Jobs You Don't Even Know About</h2>
+    <p class="section-body">When you're working, you can't always pick up. That's just the reality. The problem is that most customers won't wait — and you have no way of knowing what you missed.</p>
+  </div>
+  <div class="problem-grid reveal">
+    <div class="problem-card">
+      <div class="problem-num">01</div>
+      <h3>Missed Calls</h3>
+      <p>Most people won't call back or leave a voicemail. If no one picks up, they move on to the next shop on the list.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">02</div>
+      <h3>Slow Replies</h3>
+      <p>A lead comes in at 6pm asking about pricing. By the time you see it the next morning, they've already booked someone else.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">03</div>
+      <h3>No Follow-Up</h3>
+      <p>Someone asks about a job and then goes quiet. Without a follow-up, that lead disappears — even if they still needed the work done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="solution-grid">
+    <div class="reveal">
+      <p class="label">How It Works</p>
+      <h2>The System Handles It While You Work</h2>
+      <p class="section-body">When a call comes in that you can't answer, the system takes over. It reaches out, collects the information you need, and keeps the conversation going — so the lead doesn't go cold before you have a chance to respond.</p>
+    </div>
+    <ul class="solution-list reveal">
+      <li class="solution-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Missed Call Text-Back</strong>
+          <span>The moment you miss a call, the customer gets a text automatically. They know someone is aware of them — and they stay engaged instead of calling your competitor.</span>
+        </div>
+      </li>
+      <li class="solution-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Collects Customer Info</strong>
+          <span>The system asks for their name, what they need, and any relevant details — like vehicle info for auto businesses. You get that information before you ever call them back.</span>
+        </div>
+      </li>
+      <li class="solution-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Keeps the Conversation Moving</strong>
+          <span>It doesn't just send one message and stop. It keeps the exchange going at the right pace, so leads stay warm until they're ready to book.</span>
+        </div>
+      </li>
+      <li class="solution-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Moves Them Toward Booking</strong>
+          <span>Once someone is ready, the system can direct them to your booking link or hand the conversation off to you — with all the context already in hand.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="reveal">
+    <p class="label">Who This Is For</p>
+    <h2>Local Service Businesses That Run on Jobs</h2>
+  </div>
+  <div class="who-grid reveal">
+    <div class="who-item">Auto Shops</div>
+    <div class="who-item">Barber Shops</div>
+    <div class="who-item">Auto Detailers</div>
+    <div class="who-item">General Contractors</div>
+    <div class="who-item">Landscapers</div>
+    <div class="who-item">Handymen</div>
+    <div class="who-item">Nail &amp; Beauty Salons</div>
+    <div class="who-item">Home Service Businesses</div>
+  </div>
+  <p class="who-note reveal">If you're a <strong>small business owner in Denton or North Texas</strong> who regularly misses calls because you're doing the actual work — this was built for exactly that situation.</p>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="reveal">
+    <p class="label">Pricing</p>
+    <h2>Straightforward. Based on Your Setup.</h2>
+    <p class="section-body">Pricing depends on your business and what needs to be connected. There are two parts: getting the system built, and keeping it running.</p>
+  </div>
+
+  <div class="pricing-cards reveal">
+
+    <div class="price-card">
+      <h3>Setup</h3>
+      <p class="price-desc">
+        This is a one-time fee that covers building and connecting your system — the missed call response, lead collection, follow-up flow, and any integrations specific to your business. Every setup is a little different depending on what you already have in place.
+      </p>
+      <div class="price-range">$150 – $500</div>
+      <p class="price-cadence">one-time, based on your setup</p>
+      <ul class="price-features">
+        <li>Full system built and configured for your business</li>
+        <li>Connected to your existing phone and tools</li>
+        <li>Tested before going live</li>
+        <li>Exact cost discussed on your free call</li>
+      </ul>
+    </div>
+
+    <div class="price-card featured">
+      <div class="price-badge">Required to Operate</div>
+      <h3>Monthly Service</h3>
+      <p class="price-desc">
+        The monthly service is what keeps the system active and responding to your customers. Without it, the system does not run. This is not a maintenance fee — it is what powers every automated response, follow-up, and lead capture.
+      </p>
+      <div class="price-range">From $50<span style="font-size:1.4rem">/mo</span></div>
+      <p class="price-cadence">billed monthly, cancel any time</p>
+      <ul class="price-features">
+        <li>System stays live and active around the clock</li>
+        <li>All responses and follow-ups running continuously</li>
+        <li>Adjustments and support included</li>
+        <li>System deactivates if service is cancelled</li>
+      </ul>
+      <div class="price-required">
+        <strong>Ongoing service is required to keep the system active and responding to customers.</strong> The setup gets everything built. The monthly service is what runs it.
+      </div>
+    </div>
+
+  </div>
+
+  <p class="pricing-note reveal">Pricing is discussed during the free call. There are no surprise fees and nothing gets started until you know exactly what you're paying for.</p>
+</section>
+
+<!-- SMS DEMO -->
+<section class="sms-demo">
+  <div class="reveal">
+    <p class="label">Try It Yourself</p>
+    <h2>Experience the NTX AI Intake Demo</h2>
+    <p class="section-body">Want to see exactly how this works before booking a call? Text the keyword below and go through the intake conversation yourself — the same experience your customers would have.</p>
+  </div>
+  <div class="sms-demo-inner reveal">
+    <div>
+      <div class="sms-demo-cta-box">
+        <div class="sms-demo-keyword">DEMO</div>
+        <div class="sms-demo-number">Text to (817) 393-6339</div>
+        <p class="sms-demo-instruction">You'll receive an automated response and go through a live example of the NTX AI intake assistant — the same system we set up for local service businesses.</p>
+      </div>
+      <div class="sms-demo-disclosure">
+        By texting DEMO, you agree to receive conversational SMS messages from NTX Automation Co related to the NTX AI Intake Demo. <strong>Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchase.</strong>
+        <div class="sms-demo-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <span>·</span>
+          <a href="sms-consent.html">SMS Consent</a>
+        </div>
+      </div>
+    </div>
+    <div class="sms-demo-right">
+      <h3>What to Expect</h3>
+      <ul class="sms-demo-steps">
+        <li class="sms-demo-step">
+          <div class="sms-demo-step-num">01</div>
+          <div>
+            <strong>Text DEMO to get started</strong>
+            <span>You initiate the conversation. Nothing happens until you send the first message.</span>
+          </div>
+        </li>
+        <li class="sms-demo-step">
+          <div class="sms-demo-step-num">02</div>
+          <div>
+            <strong>The AI assistant responds</strong>
+            <span>You'll see how the system greets a new lead, collects their information, and keeps the conversation moving.</span>
+          </div>
+        </li>
+        <li class="sms-demo-step">
+          <div class="sms-demo-step-num">03</div>
+          <div>
+            <strong>Walk through a simulated intake</strong>
+            <span>The demo asks qualifying questions — name, type of service, details about the request — just like it would for a real customer.</span>
+          </div>
+        </li>
+        <li class="sms-demo-step">
+          <div class="sms-demo-step-num">04</div>
+          <div>
+            <strong>See how it closes the loop</strong>
+            <span>The demo shows how the system moves toward a next step — booking, follow-up, or handoff to the business owner.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <h2>Find Out How Many Leads You're Missing</h2>
+  <p>Book a free 15-minute call. We'll look at your current setup and give you an honest picture of what's slipping through — and what it would take to fix it.</p>
+  <a href="https://calendly.com/nichonmarshall/15min" target="_blank" class="btn-white">Book a Free Demo</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NTX <span>AUTOMATION</span> CO</div>
+  <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+    <small>Serving Denton &amp; North Texas &nbsp;&middot;&nbsp; &copy; 2025 NTX Automation Co</small>
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+      <a href="privacy.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Privacy Policy</a>
+      <a href="terms.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Terms &amp; Conditions</a>
+      <a href="sms-consent.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">SMS Consent</a>
+      <a href="mailto:support@ntxautomationco.com" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

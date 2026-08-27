@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — NTX Automation Co</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --black: #0c0c0c;
+    --white: #f4f1eb;
+    --orange: #d94f0a;
+    --orange-light: #e8621f;
+    --gray: #161616;
+    --border: rgba(255,255,255,0.07);
+    --muted: rgba(244,241,235,0.46);
+    --body: rgba(244,241,235,0.70);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 6%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,12,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem; letter-spacing: 3px;
+    color: var(--white); text-decoration: none;
+  }
+  .nav-logo span { color: var(--orange); }
+  .nav-back {
+    font-size: 0.87rem; font-weight: 500;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--white); }
+
+  /* PAGE HEADER */
+  .page-header {
+    padding: 140px 6% 60px;
+    border-bottom: 1px solid var(--border);
+    background: var(--gray);
+  }
+  .page-label {
+    font-size: 0.71rem; font-weight: 600;
+    letter-spacing: 3.5px; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 16px;
+  }
+  .page-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 0.95; letter-spacing: 0.5px;
+  }
+  .page-header .effective {
+    margin-top: 14px;
+    font-size: 0.85rem; color: var(--muted);
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 6% 100px;
+  }
+
+  .section {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem; letter-spacing: 1px;
+    color: var(--white); margin-bottom: 16px;
+  }
+
+  .section p {
+    font-size: 0.97rem; color: var(--body);
+    line-height: 1.75; margin-bottom: 14px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  .section ul {
+    list-style: none;
+    margin: 14px 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .section ul li {
+    font-size: 0.95rem; color: var(--body);
+    padding-left: 18px; position: relative; line-height: 1.6;
+  }
+  .section ul li::before {
+    content: '';
+    position: absolute; left: 0; top: 9px;
+    width: 5px; height: 5px;
+    background: var(--orange); border-radius: 50%;
+  }
+
+  /* SMS CALLOUT */
+  .sms-callout {
+    margin: 22px 0;
+    padding: 20px 22px;
+    border: 1px solid rgba(217,79,10,0.35);
+    background: rgba(217,79,10,0.07);
+    font-size: 0.91rem; color: rgba(244,241,235,0.80);
+    line-height: 1.7;
+  }
+  .sms-callout strong { color: var(--white); font-weight: 600; }
+
+  /* CONTACT BLOCK */
+  .contact-block {
+    margin-top: 18px;
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+    background: #1a1a1a;
+    font-size: 0.93rem; color: var(--body); line-height: 1.7;
+  }
+  .contact-block a {
+    color: var(--orange); text-decoration: none;
+  }
+  .contact-block a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    background: var(--black); padding: 28px 6%;
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem; letter-spacing: 3px; color: var(--white);
+  }
+  .footer-logo span { color: var(--orange); }
+  .footer-links {
+    display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 0.82rem; color: var(--muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--white); }
+
+  @media(max-width: 580px) {
+    .content { padding: 52px 6% 72px; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">NTX <span>AUTOMATION</span> CO</a>
+  <a class="nav-back" href="index.html">Back to Home</a>
+</nav>
+
+<!-- HEADER -->
+<div class="page-header">
+  <p class="page-label">Legal</p>
+  <h1>Privacy Policy</h1>
+  <p class="effective">Effective Date: August 24, 2026</p>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="section">
+    <p>NTX Automation Co is committed to protecting your personal information. This Privacy Policy explains what we collect, how we use it, and what rights you have. We keep this straightforward — no confusing legal language.</p>
+  </div>
+
+  <div class="section">
+    <h2>Information We Collect</h2>
+    <p>When you contact us by phone, SMS, web form, or any other channel, we may collect the following:</p>
+    <ul>
+      <li>Name</li>
+      <li>Phone number</li>
+      <li>Email address</li>
+      <li>Service inquiry details</li>
+      <li>Appointment or scheduling information</li>
+      <li>Message history related to your inquiry or support request</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>How We Use Your Information</h2>
+    <p>We use your information only for the purpose of serving you. Specifically, we use it to:</p>
+    <ul>
+      <li>Respond to your inquiry or service request</li>
+      <li>Provide customer support</li>
+      <li>Send appointment reminders or service updates you have requested</li>
+      <li>Operate our AI-powered intake assistant</li>
+      <li>Improve how our services work</li>
+    </ul>
+    <p>We do not use your information for unsolicited marketing or sell it to anyone.</p>
+  </div>
+
+  <div class="section">
+    <h2>SMS Communications</h2>
+    <p>NTX Automation Co sends conversational SMS messages related to customer inquiries, appointments, service requests, and product demonstrations. We do not send unsolicited marketing messages.</p>
+    <p>SMS consent is collected through explicit opt-in actions. The primary opt-in method for our AI Intake Demo program is texting the keyword <strong>DEMO</strong> to our published demo number. This is a voluntary action — the user initiates the conversation. For other service-related SMS communications, messages are sent only where the individual has provided consent through an applicable opt-in method. We do not claim that simply visiting this website constitutes SMS consent.</p>
+    <div class="sms-callout">
+      <strong>Message frequency varies.</strong> Message and data rates may apply.<br/>
+      Reply <strong>STOP</strong> at any time to opt out. You will receive a confirmation and no further messages will be sent.<br/>
+      Reply <strong>HELP</strong> for assistance.<br/><br/>
+      <strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. NTX Automation Co does not sell, rent, or provide mobile phone numbers, SMS opt-in data, or messaging consent to third parties, affiliates, or lead generators for their own marketing or promotional purposes.</strong>
+    </div>
+    <p>Consent to receive SMS messages is not a condition of purchasing any service from NTX Automation Co. For full details on how our SMS programs operate, see our <a href="sms-consent.html" style="color:var(--orange);text-decoration:none;">SMS Consent &amp; Messaging Policy</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>Data Sharing</h2>
+    <p>We do not sell your personal information. We do not transfer or share your data — including SMS opt-in data, phone numbers, or messaging consent — with third parties or affiliates for their own marketing or promotional purposes.</p>
+    <p>We do use third-party service providers to operate our systems. These providers may process your information solely as necessary to deliver services on our behalf, including:</p>
+    <ul>
+      <li>SMS delivery platforms (such as Twilio)</li>
+      <li>Scheduling and booking systems</li>
+      <li>Customer support and communication tools</li>
+      <li>Website hosting and infrastructure</li>
+    </ul>
+    <p>This operational processing is not the same as selling or sharing data for marketing purposes. These providers are not authorized by NTX Automation Co to use your data for their own marketing. They are given only what is necessary to perform their specific function.</p>
+  </div>
+
+  <div class="section">
+    <h2>Data Security</h2>
+    <p>We take reasonable precautions to protect your information from unauthorized access, misuse, or disclosure. No system is completely foolproof, but we take this seriously and work to minimize risk.</p>
+  </div>
+
+  <div class="section">
+    <h2>Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request access to the information we hold about you</li>
+      <li>Request correction of inaccurate information</li>
+      <li>Request deletion of your information</li>
+    </ul>
+    <p>To make any of these requests, contact us directly:</p>
+    <div class="contact-block">
+      NTX Automation Co<br/>
+      Email: <a href="mailto:support@ntxautomationco.com">support@ntxautomationco.com</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, the revised version will be posted on this page with an updated effective date. We encourage you to review it periodically.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NTX <span>AUTOMATION</span> CO</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="sms-consent.html">SMS Consent</a>
+    <a href="mailto:support@ntxautomationco.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
