@@ -3,7 +3,56 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NTX Automation Co — Stop Missing Calls. Start Capturing More Jobs.</title>
+
+<!-- Primary SEO -->
+<title>NTX Automation Co | Websites &amp; Business Automation in Denton, TX</title>
+<meta name="description" content="NTX Automation Co builds custom websites and business automation systems for local businesses in Denton and North Texas. Missed-call response, lead capture, and more."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://ntxautomationco.com/"/>
+<meta name="author" content="NTX Automation Co"/>
+<meta name="theme-color" content="#d94f0a"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="NTX Automation Co"/>
+<meta property="og:title" content="NTX Automation Co | Websites &amp; Business Automation in Denton, TX"/>
+<meta property="og:description" content="Custom websites and business automation for local businesses in Denton and North Texas. Missed-call text-back, lead capture, customer intake, and more."/>
+<meta property="og:url" content="https://ntxautomationco.com/"/>
+<!-- og:image: add /og-image.jpg (1200×630 px) to the repo root to enable social preview -->
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="NTX Automation Co | Websites &amp; Business Automation in Denton, TX"/>
+<meta name="twitter:description" content="Custom websites and business automation for local businesses in Denton and North Texas."/>
+<!-- twitter:image: same file as og:image once created -->
+
+<!-- Structured Data: Local Professional Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NTX Automation Co",
+  "url": "https://ntxautomationco.com",
+  "email": "support@ntxautomationco.com",
+  "areaServed": [
+    { "@type": "City", "name": "Denton", "containedInPlace": { "@type": "State", "name": "Texas" } },
+    { "@type": "AdministrativeArea", "name": "North Texas" }
+  ],
+  "serviceType": [
+    "Small Business Website Design",
+    "Business Automation",
+    "Lead Capture Systems",
+    "Missed-Call Text-Back",
+    "Customer Intake Automation"
+  ],
+  "description": "NTX Automation Co builds custom websites and business automation systems for local businesses in Denton and North Texas.",
+  "knowsAbout": ["Web Design", "Business Automation", "Lead Generation", "SMS Automation"]
+}
+</script>
+
+<!-- Fonts: preconnect first, then load -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -379,6 +428,60 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+  /* SERVICES SECTION */
+  .services { background: var(--black); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px; margin-top: 52px;
+  }
+  .service-card {
+    padding: 36px 32px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    transition: border-color 0.2s;
+  }
+  .service-card:hover { border-color: var(--orange); }
+  .service-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.35rem; letter-spacing: 0.5px;
+    color: var(--white); margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: 0.91rem; color: var(--body); line-height: 1.65;
+  }
+  .service-tag {
+    display: inline-block; margin-top: 16px;
+    font-size: 0.69rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  /* PORTFOLIO PLACEHOLDER */
+  .portfolio { background: var(--gray); }
+  .portfolio-coming {
+    margin-top: 52px;
+    padding: 52px 40px;
+    border: 1px dashed rgba(255,255,255,0.12);
+    text-align: center;
+  }
+  .portfolio-coming p {
+    font-size: 0.93rem; color: var(--muted); line-height: 1.7;
+  }
+  /* Future portfolio grid — uncomment when projects are ready
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px; margin-top: 52px;
+  }
+  .portfolio-card { border: 1px solid var(--border); background: var(--card); overflow: hidden; }
+  .portfolio-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+  .portfolio-card-body { padding: 24px 28px; }
+  .portfolio-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--white); margin-bottom: 8px; }
+  .portfolio-card p { font-size: 0.88rem; color: var(--body); line-height: 1.6; }
+  .portfolio-card a { display: inline-block; margin-top: 14px; font-size: 0.82rem; color: var(--orange); text-decoration: none; }
+  */
+
   @media(max-width: 580px) {
     .nav-cta { display: none; }
     .hero h1 { font-size: 3rem; }
@@ -389,28 +492,32 @@
 <body>
 
 <!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#">NTX <span>AUTOMATION</span> CO</a>
-  <a class="nav-cta" href="https://calendly.com/nichonmarshall/15min" target="_blank">Book a Free Demo</a>
-</nav>
+<header>
+  <nav aria-label="Main navigation">
+    <a class="nav-logo" href="/" aria-label="NTX Automation Co — Home">NTX <span>AUTOMATION</span> CO</a>
+    <a class="nav-cta" href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener">Book a Free Demo</a>
+  </nav>
+</header>
+
+<main>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home" aria-labelledby="hero-heading">
   <p class="hero-location">Denton &amp; North Texas</p>
-  <h1>Every Missed Call <em>Is a Lost Job.</em></h1>
-  <p class="hero-sub">We set up a system that <strong>automatically responds to missed calls, collects customer info, and keeps leads moving toward a booking</strong> — without you having to do anything.</p>
+  <h1 id="hero-heading">Every Missed Call <em>Is a Lost Job.</em></h1>
+  <p class="hero-sub">NTX Automation Co builds <strong>custom websites and business automation systems</strong> for local businesses in Denton and North Texas — so you capture more customers without adding more work.</p>
   <div class="hero-actions">
-    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" class="btn-primary">Book a Free Demo</a>
+    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Demo</a>
     <span class="hero-note">Free 15-minute call. No pressure.</span>
   </div>
   <hr class="hero-divider"/>
 </section>
 
 <!-- PROBLEM -->
-<section class="problem">
+<section class="problem" id="problem" aria-labelledby="problem-heading">
   <div class="reveal">
     <p class="label">The Problem</p>
-    <h2>You're Losing Jobs You Don't Even Know About</h2>
+    <h2 id="problem-heading">You're Losing Jobs You Don't Even Know About</h2>
     <p class="section-body">When you're working, you can't always pick up. That's just the reality. The problem is that most customers won't wait — and you have no way of knowing what you missed.</p>
   </div>
   <div class="problem-grid reveal">
@@ -433,11 +540,11 @@
 </section>
 
 <!-- SOLUTION -->
-<section class="solution">
+<section class="solution" id="automation" aria-labelledby="solution-heading">
   <div class="solution-grid">
     <div class="reveal">
       <p class="label">How It Works</p>
-      <h2>The System Handles It While You Work</h2>
+      <h2 id="solution-heading">The System Handles It While You Work</h2>
       <p class="section-body">When a call comes in that you can't answer, the system takes over. It reaches out, collects the information you need, and keeps the conversation going — so the lead doesn't go cold before you have a chance to respond.</p>
     </div>
     <ul class="solution-list reveal">
@@ -474,10 +581,10 @@
 </section>
 
 <!-- WHO IT'S FOR -->
-<section class="who">
+<section class="who" id="who" aria-labelledby="who-heading">
   <div class="reveal">
     <p class="label">Who This Is For</p>
-    <h2>Local Service Businesses That Run on Jobs</h2>
+    <h2 id="who-heading">Local Businesses in Denton &amp; North Texas</h2>
   </div>
   <div class="who-grid reveal">
     <div class="who-item">Auto Shops</div>
@@ -487,16 +594,44 @@
     <div class="who-item">Landscapers</div>
     <div class="who-item">Handymen</div>
     <div class="who-item">Nail &amp; Beauty Salons</div>
+    <div class="who-item">Restaurants &amp; Food Trucks</div>
     <div class="who-item">Home Service Businesses</div>
+    <div class="who-item">Local Retail</div>
   </div>
-  <p class="who-note reveal">If you're a <strong>small business owner in Denton or North Texas</strong> who regularly misses calls because you're doing the actual work — this was built for exactly that situation.</p>
+  <p class="who-note reveal">Whether you need a <strong>professional website, an automated lead system, or both</strong> — if you run a small business in Denton or North Texas, this is for you.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="reveal">
+    <p class="label">What We Do</p>
+    <h2 id="services-heading">Websites, Automation, and Everything In Between</h2>
+    <p class="section-body">We work with local businesses in Denton and North Texas to build the tools they actually need — a professional web presence, systems that capture leads automatically, or both.</p>
+  </div>
+  <div class="services-grid reveal">
+    <article class="service-card">
+      <h3>Website Design &amp; Development</h3>
+      <p>Custom, mobile-friendly websites built for local businesses — restaurants, food trucks, service companies, salons, contractors, and more. Designed to look professional, load fast, and convert visitors into customers.</p>
+      <span class="service-tag">Web Design &middot; Development</span>
+    </article>
+    <article class="service-card">
+      <h3>Business Automation</h3>
+      <p>Automated systems that respond to missed calls, collect customer information, follow up with leads, and help move inquiries toward a booking — running continuously without extra work on your end.</p>
+      <span class="service-tag">Lead Capture &middot; Automation</span>
+    </article>
+    <article class="service-card">
+      <h3>Professional Content</h3>
+      <p>Photography and video content can be incorporated into qualifying website and business packages, giving local businesses professional visuals to use across their site and social media.</p>
+      <span class="service-tag">Photography &middot; Video</span>
+    </article>
+  </div>
 </section>
 
 <!-- PRICING -->
-<section class="pricing">
+<section class="pricing" id="pricing" aria-labelledby="pricing-heading">
   <div class="reveal">
     <p class="label">Pricing</p>
-    <h2>Straightforward. Based on Your Setup.</h2>
+    <h2 id="pricing-heading">Straightforward. Based on Your Setup.</h2>
     <p class="section-body">Pricing depends on your business and what needs to be connected. There are two parts: getting the system built, and keeping it running.</p>
   </div>
 
@@ -541,11 +676,38 @@
   <p class="pricing-note reveal">Pricing is discussed during the free call. There are no surprise fees and nothing gets started until you know exactly what you're paying for.</p>
 </section>
 
+<!-- PORTFOLIO (placeholder — add real projects when ready) -->
+<section class="portfolio" id="work" aria-labelledby="portfolio-heading">
+  <div class="reveal">
+    <p class="label">Our Work</p>
+    <h2 id="portfolio-heading">Recent Projects</h2>
+    <p class="section-body">A selection of websites and automation systems built for local businesses in Denton and North Texas.</p>
+  </div>
+  <div class="portfolio-coming reveal">
+    <p>Client projects coming soon. <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;">Book a call</a> to discuss your project.</p>
+  </div>
+  <!--
+    Future project cards — copy this block for each project:
+
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+        <img src="/work/project-name.jpg" alt="Screenshot of [Client Name] website" width="600" height="400"/>
+        <div class="portfolio-card-body">
+          <h3>[Client / Business Name]</h3>
+          <p>[Short project description — what was built and why it matters to the business.]</p>
+          <p><strong>Services:</strong> Website Design, Business Automation</p>
+          <a href="https://clientwebsite.com" target="_blank" rel="noopener">View live site</a>
+        </div>
+      </article>
+    </div>
+  -->
+</section>
+
 <!-- SMS DEMO -->
-<section class="sms-demo">
+<section class="sms-demo" id="demo" aria-labelledby="demo-heading">
   <div class="reveal">
     <p class="label">Try It Yourself</p>
-    <h2>Experience the NTX AI Intake Demo</h2>
+    <h2 id="demo-heading">Experience the NTX AI Intake Demo</h2>
     <p class="section-body">Want to see exactly how this works before booking a call? Text the keyword below and go through the intake conversation yourself — the same experience your customers would have.</p>
   </div>
   <div class="sms-demo-inner reveal">
@@ -603,23 +765,25 @@
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta" id="cta">
-  <h2>Find Out How Many Leads You're Missing</h2>
+<section class="final-cta" id="cta" aria-labelledby="cta-heading">
+  <h2 id="cta-heading">Find Out How Many Leads You're Missing</h2>
   <p>Book a free 15-minute call. We'll look at your current setup and give you an honest picture of what's slipping through — and what it would take to fix it.</p>
-  <a href="https://calendly.com/nichonmarshall/15min" target="_blank" class="btn-white">Book a Free Demo</a>
+  <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" class="btn-white">Book a Free Demo</a>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">NTX <span>AUTOMATION</span> CO</div>
   <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
-    <small>Serving Denton &amp; North Texas &nbsp;&middot;&nbsp; &copy; 2025 NTX Automation Co</small>
-    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+    <small>Serving Denton &amp; North Texas &nbsp;&middot;&nbsp; &copy; 2026 NTX Automation Co</small>
+    <nav aria-label="Footer links" style="display:flex; gap:20px; flex-wrap:wrap;">
       <a href="privacy.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Privacy Policy</a>
       <a href="terms.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Terms &amp; Conditions</a>
       <a href="sms-consent.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">SMS Consent</a>
       <a href="mailto:support@ntxautomationco.com" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Contact</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
