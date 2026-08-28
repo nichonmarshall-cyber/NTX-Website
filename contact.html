@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Get a Free Quote | Contact NTX Automation Co — Denton, TX</title>
-<meta name="description" content="Contact NTX Automation Co to get a free quote for web design or AI intake automation. Serving local businesses in Denton and North Texas."/>
+<meta name="description" content="Contact NTX Automation Co for a website, optional Website Care, Local SEO, photography, or AI intake automation. Select multiple services in one quote request."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://ntxautomationco.com/contact.html"/>
 <meta name="theme-color" content="#d94f0a"/>
@@ -33,6 +33,21 @@
 .aside-divider { border: none; border-top: 1px solid var(--border); }
 @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 48px; } }
 @media (max-width: 580px) { .contact-layout { padding: 56px 5% 72px; } .contact-hero { padding: 110px 5% 52px; } }
+
+.service-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.service-fieldset legend { font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--body-strong); margin-bottom: 8px; }
+.selection-help { font-size: 0.84rem; color: var(--muted); line-height: 1.55; margin-bottom: 20px; }
+.service-option-group { margin-bottom: 22px; }
+.service-option-group h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.08rem; letter-spacing: 0.5px; color: var(--white); margin-bottom: 10px; }
+.service-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.service-option { display: flex; gap: 11px; align-items: flex-start; padding: 14px; border: 1px solid var(--border); background: var(--gray); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.service-option:hover, .service-option:has(input:checked) { border-color: var(--orange); background: rgba(217,79,10,0.06); }
+.service-option input { width: auto; margin-top: 3px; accent-color: var(--orange); flex: 0 0 auto; }
+.service-option span { display: flex; flex-direction: column; gap: 4px; }
+.service-option strong { color: var(--white); font-size: 0.88rem; line-height: 1.3; }
+.service-option small { color: var(--muted); font-size: 0.76rem; line-height: 1.45; }
+.featured-option { border-color: rgba(217,79,10,0.45); }
+@media (max-width: 680px) { .service-options { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -57,7 +72,7 @@
     <form
       name="quote-request"
       method="POST"
-      action="/contact.html?success=true"
+      action="/contact?success=true"
       data-netlify="true"
       netlify-honeypot="bot-field"
       id="quote-form"
@@ -113,24 +128,48 @@
           <input type="url" id="website" name="website" placeholder="https://yourbusiness.com"/>
         </div>
       </div>
+      <fieldset class="form-group service-fieldset" id="fg-pkg" aria-describedby="err-pkg">
+        <legend>Packages and Services <span style="color:var(--orange)" aria-hidden="true">*</span></legend>
+        <p class="selection-help">Choose everything you're interested in. You can select a website build and one or more ongoing services together.</p>
 
-      <div class="form-group" id="fg-pkg">
-        <label for="package">Package or Service <span style="color:var(--orange)" aria-hidden="true">*</span></label>
-        <select id="package" name="package" required aria-required="true" aria-describedby="err-pkg">
-          <option value="" disabled selected>Select a package or service</option>
-          <option value="starter">Starter Website — $450</option>
-          <option value="business">Business Website — $650</option>
-          <option value="seo">Business + SEO — $900</option>
-          <option value="custom-website">Custom Website — Starting at $1,200</option>
-          <option value="ai-standard">Standard AI Intake — Starting at $750 setup + $149/month</option>
-          <option value="ai-integrated">Integrated AI Assistant — Starting at $1,000 setup + $199/month</option>
-          <option value="ai-custom">Custom AI System — Starting at $1,500 setup + $249/month</option>
-          <option value="photo-video">Photography / Video</option>
-          <option value="website-care">Website Care</option>
-          <option value="not-sure">Not Sure Yet</option>
-        </select>
-        <span class="field-error" id="err-pkg" role="alert">Please select a package or service.</span>
-      </div>
+        <div class="service-option-group">
+          <h3>Website Build — One-Time</h3>
+          <div class="service-options">
+            <label class="service-option"><input type="checkbox" name="services" value="starter" data-exclusive-group="website"/><span><strong>Starter Website — $450</strong><small>Simple professional online presence</small></span></label>
+            <label class="service-option"><input type="checkbox" name="services" value="business" data-exclusive-group="website"/><span><strong>Business Website — $650</strong><small>Most popular complete business website</small></span></label>
+            <label class="service-option"><input type="checkbox" name="services" value="custom-website" data-exclusive-group="website"/><span><strong>Custom Website — Starting at $900</strong><small>Additional pages, integrations, or advanced functionality</small></span></label>
+          </div>
+        </div>
+
+        <div class="service-option-group">
+          <h3>Optional Monthly Services</h3>
+          <div class="service-options">
+            <label class="service-option"><input type="checkbox" name="services" value="website-care" data-care-option="care"/><span><strong>Website Care — $49/month</strong><small>Hosting, monitoring, maintenance, and minor updates</small></span></label>
+            <label class="service-option"><input type="checkbox" name="services" value="local-seo" data-care-option="seo"/><span><strong>Local SEO — $149/month</strong><small>Ongoing local-search optimization and monthly content work</small></span></label>
+            <label class="service-option featured-option"><input type="checkbox" name="services" value="complete-care" data-care-option="complete"/><span><strong>Complete Care — $179/month</strong><small>Website Care and Local SEO bundled together</small></span></label>
+          </div>
+        </div>
+
+        <div class="service-option-group">
+          <h3>AI Intake Assistant</h3>
+          <div class="service-options">
+            <label class="service-option"><input type="checkbox" name="services" value="ai-standard" data-exclusive-group="ai"/><span><strong>Standard AI Intake</strong><small>Starting at $750 setup + $149/month</small></span></label>
+            <label class="service-option"><input type="checkbox" name="services" value="ai-integrated" data-exclusive-group="ai"/><span><strong>Integrated AI Assistant</strong><small>Starting at $1,000 setup + $199/month</small></span></label>
+            <label class="service-option"><input type="checkbox" name="services" value="ai-custom" data-exclusive-group="ai"/><span><strong>Custom AI System</strong><small>Starting at $1,500 setup + $249/month</small></span></label>
+          </div>
+        </div>
+
+        <div class="service-option-group">
+          <h3>Other</h3>
+          <div class="service-options">
+            <label class="service-option"><input type="checkbox" name="services" value="photo-video"/><span><strong>Photography / Video</strong><small>Professional content coordinated through NTX</small></span></label>
+            <label class="service-option"><input type="checkbox" name="services" value="not-sure"/><span><strong>Not Sure Yet</strong><small>Tell us what you need and we'll recommend a direction</small></span></label>
+          </div>
+        </div>
+
+        <span class="field-error" id="err-pkg" role="alert">Please select at least one package or service.</span>
+      </fieldset>
+
 
       <div class="form-group">
         <label for="project-details">Tell Us About Your Business or Project</label>
@@ -173,17 +212,15 @@
 <script src="/components.js"></script>
 <script>
 (function () {
-  // Pre-select package from ?pkg= query param
+  // Pre-select one or more services from ?pkg= values or a comma-separated value.
   var params = new URLSearchParams(window.location.search);
-  var pkg = params.get('pkg');
-  if (pkg) {
-    var sel = document.getElementById('package');
-    if (sel) {
-      for (var i = 0; i < sel.options.length; i++) {
-        if (sel.options[i].value === pkg) { sel.selectedIndex = i; break; }
-      }
-    }
-  }
+  var requested = params.getAll('pkg').flatMap(function (value) { return value.split(','); });
+  var aliases = { 'seo': 'local-seo' };
+  requested.forEach(function (value) {
+    var normalized = aliases[value] || value;
+    var input = document.querySelector('input[name="services"][value="' + normalized + '"]');
+    if (input) input.checked = true;
+  });
 
   // Show success state
   if (params.get('success') === 'true') {
@@ -214,7 +251,29 @@
   document.getElementById('business').addEventListener('input', function(){ clearError('fg-business','err-business'); });
   document.getElementById('email').addEventListener('input', function(){ clearError('fg-email','err-email'); });
   document.getElementById('business-type').addEventListener('change', function(){ clearError('fg-btype','err-btype'); });
-  document.getElementById('package').addEventListener('change', function(){ clearError('fg-pkg','err-pkg'); });
+  var serviceInputs = Array.from(document.querySelectorAll('input[name="services"]'));
+  serviceInputs.forEach(function (input) {
+    input.addEventListener('change', function () {
+      clearError('fg-pkg','err-pkg');
+
+      var exclusiveGroup = input.getAttribute('data-exclusive-group');
+      if (input.checked && exclusiveGroup) {
+        serviceInputs.forEach(function (other) {
+          if (other !== input && other.getAttribute('data-exclusive-group') === exclusiveGroup) other.checked = false;
+        });
+      }
+
+      var careOption = input.getAttribute('data-care-option');
+      if (input.checked && careOption === 'complete') {
+        serviceInputs.forEach(function (other) {
+          if (other.getAttribute('data-care-option') === 'care' || other.getAttribute('data-care-option') === 'seo') other.checked = false;
+        });
+      } else if (input.checked && (careOption === 'care' || careOption === 'seo')) {
+        var complete = document.querySelector('input[data-care-option="complete"]');
+        if (complete) complete.checked = false;
+      }
+    });
+  });
 
   form.addEventListener('submit', function (e) {
     var valid = true;
@@ -236,14 +295,14 @@
     if (!btype.value) { showError('fg-btype','err-btype'); valid = false; }
     else clearError('fg-btype','err-btype');
 
-    var pkg = document.getElementById('package');
-    if (!pkg.value) { showError('fg-pkg','err-pkg'); valid = false; }
+    var selectedServices = document.querySelectorAll('input[name="services"]:checked');
+    if (!selectedServices.length) { showError('fg-pkg','err-pkg'); valid = false; }
     else clearError('fg-pkg','err-pkg');
 
     if (!valid) {
       e.preventDefault();
       // Focus first error
-      var firstErr = form.querySelector('.form-group.has-error input, .form-group.has-error select');
+      var firstErr = form.querySelector('.form-group.has-error input, .form-group.has-error select, fieldset.has-error input');
       if (firstErr) firstErr.focus();
     }
   });
