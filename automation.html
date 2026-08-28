@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Business Automation for Local Businesses | NTX Automation Co — Denton, TX</title>
+<meta name="description" content="Missed-call text-back, automated lead intake, and follow-up systems for local businesses in Denton and North Texas. Stop losing leads when you're busy."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://ntxautomationco.com/automation.html"/>
+<meta name="theme-color" content="#d94f0a"/>
+<meta property="og:title" content="Business Automation — NTX Automation Co, Denton TX"/>
+<meta property="og:description" content="Automated systems that handle missed calls, collect lead info, and follow up automatically for local businesses in Denton and North Texas."/>
+<meta property="og:url" content="https://ntxautomationco.com/automation.html"/>
+<meta property="og:type" content="website"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Business Automation",
+  "provider": { "@type": "LocalBusiness", "name": "NTX Automation Co", "url": "https://ntxautomationco.com" },
+  "areaServed": { "@type": "AdministrativeArea", "name": "Denton, Texas" },
+  "description": "Missed-call text-back, automated lead intake, and customer follow-up systems for local businesses in Denton and North Texas."
+}
+</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/style.css"/>
+<style>
+.service-page-hero {
+  padding: 140px 6% 72px;
+  background: var(--gray);
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.service-page-hero::after {
+  content: '';
+  position: absolute; top: -20%; right: -5%;
+  width: 40vw; height: 40vw; max-width: 500px;
+  background: radial-gradient(circle, rgba(217,79,10,0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+.service-page-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.93; max-width: 780px; margin-bottom: 20px;
+}
+.service-page-hero h1 em { font-style: normal; color: var(--orange); display: block; }
+.service-page-hero p {
+  font-size: 1.05rem; color: var(--body);
+  max-width: 520px; font-weight: 300; line-height: 1.72;
+  margin-bottom: 32px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.problem-section { background: var(--black); }
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 52px;
+}
+.problem-card-ap {
+  background: var(--black);
+  padding: 36px 30px;
+}
+.problem-num-ap {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem; color: var(--orange);
+  opacity: 0.35; line-height: 1; margin-bottom: 16px;
+}
+.problem-card-ap h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem; letter-spacing: 0.5px;
+  color: var(--white); margin-bottom: 10px;
+}
+.problem-card-ap p { font-size: 0.91rem; color: var(--body); line-height: 1.65; }
+
+.solution-section { background: var(--gray); }
+.solution-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  margin-top: 52px;
+}
+.solution-two-col p {
+  font-size: 1rem; color: var(--body);
+  line-height: 1.75; margin-bottom: 16px;
+}
+.dot-list { list-style: none; display: flex; flex-direction: column; }
+.dot-item {
+  display: flex; gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.dot-item:first-child { border-top: 1px solid var(--border); }
+.dot-item .dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; flex-shrink: 0; margin-top: 9px; }
+.dot-item strong { display: block; font-weight: 600; color: var(--white); margin-bottom: 4px; font-size: 0.95rem; }
+.dot-item span { font-size: 0.88rem; color: var(--body); }
+
+.pricing-section { background: var(--black); }
+.pricing-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 52px;
+  max-width: 780px;
+}
+.price-card-ap {
+  padding: 36px 32px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  position: relative;
+}
+.price-card-ap.featured { border-color: var(--orange); background: #180e08; }
+.price-badge-ap {
+  position: absolute; top: -11px; left: 24px;
+  background: var(--orange); color: #fff;
+  font-size: 0.67rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px;
+}
+.price-card-ap h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem; letter-spacing: 0.5px;
+  color: var(--white); margin-bottom: 10px;
+}
+.price-range-ap {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem; line-height: 1; color: var(--white); margin-bottom: 4px;
+}
+.price-cadence-ap { font-size: 0.79rem; color: var(--muted); margin-bottom: 20px; }
+.price-desc-ap {
+  font-size: 0.88rem; color: var(--body); line-height: 1.65;
+  padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px;
+}
+.price-features-ap { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.price-features-ap li {
+  font-size: 0.88rem; color: var(--body);
+  padding-left: 14px; position: relative;
+}
+.price-features-ap li::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 4px; height: 4px; background: var(--orange); border-radius: 50%;
+}
+.price-required-ap {
+  margin-top: 20px; padding: 12px 16px;
+  border: 1px solid var(--orange-border);
+  background: var(--orange-dim);
+  font-size: 0.82rem; color: var(--body-strong); line-height: 1.6;
+}
+.price-required-ap strong { color: var(--white); }
+
+.demo-section { background: var(--gray); }
+.demo-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-top: 52px;
+}
+.demo-box {
+  padding: 36px;
+  border: 1px solid rgba(217,79,10,0.4);
+  background: rgba(217,79,10,0.05);
+}
+.demo-keyword {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem; color: var(--orange);
+  letter-spacing: 6px; line-height: 1; margin-bottom: 4px;
+}
+.demo-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; color: var(--white);
+  letter-spacing: 2px; margin-bottom: 16px;
+}
+.demo-box p { font-size: 0.91rem; color: var(--body); line-height: 1.65; margin-bottom: 20px; }
+
+.steps-list { list-style: none; display: flex; flex-direction: column; }
+.step-item { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.step-item:first-child { border-top: 1px solid var(--border); }
+.step-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem; color: var(--orange);
+  opacity: 0.5; flex-shrink: 0; width: 28px; line-height: 1.3;
+}
+.step-item strong { display: block; font-weight: 600; color: var(--white); margin-bottom: 3px; font-size: 0.93rem; }
+.step-item span { font-size: 0.88rem; color: var(--body); }
+
+.related-section { background: var(--black); }
+.related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 44px; }
+.related-card {
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s, background 0.2s;
+}
+.related-card:hover { border-color: var(--orange); background: var(--card-hover); }
+.related-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem; color: var(--white); margin-bottom: 8px; }
+.related-card p { font-size: 0.85rem; color: var(--body); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .problem-grid { grid-template-columns: 1fr; }
+  .solution-two-col { grid-template-columns: 1fr; gap: 40px; }
+  .pricing-two-col { grid-template-columns: 1fr; max-width: 100%; }
+  .demo-inner { grid-template-columns: 1fr; gap: 36px; }
+  .related-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+@media (max-width: 580px) {
+  .service-page-hero { padding: 110px 5% 52px; }
+}
+</style>
+</head>
+<body>
+
+<main id="main-content">
+
+<div class="service-page-hero">
+  <span class="label">Business Automation</span>
+  <h1>Stop Losing Leads<br><em>When You're Busy Working.</em></h1>
+  <p>Automated systems that respond to missed calls, collect customer information, and follow up with leads — running continuously without extra work on your end.</p>
+      <div style="margin-top:24px;padding:18px 22px;border:1px solid var(--orange-border);background:var(--orange-dim);">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--white);margin-bottom:4px;">AI Intake Assistant</p>
+        <p style="font-size:0.93rem;color:var(--body);margin-bottom:2px;">Starting at <strong style="color:var(--white);">$750 setup</strong> + <strong style="color:var(--white);">$149/month</strong></p>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:12px;">Monthly service keeps the system hosted, monitored, and active.</p>
+        <a href="/packages.html#ai-pricing" style="font-size:0.84rem;font-weight:600;color:var(--orange);text-decoration:none;">View Full Pricing →</a>
+      </div>
+  <div class="hero-actions">
+    <a href="/contact.html?pkg=ai-standard" class="btn-primary">Get a Quote</a>
+    <a href="#demo" class="btn-ghost">Try the Demo</a>
+    <a href="/demo.html" class="btn-ghost">Full Demo Page</a>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<section class="problem-section" aria-labelledby="prob-heading">
+  <div class="reveal">
+    <span class="label">The Problem</span>
+    <h2 class="section-heading" id="prob-heading">Busy Businesses Lose Jobs They Never Knew About.</h2>
+    <p class="section-body">When you're working, you can't always pick up. Most customers won't wait — and you have no way of knowing what you missed.</p>
+  </div>
+  <div class="problem-grid">
+    <div class="problem-card-ap reveal reveal-d1">
+      <div class="problem-num-ap">01</div>
+      <h3>Missed Calls</h3>
+      <p>Most people won't call back or leave a voicemail. If no one picks up, they move on to the next business on the list.</p>
+    </div>
+    <div class="problem-card-ap reveal reveal-d2">
+      <div class="problem-num-ap">02</div>
+      <h3>Slow Replies</h3>
+      <p>A lead texts at 6pm asking about pricing. By the time you see it the next morning, they've already booked someone else.</p>
+    </div>
+    <div class="problem-card-ap reveal reveal-d3">
+      <div class="problem-num-ap">03</div>
+      <h3>No Follow-Up</h3>
+      <p>Someone asked for a quote and went quiet. Without a follow-up, that lead disappears — even if they still needed the job done.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<!-- THE SOLUTION -->
+<section class="solution-section" aria-labelledby="sol-heading">
+  <div class="solution-two-col">
+    <div class="reveal">
+      <span class="label">How It Works</span>
+      <h2 class="section-heading" id="sol-heading">The System Handles It While You Work.</h2>
+      <p>NTX builds and connects an automated system to your existing phone number and business. Once it's running, it responds to leads, collects their information, and keeps the conversation moving — without you having to do anything.</p>
+      <p>You get the lead information. The customer gets a response. Nothing falls through the cracks.</p>
+    </div>
+    <ul class="dot-list reveal reveal-d2">
+      <li class="dot-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Missed Call Text-Back</strong>
+          <span>The moment you miss a call, the customer automatically gets a text. They stay engaged instead of moving on.</span>
+        </div>
+      </li>
+      <li class="dot-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Automated Lead Intake</strong>
+          <span>The system asks for their name, what they need, and relevant details. You get that information before you call them back.</span>
+        </div>
+      </li>
+      <li class="dot-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Keeps the Conversation Moving</strong>
+          <span>It doesn't send one message and stop. It keeps the exchange going at the right pace so leads stay warm.</span>
+        </div>
+      </li>
+      <li class="dot-item">
+        <div class="dot"></div>
+        <div>
+          <strong>Moves Toward Booking</strong>
+          <span>Once someone is ready, the system directs them to your booking link or hands the conversation off to you with full context.</span>
+        </div>
+      </li>
+      <li class="dot-item">
+        <div class="dot"></div>
+        <div>
+          <strong>24/7 Availability</strong>
+          <span>Leads that come in at 8pm, on weekends, or during busy hours all get an immediate response — same as if you'd picked up.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<!-- PRICING -->
+<section class="pricing-section" aria-labelledby="pricing-heading">
+  <div class="reveal">
+    <span class="label">Pricing</span>
+    <h2 class="section-heading" id="pricing-heading">Three Plans. Clear Pricing.</h2>
+    <p class="section-body">Every plan includes a one-time setup and a required monthly service. The monthly service keeps the system hosted, monitored, maintained, and operational — without it, the assistant does not run.</p>
+  </div>
+
+  <div class="pricing-grid-3 reveal" style="margin-top:44px;">
+
+    <div class="price-card featured">
+      <div class="plan-badge">Best for Most Businesses</div>
+      <h3>Standard AI Intake</h3>
+      <div class="price-amount">Starting at $750</div>
+      <p class="price-cadence">one-time setup</p>
+      <div class="price-amount" style="font-size:1.9rem;margin-top:12px;">$149<span style="font-size:1rem;">/month</span></div>
+      <p class="price-cadence" style="margin-bottom:16px;">monthly service (required)</p>
+      <p class="price-desc">Best for one business, one location, one phone number, and one primary intake workflow.</p>
+      <ul class="price-includes">
+        <li>Dedicated local SMS number</li>
+        <li>Missed-call text-back</li>
+        <li>AI-powered lead qualification</li>
+        <li>Industry-specific intake questions</li>
+        <li>Booking-link delivery or owner handoff</li>
+        <li>Opt-in, STOP, and HELP compliance</li>
+        <li>Hosting, monitoring, and support</li>
+      </ul>
+      <a href="/contact.html?pkg=ai-standard" class="btn-primary">Choose Standard</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Integrated AI Assistant</h3>
+      <div class="price-amount" style="font-size:2rem;">Starting at $1,000</div>
+      <p class="price-cadence">one-time setup</p>
+      <div class="price-amount" style="font-size:1.6rem;margin-top:12px;">Starting at $199<span style="font-size:0.9rem;">/month</span></div>
+      <p class="price-cadence" style="margin-bottom:16px;">monthly service (required)</p>
+      <p class="price-desc">For businesses that need the assistant connected to an existing booking, calendar, CRM, webhook, or lead-management system.</p>
+      <ul class="price-includes">
+        <li>Everything in Standard</li>
+        <li>One supported third-party integration</li>
+        <li>Custom lead delivery or routing</li>
+        <li>Tailored follow-up workflow</li>
+        <li>Integration testing and monitoring</li>
+      </ul>
+      <p style="font-size:0.81rem;color:var(--muted);line-height:1.6;margin-bottom:22px;">Final price depends on the third-party platform and technical requirements.</p>
+      <a href="/contact.html?pkg=ai-integrated" class="btn-ghost">Request an Integration Quote</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Custom or Multi-Location</h3>
+      <div class="price-amount" style="font-size:2rem;">Starting at $1,500</div>
+      <p class="price-cadence">one-time setup</p>
+      <div class="price-amount" style="font-size:1.6rem;margin-top:12px;">Starting at $249<span style="font-size:0.9rem;">/month</span></div>
+      <p class="price-cadence" style="margin-bottom:16px;">monthly service (required)</p>
+      <p class="price-desc">For multiple locations, phone numbers, workflows, advanced routing, dashboards, reporting, or specialized integrations.</p>
+      <ul class="price-includes">
+        <li>Multiple locations and phone numbers</li>
+        <li>Multiple intake workflows</li>
+        <li>Advanced lead routing</li>
+        <li>Custom dashboards or reporting</li>
+        <li>CRM synchronization</li>
+        <li>Higher messaging volume</li>
+      </ul>
+      <a href="/contact.html?pkg=ai-custom" class="btn-ghost">Discuss a Custom System</a>
+    </div>
+
+  </div>
+
+  <div class="pricing-disclosure reveal">
+    <strong>Monthly service is required</strong> to keep the AI Intake Assistant hosted, monitored, maintained, and operational. If service is canceled, the system is deactivated at the end of the paid billing period.<br/><br/>
+    Standard includes up to 500 SMS segments per month; higher message volume may cost more. Twilio phone-number, carrier, A2P registration, and third-party subscription fees may be billed separately at cost. Additional locations, phone numbers, integrations, dashboards, and major workflow changes require a custom quote. Setup prices start at the listed amount — final pricing depends on the approved scope.
+  </div>
+
+  <div style="margin-top:24px;" class="reveal">
+    <a href="/packages.html#ai-pricing" class="btn-ghost">Compare All Plans on the Pricing Page →</a>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<!-- DEMO -->
+<section class="demo-section" id="demo" aria-labelledby="demo-heading">
+  <div class="reveal">
+    <span class="label">Try It Yourself</span>
+    <h2 class="section-heading" id="demo-heading">Experience the NTX AI Intake Demo.</h2>
+    <p class="section-body">Text a single keyword and go through the system yourself — the same experience your customers would have with a business that uses NTX automation.</p>
+  </div>
+
+  <div class="demo-inner">
+    <div class="demo-box reveal">
+      <div class="demo-keyword">DEMO</div>
+      <div class="demo-number">Text to (817) 393-6339</div>
+      <p>Prospective customers may opt in to the NTX AI Intake Demo by texting DEMO to (817) 393-6339. The user initiates the conversation voluntarily before any demo messages are sent.</p>
+      <div class="sms-disclosure">
+        By texting DEMO, you agree to receive conversational SMS messages from NTX Automation Co related to the NTX AI Intake Demo.
+        <strong> Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchase.</strong>
+        <div class="sms-disclosure-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <span style="color:rgba(244,241,235,0.2)">·</span>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+          <span style="color:rgba(244,241,235,0.2)">·</span>
+          <a href="/sms-consent.html">SMS Consent</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-d2">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--white);margin-bottom:20px;letter-spacing:0.5px;">What to Expect</h3>
+      <ul class="steps-list">
+        <li class="step-item">
+          <div class="step-num">01</div>
+          <div><strong>Text DEMO to start</strong><span>You initiate the conversation. Nothing happens until you send the first message.</span></div>
+        </li>
+        <li class="step-item">
+          <div class="step-num">02</div>
+          <div><strong>The AI assistant responds</strong><span>See how the system greets a new lead, collects information, and keeps the conversation moving.</span></div>
+        </li>
+        <li class="step-item">
+          <div class="step-num">03</div>
+          <div><strong>Walk through a simulated intake</strong><span>The demo asks qualifying questions — name, type of service, request details — just like it would for a real customer.</span></div>
+        </li>
+        <li class="step-item">
+          <div class="step-num">04</div>
+          <div><strong>See how it closes the loop</strong><span>The demo shows how the system moves toward a next step — booking, follow-up, or handoff to the business owner.</span></div>
+        </li>
+      </ul>
+      <a href="/demo.html" class="btn-ghost" style="margin-top:24px;display:inline-block;">View Full Demo Page →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<!-- RELATED -->
+<section class="related-section" aria-labelledby="rel-heading">
+  <div class="reveal">
+    <span class="label">Often Combined With</span>
+    <h2 class="section-heading" id="rel-heading">Automation Works Best With a Strong Foundation.</h2>
+    <p class="section-body">Business automation is most effective when it's part of a complete digital system — not a standalone tool.</p>
+  </div>
+  <div class="related-grid reveal">
+    <a href="/web-design.html" class="related-card">
+      <h3>Web Design &amp; Development</h3>
+      <p>A professional website gives automation a place to send leads — and gives customers a reason to reach out in the first place.</p>
+    </a>
+    <a href="/website-care.html" class="related-card">
+      <h3>Website Care &amp; Management</h3>
+      <p>Ongoing hosting and maintenance keeps your site and automation systems running reliably.</p>
+    </a>
+    <a href="/packages.html" class="related-card">
+      <h3>Complete Business System</h3>
+      <p>Website + professional content + automation — the complete package for a business ready to grow.</p>
+    </a>
+  </div>
+</section>
+
+<section class="final-cta" aria-labelledby="auto-cta-heading">
+  <h2 id="auto-cta-heading">Ready to Stop Missing Leads?</h2>
+  <p>Get a free quote or book a call to discuss what an automation system would look like for your business.</p>
+  <div class="final-cta-actions">
+    <a href="/contact.html?pkg=ai-standard" class="btn-white">Get a Free Quote</a>
+    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener"
+       class="btn-ghost" style="border-color:rgba(255,255,255,0.4);color:#fff;">Book a Call</a>
+  </div>
+</section>
+
+</main>
+
+<script src="/components.js"></script>
+</body>
+</html>

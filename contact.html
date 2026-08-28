@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Get a Free Quote | Contact NTX Automation Co — Denton, TX</title>
+<meta name="description" content="Contact NTX Automation Co to get a free quote for web design or AI intake automation. Serving local businesses in Denton and North Texas."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://ntxautomationco.com/contact.html"/>
+<meta name="theme-color" content="#d94f0a"/>
+<meta property="og:title" content="Contact NTX Automation Co — Get a Free Quote"/>
+<meta property="og:description" content="Ready to build something? Get a free quote from NTX Automation Co."/>
+<meta property="og:url" content="https://ntxautomationco.com/contact.html"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/style.css"/>
+<style>
+.contact-hero { padding: 140px 6% 72px; background: var(--gray); border-bottom: 1px solid var(--border); }
+.contact-hero .label { display: block; margin-bottom: 14px; }
+.contact-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5.2rem); line-height: 0.95; margin-bottom: 18px; }
+.contact-hero p { font-size: 1.05rem; color: var(--body); max-width: 520px; font-weight: 300; line-height: 1.72; }
+.contact-layout { display: grid; grid-template-columns: 1fr 400px; gap: 72px; padding: 80px 6% 100px; max-width: 1200px; margin: 0 auto; }
+.contact-form-wrap h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.5px; color: var(--white); margin-bottom: 32px; }
+.contact-aside { display: flex; flex-direction: column; gap: 40px; }
+.aside-block h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.5px; color: var(--white); margin-bottom: 12px; }
+.aside-block p { font-size: 0.91rem; color: var(--body); line-height: 1.65; margin-bottom: 16px; }
+.aside-email { font-size: 0.88rem; color: var(--orange); text-decoration: none; display: block; margin-top: 8px; }
+.aside-email:hover { opacity: 0.75; }
+.aside-divider { border: none; border-top: 1px solid var(--border); }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 48px; } }
+@media (max-width: 580px) { .contact-layout { padding: 56px 5% 72px; } .contact-hero { padding: 110px 5% 52px; } }
+</style>
+</head>
+<body>
+<main id="main-content">
+
+<div class="contact-hero">
+  <span class="label">Let's Get Started</span>
+  <h1>Get a Free Quote</h1>
+  <p>Tell us about your business and what you're looking to build. We'll follow up within one business day with next steps — no commitment required.</p>
+</div>
+
+<div class="contact-layout">
+  <div class="contact-form-wrap">
+    <h2>Tell Us About Your Project</h2>
+
+    <!-- Netlify Forms: after deploying to Netlify, go to Dashboard → Forms → quote-request → add notification email -->
+    <div class="form-success" id="form-success" role="alert" aria-live="polite" style="display:none;">
+      <strong>Thank you — we received your request.</strong><br/>
+      We'll follow up within one business day to discuss your project. Talk soon.
+    </div>
+
+    <form
+      name="quote-request"
+      method="POST"
+      action="/contact.html?success=true"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      id="quote-form"
+      class="form-stack"
+    >
+      <input type="hidden" name="form-name" value="quote-request"/>
+      <div style="display:none;"><label>Do not fill: <input name="bot-field"/></label></div>
+
+      <div class="form-grid">
+        <div class="form-group" id="fg-name">
+          <label for="name">Your Name <span style="color:var(--orange)" aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="First Last" required autocomplete="name" aria-required="true" aria-describedby="err-name"/>
+          <span class="field-error" id="err-name" role="alert">Please enter your name.</span>
+        </div>
+        <div class="form-group" id="fg-business">
+          <label for="business">Business Name <span style="color:var(--orange)" aria-hidden="true">*</span></label>
+          <input type="text" id="business" name="business" placeholder="Your Business" required aria-required="true" aria-describedby="err-business"/>
+          <span class="field-error" id="err-business" role="alert">Please enter your business name.</span>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group" id="fg-email">
+          <label for="email">Email Address <span style="color:var(--orange)" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required autocomplete="email" aria-required="true" aria-describedby="err-email"/>
+          <span class="field-error" id="err-email" role="alert">Please enter a valid email address.</span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(817) 000-0000" autocomplete="tel"/>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group" id="fg-btype">
+          <label for="business-type">Type of Business <span style="color:var(--orange)" aria-hidden="true">*</span></label>
+          <select id="business-type" name="business-type" required aria-required="true" aria-describedby="err-btype">
+            <option value="" disabled selected>Select your industry</option>
+            <option>Restaurant or Food Truck</option>
+            <option>Hair Salon or Barber Shop</option>
+            <option>Auto Shop or Detailer</option>
+            <option>Contractor or Trades</option>
+            <option>Landscaping or Lawn Care</option>
+            <option>Nail or Beauty Salon</option>
+            <option>Retail</option>
+            <option>Health or Wellness</option>
+            <option>Other Local Business</option>
+          </select>
+          <span class="field-error" id="err-btype" role="alert">Please select your business type.</span>
+        </div>
+        <div class="form-group">
+          <label for="website">Existing Website (if any)</label>
+          <input type="url" id="website" name="website" placeholder="https://yourbusiness.com"/>
+        </div>
+      </div>
+
+      <div class="form-group" id="fg-pkg">
+        <label for="package">Package or Service <span style="color:var(--orange)" aria-hidden="true">*</span></label>
+        <select id="package" name="package" required aria-required="true" aria-describedby="err-pkg">
+          <option value="" disabled selected>Select a package or service</option>
+          <option value="starter">Starter Website — $450</option>
+          <option value="business">Business Website — $650</option>
+          <option value="seo">Business + SEO — $900</option>
+          <option value="custom-website">Custom Website — Starting at $1,200</option>
+          <option value="ai-standard">Standard AI Intake — Starting at $750 setup + $149/month</option>
+          <option value="ai-integrated">Integrated AI Assistant — Starting at $1,000 setup + $199/month</option>
+          <option value="ai-custom">Custom AI System — Starting at $1,500 setup + $249/month</option>
+          <option value="photo-video">Photography / Video</option>
+          <option value="website-care">Website Care</option>
+          <option value="not-sure">Not Sure Yet</option>
+        </select>
+        <span class="field-error" id="err-pkg" role="alert">Please select a package or service.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="project-details">Tell Us About Your Business or Project</label>
+        <textarea id="project-details" name="project-details" rows="4"
+          placeholder="What does your business do? What are you looking to build or improve? Any details about your goals, timeline, or budget help us prepare for our conversation."></textarea>
+      </div>
+
+      <p class="form-note">
+        By submitting this form, you agree to be contacted by NTX Automation Co regarding your inquiry. We do not sell or share your information.
+        See our <a href="/privacy.html" style="color:var(--orange);text-decoration:none;">Privacy Policy</a>.
+      </p>
+
+      <button type="submit" class="btn-primary" style="align-self:flex-start;margin-top:8px;">
+        Send My Quote Request
+      </button>
+    </form>
+  </div>
+
+  <aside class="contact-aside">
+    <div class="aside-block">
+      <h3>Prefer to Talk First?</h3>
+      <p>Book a free 15-minute call with NTX. No presentation, no pitch — just a conversation about your business and what you need.</p>
+      <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" class="btn-primary btn-full">Book a Free Call</a>
+    </div>
+    <hr class="aside-divider"/>
+    <div class="aside-block">
+      <h3>Have a Quick Question?</h3>
+      <p>Email us directly and we'll get back to you within one business day.</p>
+      <a class="aside-email" href="mailto:support@ntxautomationco.com">support@ntxautomationco.com</a>
+    </div>
+    <hr class="aside-divider"/>
+    <div class="aside-block">
+      <h3>Serving Denton &amp; North Texas</h3>
+      <p style="font-size:0.88rem;color:var(--muted);line-height:1.65;">NTX Automation Co works with local businesses throughout Denton, North Texas, and the surrounding area. Most work is handled remotely — no office visit required.</p>
+    </div>
+  </aside>
+</div>
+
+</main>
+<script src="/components.js"></script>
+<script>
+(function () {
+  // Pre-select package from ?pkg= query param
+  var params = new URLSearchParams(window.location.search);
+  var pkg = params.get('pkg');
+  if (pkg) {
+    var sel = document.getElementById('package');
+    if (sel) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === pkg) { sel.selectedIndex = i; break; }
+      }
+    }
+  }
+
+  // Show success state
+  if (params.get('success') === 'true') {
+    var form = document.getElementById('quote-form');
+    var msg  = document.getElementById('form-success');
+    if (form && msg) { form.style.display = 'none'; msg.style.display = 'block'; }
+  }
+
+  // Accessible inline validation
+  var form = document.getElementById('quote-form');
+  if (!form) return;
+
+  function showError(fg, err) {
+    var g = document.getElementById(fg);
+    var e = document.getElementById(err);
+    if (g) g.classList.add('has-error');
+    if (e) e.classList.add('visible');
+  }
+  function clearError(fg, err) {
+    var g = document.getElementById(fg);
+    var e = document.getElementById(err);
+    if (g) g.classList.remove('has-error');
+    if (e) e.classList.remove('visible');
+  }
+
+  // Clear errors on interaction
+  document.getElementById('name').addEventListener('input', function(){ clearError('fg-name','err-name'); });
+  document.getElementById('business').addEventListener('input', function(){ clearError('fg-business','err-business'); });
+  document.getElementById('email').addEventListener('input', function(){ clearError('fg-email','err-email'); });
+  document.getElementById('business-type').addEventListener('change', function(){ clearError('fg-btype','err-btype'); });
+  document.getElementById('package').addEventListener('change', function(){ clearError('fg-pkg','err-pkg'); });
+
+  form.addEventListener('submit', function (e) {
+    var valid = true;
+
+    var name = document.getElementById('name');
+    if (!name.value.trim()) { showError('fg-name','err-name'); valid = false; }
+    else clearError('fg-name','err-name');
+
+    var biz = document.getElementById('business');
+    if (!biz.value.trim()) { showError('fg-business','err-business'); valid = false; }
+    else clearError('fg-business','err-business');
+
+    var email = document.getElementById('email');
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if (!emailOk) { showError('fg-email','err-email'); valid = false; }
+    else clearError('fg-email','err-email');
+
+    var btype = document.getElementById('business-type');
+    if (!btype.value) { showError('fg-btype','err-btype'); valid = false; }
+    else clearError('fg-btype','err-btype');
+
+    var pkg = document.getElementById('package');
+    if (!pkg.value) { showError('fg-pkg','err-pkg'); valid = false; }
+    else clearError('fg-pkg','err-pkg');
+
+    if (!valid) {
+      e.preventDefault();
+      // Focus first error
+      var firstErr = form.querySelector('.form-group.has-error input, .form-group.has-error select');
+      if (firstErr) firstErr.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>

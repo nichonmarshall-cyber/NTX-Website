@@ -1,202 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Terms &amp; Conditions — NTX Automation Co</title>
-<meta name="description" content="Terms and Conditions for NTX Automation Co services, including SMS program terms for the NTX AI Intake Demo."/>
+<meta name="description" content="Terms and Conditions for NTX Automation Co services and SMS communications."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://ntxautomationco.com/terms.html"/>
+<meta name="theme-color" content="#d94f0a"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-  :root {
-    --black: #0c0c0c;
-    --white: #f4f1eb;
-    --orange: #d94f0a;
-    --orange-light: #e8621f;
-    --gray: #161616;
-    --border: rgba(255,255,255,0.07);
-    --muted: rgba(244,241,235,0.46);
-    --body: rgba(244,241,235,0.70);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 20px 6%;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(12,12,12,0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem; letter-spacing: 3px;
-    color: var(--white); text-decoration: none;
-  }
-  .nav-logo span { color: var(--orange); }
-  .nav-back {
-    font-size: 0.87rem; font-weight: 500;
-    color: var(--muted); text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-back:hover { color: var(--white); }
-
-  /* PAGE HEADER */
-  .page-header {
-    padding: 140px 6% 60px;
-    border-bottom: 1px solid var(--border);
-    background: var(--gray);
-  }
-  .page-label {
-    font-size: 0.71rem; font-weight: 600;
-    letter-spacing: 3.5px; text-transform: uppercase;
-    color: var(--orange); margin-bottom: 16px;
-  }
-  .page-header h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    line-height: 0.95; letter-spacing: 0.5px;
-  }
-  .page-header .effective {
-    margin-top: 14px;
-    font-size: 0.85rem; color: var(--muted);
-  }
-
-  /* CONTENT */
-  .content {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 72px 6% 100px;
-  }
-
-  .section {
-    margin-bottom: 52px;
-    padding-bottom: 52px;
-    border-bottom: 1px solid var(--border);
-  }
-  .section:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .section h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem; letter-spacing: 1px;
-    color: var(--white); margin-bottom: 16px;
-  }
-
-  .section p {
-    font-size: 0.97rem; color: var(--body);
-    line-height: 1.75; margin-bottom: 14px;
-  }
-  .section p:last-child { margin-bottom: 0; }
-
-  .section ul {
-    list-style: none;
-    margin: 14px 0;
-    display: flex; flex-direction: column; gap: 10px;
-  }
-  .section ul li {
-    font-size: 0.95rem; color: var(--body);
-    padding-left: 18px; position: relative; line-height: 1.6;
-  }
-  .section ul li::before {
-    content: '';
-    position: absolute; left: 0; top: 9px;
-    width: 5px; height: 5px;
-    background: var(--orange); border-radius: 50%;
-  }
-
-  /* SMS CALLOUT */
-  .sms-callout {
-    margin: 22px 0;
-    padding: 20px 22px;
-    border: 1px solid rgba(217,79,10,0.35);
-    background: rgba(217,79,10,0.07);
-    font-size: 0.91rem; color: rgba(244,241,235,0.80);
-    line-height: 1.7;
-  }
-  .sms-callout strong { color: var(--white); font-weight: 600; }
-
-  /* CONTACT BLOCK */
-  .contact-block {
-    margin-top: 18px;
-    padding: 20px 22px;
-    border: 1px solid var(--border);
-    background: #1a1a1a;
-    font-size: 0.93rem; color: var(--body); line-height: 1.7;
-  }
-  .contact-block a {
-    color: var(--orange); text-decoration: none;
-  }
-  .contact-block a:hover { text-decoration: underline; }
-
-  /* FOOTER */
-  footer {
-    background: var(--black); padding: 28px 6%;
-    display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 12px;
-    border-top: 1px solid var(--border);
-  }
-  .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem; letter-spacing: 3px; color: var(--white);
-  }
-  .footer-logo span { color: var(--orange); }
-  .footer-links {
-    display: flex; gap: 24px; flex-wrap: wrap;
-  }
-  .footer-links a {
-    font-size: 0.82rem; color: var(--muted);
-    text-decoration: none; transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--white); }
-
-  @media(max-width: 580px) {
-    .content { padding: 52px 6% 72px; }
-    footer { flex-direction: column; align-items: flex-start; }
-  }
-</style>
+<link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="index.html">NTX <span>AUTOMATION</span> CO</a>
-  <a class="nav-back" href="index.html">Back to Home</a>
-</nav>
+<main id="main-content">
 
-<!-- HEADER -->
 <div class="page-header">
-  <p class="page-label">Legal</p>
+  <span class="label">Legal</span>
   <h1>Terms &amp; Conditions</h1>
   <p class="effective">Effective Date: August 24, 2026</p>
 </div>
 
-<!-- CONTENT -->
-<div class="content">
+<div class="legal-content">
 
-  <div class="section">
+  <div class="legal-section">
     <p>By using NTX Automation Co's services, website, or SMS communications, you agree to the following Terms &amp; Conditions. Please read them before using our services. If you have questions, contact us before getting started.</p>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Our Services</h2>
     <p>NTX Automation Co provides AI-powered customer communication and intake automation for local service businesses. Our services may include:</p>
     <ul>
@@ -208,7 +42,7 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>SMS Terms</h2>
     <p><strong>Program / Business Name:</strong> NTX Automation Co / NTX AI Intake Demo</p>
     <p>NTX Automation Co operates conversational SMS programs. The primary registered program is the <strong>NTX AI Intake Demo</strong>, which allows prospective customers to voluntarily experience our AI-powered intake assistant by texting the keyword <strong>DEMO</strong> to our published demo number. No messages are sent until the user initiates the conversation.</p>
@@ -224,15 +58,15 @@
     <div class="sms-callout">
       <strong>Message frequency varies.</strong> Message and data rates may apply.<br/>
       Reply <strong>STOP</strong> at any time to unsubscribe. NTX Automation Co will send an unsubscribe confirmation, and you will receive no further messages under that program unless you opt in again.<br/>
-      Reply <strong>HELP</strong> for assistance. You can also email <a href="mailto:support@ntxautomationco.com" style="color:var(--orange);text-decoration:none;">support@ntxautomationco.com</a>.<br/><br/>
+      Reply <strong>HELP</strong> for assistance. You can also email <a href="mailto:support@ntxautomationco.com">support@ntxautomationco.com</a>.<br/><br/>
       <strong>Consent to receive SMS messages is not a condition of purchase.</strong><br/>
       <strong>Wireless carriers are not liable for delayed or undelivered messages.</strong>
     </div>
     <p>SMS consent collected for the NTX AI Intake Demo applies solely to NTX Automation Co. It is not transferred to any NTX Automation Co client business. No mobile opt-in data, phone numbers, or messaging consent is sold, rented, or shared with third parties for marketing purposes.</p>
-    <p>For full details on how our SMS programs operate, including opt-in confirmation and opt-out messages, see our <a href="sms-consent.html" style="color:var(--orange);text-decoration:none;">SMS Consent &amp; Messaging Policy</a> and <a href="privacy.html" style="color:var(--orange);text-decoration:none;">Privacy Policy</a>.</p>
+    <p>For full details on how our SMS programs operate, including opt-in confirmation and opt-out messages, see our <a href="/sms-consent.html">SMS Consent &amp; Messaging Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Your Responsibilities</h2>
     <p>When using our services, you agree not to:</p>
     <ul>
@@ -243,12 +77,12 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Service Availability</h2>
     <p>We work to maintain reliable, continuous service. However, we do not guarantee uninterrupted availability. Occasional downtime may occur due to maintenance, technical issues, or circumstances outside our control.</p>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Limitation of Liability</h2>
     <p>NTX Automation Co is not liable for:</p>
     <ul>
@@ -260,17 +94,17 @@
     <p>Our services are provided as-is. We make reasonable efforts to ensure quality but cannot guarantee specific outcomes.</p>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Intellectual Property</h2>
     <p>All website content, branding, automation systems, and software associated with NTX Automation Co remain our property unless otherwise stated in writing. You may not copy, reproduce, or distribute our materials without permission.</p>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Changes to These Terms</h2>
     <p>We reserve the right to update these Terms &amp; Conditions at any time. When changes are made, the updated version will be posted on this page with a revised effective date. Continued use of our services after an update means you accept the revised terms.</p>
   </div>
 
-  <div class="section">
+  <div class="legal-section">
     <h2>Contact Us</h2>
     <p>If you have questions about these Terms &amp; Conditions or anything related to our services, reach out directly:</p>
     <div class="contact-block">
@@ -281,17 +115,8 @@
 
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">NTX <span>AUTOMATION</span> CO</div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="sms-consent.html">SMS Consent</a>
-    <a href="mailto:support@ntxautomationco.com">Contact</a>
-  </div>
-</footer>
+</main>
 
+<script src="/components.js"></script>
 </body>
 </html>

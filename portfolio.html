@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Work | NTX Automation Co — Web Design Portfolio, Denton TX</title>
+<meta name="description" content="Websites and digital systems built by NTX Automation Co for local businesses in Denton and North Texas. View our portfolio of web design and automation projects."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://ntxautomationco.com/portfolio.html"/>
+<meta name="theme-color" content="#d94f0a"/>
+<meta property="og:title" content="Our Work — NTX Automation Co Portfolio"/>
+<meta property="og:description" content="Websites and digital systems built for local businesses in Denton and North Texas."/>
+<meta property="og:url" content="https://ntxautomationco.com/portfolio.html"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/style.css"/>
+<style>
+.portfolio-hero {
+  padding: 140px 6% 72px; background: var(--gray);
+  border-bottom: 1px solid var(--border);
+}
+.portfolio-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  line-height: 0.95; margin-bottom: 18px;
+}
+.portfolio-hero p {
+  font-size: 1.05rem; color: var(--body);
+  max-width: 520px; font-weight: 300; line-height: 1.72;
+}
+
+.portfolio-main { background: var(--black); }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+
+/* PORTFOLIO CARD */
+.port-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  overflow: hidden;
+  transition: border-color 0.2s;
+  display: flex; flex-direction: column;
+}
+.port-card:hover { border-color: var(--orange); }
+
+.port-img {
+  width: 100%; aspect-ratio: 16/9;
+  background: #1a1a1a;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+}
+.port-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.port-body { padding: 28px 28px 24px; flex: 1; display: flex; flex-direction: column; }
+.port-industry {
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 8px;
+}
+.port-body h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem; letter-spacing: 0.5px;
+  color: var(--white); margin-bottom: 12px; line-height: 1.1;
+}
+.port-body p { font-size: 0.91rem; color: var(--body); line-height: 1.65; flex: 1; }
+.port-services {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;
+}
+.port-tag {
+  font-size: 0.69rem; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); padding: 4px 10px;
+  border: 1px solid var(--border);
+}
+.port-meta { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+.port-meta-item {
+  display: flex; gap: 8px; align-items: baseline;
+  font-size: 0.82rem;
+}
+.port-meta-label { color: var(--muted); font-weight: 600; min-width: 80px; }
+.port-meta-val { color: var(--body); }
+.port-actions { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+.port-actions a { font-size: 0.84rem; font-weight: 600; color: var(--orange); text-decoration: none; transition: opacity 0.2s; }
+.port-actions a:hover { opacity: 0.75; }
+
+/* TESTIMONIAL inside card */
+.port-testimonial {
+  margin-top: 20px; padding: 16px 18px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.port-testimonial p {
+  font-size: 0.87rem; color: var(--body);
+  line-height: 1.65; font-style: italic; margin-bottom: 8px;
+}
+.port-testimonial-author { font-size: 0.78rem; font-weight: 600; color: var(--white); }
+
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 580px) { .portfolio-hero { padding: 110px 5% 52px; } }
+</style>
+</head>
+<body>
+
+<main id="main-content">
+
+<div class="portfolio-hero">
+  <span class="label">Our Work</span>
+  <h1>Built for Real Businesses.</h1>
+  <p>A growing portfolio of websites and digital systems NTX has built for local businesses in Denton and North Texas. Projects are featured here after completion and client approval.</p>
+</div>
+
+<section class="portfolio-main" aria-labelledby="port-list-heading">
+  <div class="reveal">
+    <h2 class="section-heading" id="port-list-heading" style="display:none;">Portfolio</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    PROJECT CARD — HAIRSTYLIST (AWAITING CLIENT APPROVAL)
+    Replace all [bracketed] content with real project data.
+    Uncomment the <img> tag and replace the placeholder-block once
+    a real screenshot is available.
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <article class="port-card reveal">
+      <div class="port-img">
+        <div class="placeholder-block" style="width:100%;height:100%;">
+          <span class="ph-label">Preview Pending Approval</span>
+          <p>Desktop screenshot will appear here after client permission is confirmed</p>
+        </div>
+        <!--
+        <img
+          src="/work/[client-slug]-desktop.jpg"
+          alt="Screenshot of [Client Business Name] website designed by NTX Automation Co"
+          width="800" height="450"
+          loading="lazy"
+        />
+        -->
+      </div>
+      <div class="port-body">
+        <p class="port-industry">Hair &amp; Beauty</p>
+        <h2>[Client Name — Pending Approval]</h2>
+        <p>Custom website designed and built for a local hairstylist in Denton, TX. Full project details, screenshots, and live site link will be published after client permission is confirmed.</p>
+        <div class="port-services">
+          <span class="port-tag">Web Design</span>
+          <span class="port-tag">Development</span>
+        </div>
+        <div class="port-meta">
+          <div class="port-meta-item">
+            <span class="port-meta-label">Location</span>
+            <span class="port-meta-val">Denton, TX</span>
+          </div>
+          <div class="port-meta-item">
+            <span class="port-meta-label">Services</span>
+            <span class="port-meta-val">Website Design &amp; Development</span>
+          </div>
+          <div class="port-meta-item">
+            <span class="port-meta-label">Status</span>
+            <span class="port-meta-val">Awaiting client approval to publish</span>
+          </div>
+        </div>
+        <div class="port-actions">
+          <span style="font-size:0.82rem;color:var(--muted);">Live site link coming soon</span>
+        </div>
+        <!--
+        TESTIMONIAL — uncomment and fill in when available:
+        <div class="port-testimonial">
+          <p>"[Exact client quote — nothing fabricated.]"</p>
+          <div class="port-testimonial-author">[Client Name] — [Business Name]</div>
+        </div>
+        -->
+      </div>
+    </article>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    PLACEHOLDER SLOT — NEXT PROJECT
+    Copy this entire <article> block and fill in real details
+    when the next project is completed and approved.
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <article class="port-card reveal reveal-d2">
+      <div class="port-img">
+        <div class="placeholder-block" style="width:100%;height:100%;">
+          <span class="ph-label">Next Project</span>
+          <p>New projects are added here after completion and client approval</p>
+        </div>
+      </div>
+      <div class="port-body">
+        <p class="port-industry">Coming Soon</p>
+        <h2>Your Business Could Be Here</h2>
+        <p>NTX is actively working with local businesses across Denton and North Texas. Completed projects are featured here after client approval. Interested in working with NTX? Get a free quote.</p>
+        <div class="port-services">
+          <span class="port-tag">Available Now</span>
+        </div>
+        <div class="port-actions">
+          <a href="/contact.html">Get a Free Quote →</a>
+        </div>
+      </div>
+    </article>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    REAL PROJECT TEMPLATE — copy this for each new project:
+
+    <article class="port-card">
+      <div class="port-img">
+        <img
+          src="/work/[slug]-desktop.jpg"
+          alt="Screenshot of [Business Name] website designed by NTX Automation Co"
+          width="800" height="450"
+          loading="lazy"
+        />
+      </div>
+      <div class="port-body">
+        <p class="port-industry">[Industry — e.g. Restaurant, Auto Shop, Salon]</p>
+        <h2>[Business Name]</h2>
+        <p>[1–2 sentence description of the project and what was built.]</p>
+        <div class="port-services">
+          <span class="port-tag">Web Design</span>
+          <span class="port-tag">Automation</span>
+          [add/remove as appropriate]
+        </div>
+        <div class="port-meta">
+          <div class="port-meta-item">
+            <span class="port-meta-label">Location</span>
+            <span class="port-meta-val">[City, TX]</span>
+          </div>
+          <div class="port-meta-item">
+            <span class="port-meta-label">Services</span>
+            <span class="port-meta-val">[Services provided]</span>
+          </div>
+        </div>
+        <div class="port-actions">
+          <a href="https://[clientwebsite.com]" target="_blank" rel="noopener">View Live Site →</a>
+        </div>
+        <div class="port-testimonial">
+          <p>"[Exact client quote.]"</p>
+          <div class="port-testimonial-author">[Name] — [Business Name]</div>
+        </div>
+      </div>
+    </article>
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+  </div>
+</section>
+
+<section class="final-cta" aria-labelledby="port-cta-heading">
+  <h2 id="port-cta-heading">Ready to Be Our Next Project?</h2>
+  <p>Get a free quote or book a call to discuss what NTX can build for your business.</p>
+  <div class="final-cta-actions">
+    <a href="/contact.html" class="btn-white">Get a Free Quote</a>
+    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener"
+       class="btn-ghost" style="border-color:rgba(255,255,255,0.4);color:#fff;">Book a Call</a>
+  </div>
+</section>
+
+</main>
+
+<script src="/components.js"></script>
+</body>
+</html>

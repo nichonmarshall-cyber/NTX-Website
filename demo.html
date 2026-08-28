@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NTX AI Intake Demo | Business Automation Demo — NTX Automation Co</title>
+<meta name="description" content="Try the NTX AI Intake Demo. Text DEMO to (817) 393-6339 to experience how NTX automation handles a new lead — responding, collecting info, and moving toward booking."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://ntxautomationco.com/demo.html"/>
+<meta name="theme-color" content="#d94f0a"/>
+<meta property="og:title" content="NTX AI Intake Demo — Try It Yourself"/>
+<meta property="og:description" content="Text DEMO to (817) 393-6339 to experience the NTX business automation system firsthand."/>
+<meta property="og:url" content="https://ntxautomationco.com/demo.html"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/style.css"/>
+<style>
+.demo-hero {
+  padding: 140px 6% 72px; background: var(--gray);
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.demo-hero::after {
+  content: ''; position: absolute; top: -10%; right: -5%;
+  width: 45vw; height: 45vw; max-width: 600px;
+  background: radial-gradient(circle, rgba(217,79,10,0.10) 0%, transparent 65%);
+  pointer-events: none;
+}
+.demo-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.93; max-width: 780px; margin-bottom: 20px;
+}
+.demo-hero h1 em { font-style: normal; color: var(--orange); display: block; }
+.demo-hero p {
+  font-size: 1.05rem; color: var(--body);
+  max-width: 520px; font-weight: 300; line-height: 1.72;
+}
+
+.demo-main { background: var(--black); }
+.demo-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: start;
+  margin-top: 52px;
+}
+.demo-cta-box {
+  padding: 40px 36px;
+  border: 1px solid rgba(217,79,10,0.45);
+  background: rgba(217,79,10,0.06);
+}
+.demo-kw {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 6rem; color: var(--orange);
+  letter-spacing: 6px; line-height: 1; margin-bottom: 4px;
+}
+.demo-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem; color: var(--white);
+  letter-spacing: 2px; margin-bottom: 20px;
+}
+.demo-cta-box p { font-size: 0.93rem; color: var(--body); line-height: 1.65; margin-bottom: 24px; }
+
+.steps-list { list-style: none; display: flex; flex-direction: column; margin-top: 4px; }
+.step-item { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.step-item:first-child { border-top: 1px solid var(--border); }
+.step-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem; color: var(--orange);
+  opacity: 0.5; flex-shrink: 0; width: 30px; line-height: 1.2;
+}
+.step-item strong { display: block; font-weight: 600; color: var(--white); margin-bottom: 4px; font-size: 0.95rem; }
+.step-item span { font-size: 0.9rem; color: var(--body); }
+
+.program-section { background: var(--gray); }
+.program-block {
+  margin-top: 44px; display: flex; flex-direction: column; gap: 16px; max-width: 680px;
+}
+.program-copy-item {
+  padding: 18px 22px;
+  border-left: 3px solid var(--orange);
+  background: #161616;
+}
+.program-copy-label {
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 8px; display: block;
+}
+.program-copy-text {
+  font-size: 0.91rem; color: var(--body-strong); line-height: 1.7;
+}
+
+.about-system { background: var(--black); }
+.about-system-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: start; margin-top: 52px;
+}
+.about-system-grid p { font-size: 1rem; color: var(--body); line-height: 1.75; margin-bottom: 16px; }
+
+.ref-table {
+  width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem;
+}
+.ref-table tr { border-bottom: 1px solid var(--border); }
+.ref-table tr:last-child { border-bottom: none; }
+.ref-table td { padding: 13px 15px; vertical-align: top; color: var(--body); line-height: 1.6; }
+.ref-table td:first-child {
+  width: 36%; font-weight: 600; color: var(--white);
+  white-space: nowrap; background: #161616;
+  border-right: 1px solid var(--border);
+}
+.ref-table td:last-child { background: #111; }
+.ref-table code {
+  font-family: monospace; font-size: 0.87rem;
+  color: var(--orange); background: rgba(217,79,10,0.1); padding: 2px 6px;
+}
+
+@media (max-width: 900px) {
+  .demo-layout { grid-template-columns: 1fr; gap: 40px; }
+  .about-system-grid { grid-template-columns: 1fr; gap: 36px; }
+  .ref-table td:first-child { white-space: normal; width: 40%; }
+}
+@media (max-width: 580px) { .demo-hero { padding: 110px 5% 52px; } }
+</style>
+</head>
+<body>
+
+<main id="main-content">
+
+<div class="demo-hero">
+  <span class="label">NTX AI Intake Demo</span>
+  <h1>See the System<br><em>In Action.</em></h1>
+  <p>Text a single keyword and experience the NTX automation system firsthand — the same system we build and configure for local service businesses.</p>
+</div>
+
+<!-- MAIN DEMO -->
+<section class="demo-main" aria-labelledby="demo-heading">
+  <div class="reveal">
+    <span class="label">Try It Now</span>
+    <h2 class="section-heading" id="demo-heading">One Text. Full Demonstration.</h2>
+    <p class="section-body">Prospective customers opt in to the NTX AI Intake Demo by texting DEMO to the number below. You initiate the conversation — no messages are sent until you do.</p>
+  </div>
+
+  <div class="demo-layout">
+    <div class="demo-cta-box reveal">
+      <div class="demo-kw">DEMO</div>
+      <div class="demo-num">Text to (817) 393-6339</div>
+      <p>Prospective customers may opt in to the NTX AI Intake Demo by texting DEMO to the NTX Automation Co demo number. The user initiates the SMS conversation voluntarily before any demo messages are sent.</p>
+
+      <div class="sms-disclosure">
+        By texting DEMO to (817) 393-6339, you agree to receive conversational SMS messages from NTX Automation Co related to the NTX AI Intake Demo.
+        <strong> Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchase.</strong>
+        <br/><br/>
+        Consent to the NTX AI Intake Demo applies specifically to NTX Automation Co and this program. It is not transferred to any NTX Automation Co client business.
+        <div class="sms-disclosure-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <span style="color:rgba(244,241,235,0.2)">·</span>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+          <span style="color:rgba(244,241,235,0.2)">·</span>
+          <a href="/sms-consent.html">SMS Consent &amp; Messaging Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-d2">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);margin-bottom:20px;letter-spacing:0.5px;">What to Expect</h3>
+      <ul class="steps-list">
+        <li class="step-item">
+          <div class="step-n">01</div>
+          <div><strong>Text DEMO to get started</strong><span>You initiate the conversation. Nothing is sent until you text first.</span></div>
+        </li>
+        <li class="step-item">
+          <div class="step-n">02</div>
+          <div><strong>The AI assistant responds</strong><span>You'll see how the system greets a new lead and keeps the conversation moving.</span></div>
+        </li>
+        <li class="step-item">
+          <div class="step-n">03</div>
+          <div><strong>Walk through a simulated intake</strong><span>The demo collects information — name, type of service, details about the request — the same as it would for a real customer inquiry.</span></div>
+        </li>
+        <li class="step-item">
+          <div class="step-n">04</div>
+          <div><strong>See the follow-through</strong><span>The demo shows how the system moves toward a next step — booking link, follow-up, or handoff to the business owner.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<!-- PROGRAM COPY -->
+<section class="program-section" aria-labelledby="program-heading">
+  <div class="reveal">
+    <span class="label">How the Program Works</span>
+    <h2 class="section-heading" id="program-heading">Opt-In, Opt-Out, and Help Messages.</h2>
+    <p class="section-body">The NTX AI Intake Demo program uses the following automated messages at key points in the conversation.</p>
+  </div>
+  <div class="program-block reveal">
+    <div class="program-copy-item">
+      <span class="program-copy-label">Opt-In Confirmation</span>
+      <p class="program-copy-text">NTX Automation Co: You're opted in to the NTX AI Intake Demo. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out.</p>
+    </div>
+    <div class="program-copy-item">
+      <span class="program-copy-label">Opt-Out Confirmation</span>
+      <p class="program-copy-text">NTX Automation Co: You have been unsubscribed from the NTX AI Intake Demo and will receive no further messages. Text DEMO to opt in again.</p>
+    </div>
+    <div class="program-copy-item">
+      <span class="program-copy-label">HELP Response</span>
+      <p class="program-copy-text">NTX Automation Co: For help with the NTX AI Intake Demo, email support@ntxautomationco.com. Reply STOP to opt out.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<!-- ABOUT THE SYSTEM -->
+<section class="about-system" aria-labelledby="sys-heading">
+  <div class="about-system-grid">
+    <div class="reveal">
+      <span class="label">About the System</span>
+      <h2 class="section-heading" id="sys-heading">What This Demo Is Showing You.</h2>
+      <p>The NTX AI Intake Demo is an interactive demonstration of the automation system NTX builds and configures for local service businesses. What you experience in the demo is representative of what a business's customers experience when the system is live.</p>
+      <p>The system is designed to handle the gap between a missed call or unanswered inquiry and the moment a business owner can respond — keeping the lead engaged and collecting relevant information automatically.</p>
+      <a href="/automation.html" class="btn-ghost" style="margin-top:8px;display:inline-block;">Learn More About Business Automation →</a>
+    </div>
+    <div class="reveal reveal-d2">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--white);margin-bottom:16px;letter-spacing:0.5px;">Quick Reference</h3>
+      <table class="ref-table">
+        <tr><td>Program Name</td><td>NTX AI Intake Demo</td></tr>
+        <tr><td>Business</td><td>NTX Automation Co</td></tr>
+        <tr><td>Opt-In Method</td><td>Text <code>DEMO</code> to (817) 393-6339 — user initiates voluntarily</td></tr>
+        <tr><td>Message Type</td><td>Conversational — interactive AI intake demonstration</td></tr>
+        <tr><td>Frequency</td><td>Varies based on the conversation</td></tr>
+        <tr><td>Rates</td><td>Message and data rates may apply</td></tr>
+        <tr><td>To Opt Out</td><td>Reply <code>STOP</code> — confirmation sent, no further messages</td></tr>
+        <tr><td>For Help</td><td>Reply <code>HELP</code> or email <a href="mailto:support@ntxautomationco.com" style="color:var(--orange);text-decoration:none;">support@ntxautomationco.com</a></td></tr>
+        <tr><td>Consent Scope</td><td>NTX Automation Co only — not transferred to any other business</td></tr>
+        <tr><td>Condition of Purchase</td><td>No. Consent is never required to purchase any service.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" aria-labelledby="demo-cta-heading">
+  <h2 id="demo-cta-heading">Ready to Build This for Your Business?</h2>
+  <p>Get a free quote or book a call to see how NTX automation would work for your specific business and customer flow.</p>
+  <div class="final-cta-actions">
+    <a href="/contact.html?pkg=ai-standard" class="btn-white">Get a Free Quote</a>
+    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener"
+       class="btn-ghost" style="border-color:rgba(255,255,255,0.4);color:#fff;">Book a Call</a>
+  </div>
+</section>
+
+</main>
+
+<script src="/components.js"></script>
+</body>
+</html>

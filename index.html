@@ -1,800 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- Primary SEO -->
-<title>NTX Automation Co | Websites &amp; Business Automation in Denton, TX</title>
-<meta name="description" content="NTX Automation Co builds custom websites and business automation systems for local businesses in Denton and North Texas. Missed-call response, lead capture, and more."/>
+<title>NTX Automation Co | Websites &amp; AI Intake Systems for Local Businesses — Denton, TX</title>
+<meta name="description" content="NTX Automation Co builds professional websites and AI-powered customer intake systems for local businesses in Denton and North Texas. Starting at $450. Get a free quote."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://ntxautomationco.com/"/>
 <meta name="author" content="NTX Automation Co"/>
 <meta name="theme-color" content="#d94f0a"/>
-
-<!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="NTX Automation Co"/>
-<meta property="og:title" content="NTX Automation Co | Websites &amp; Business Automation in Denton, TX"/>
-<meta property="og:description" content="Custom websites and business automation for local businesses in Denton and North Texas. Missed-call text-back, lead capture, customer intake, and more."/>
+<meta property="og:title" content="NTX Automation Co | Websites &amp; AI Intake Systems — Denton, TX"/>
+<meta property="og:description" content="Professional websites and AI-powered customer intake for local businesses in Denton and North Texas."/>
 <meta property="og:url" content="https://ntxautomationco.com/"/>
-<!-- og:image: add /og-image.jpg (1200×630 px) to the repo root to enable social preview -->
-
-<!-- Twitter / X Card -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="NTX Automation Co | Websites &amp; Business Automation in Denton, TX"/>
-<meta name="twitter:description" content="Custom websites and business automation for local businesses in Denton and North Texas."/>
-<!-- twitter:image: same file as og:image once created -->
-
-<!-- Structured Data: Local Professional Service -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NTX Automation Co | Websites &amp; AI Intake Systems — Denton, TX"/>
+<meta name="twitter:description" content="Professional websites and AI-powered customer intake for local businesses in Denton and North Texas."/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "LocalBusiness"],
   "name": "NTX Automation Co",
   "url": "https://ntxautomationco.com",
   "email": "support@ntxautomationco.com",
+  "founder": { "@type": "Person", "name": "Nicholas Marshall" },
   "areaServed": [
     { "@type": "City", "name": "Denton", "containedInPlace": { "@type": "State", "name": "Texas" } },
     { "@type": "AdministrativeArea", "name": "North Texas" }
   ],
-  "serviceType": [
-    "Small Business Website Design",
-    "Business Automation",
-    "Lead Capture Systems",
-    "Missed-Call Text-Back",
-    "Customer Intake Automation"
-  ],
-  "description": "NTX Automation Co builds custom websites and business automation systems for local businesses in Denton and North Texas.",
-  "knowsAbout": ["Web Design", "Business Automation", "Lead Generation", "SMS Automation"]
+  "serviceType": ["Website Design and Development","AI Intake Automation","Lead Capture Systems","Missed-Call Text-Back","Customer Intake Automation","Professional Photography","Professional Video","Website Hosting and Maintenance"],
+  "description": "NTX Automation Co builds professional websites and AI-powered customer intake systems for local businesses in Denton and North Texas.",
+  "priceRange": "$$"
 }
 </script>
-
-<!-- Fonts: preconnect first, then load -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/style.css"/>
 <style>
-  :root {
-    --black: #0c0c0c;
-    --white: #f4f1eb;
-    --orange: #d94f0a;
-    --orange-light: #e8621f;
-    --gray: #161616;
-    --card: #1e1e1e;
-    --border: rgba(255,255,255,0.07);
-    --muted: rgba(244,241,235,0.46);
-    --body: rgba(244,241,235,0.70);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 20px 6%;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(12,12,12,0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem; letter-spacing: 3px;
-    color: var(--white); text-decoration: none;
-  }
-  .nav-logo span { color: var(--orange); }
-  .nav-cta {
-    background: var(--orange); color: #fff;
-    padding: 10px 24px; border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.87rem; font-weight: 600;
-    text-decoration: none; cursor: pointer;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--orange-light); }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 130px 6% 90px;
-    position: relative; overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute; top: -10%; right: -5%;
-    width: 55vw; height: 55vw; max-width: 700px;
-    background: radial-gradient(circle, rgba(217,79,10,0.10) 0%, transparent 65%);
-    pointer-events: none;
-  }
-  .hero-location {
-    font-size: 0.73rem; font-weight: 600;
-    letter-spacing: 3.5px; text-transform: uppercase;
-    color: var(--orange); margin-bottom: 22px;
-    opacity: 0; animation: fadeUp 0.5s 0.1s forwards;
-  }
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3.2rem, 8.5vw, 7.2rem);
-    line-height: 0.93; letter-spacing: 0.5px; max-width: 880px;
-    opacity: 0; animation: fadeUp 0.6s 0.22s forwards;
-  }
-  .hero h1 em { font-style: normal; color: var(--orange); display: block; }
-  .hero-sub {
-    margin-top: 28px;
-    font-size: 1.12rem; font-weight: 300;
-    color: var(--body); max-width: 520px; line-height: 1.72;
-    opacity: 0; animation: fadeUp 0.6s 0.36s forwards;
-  }
-  .hero-sub strong { color: var(--white); font-weight: 500; }
-  .hero-actions {
-    margin-top: 40px;
-    display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
-    opacity: 0; animation: fadeUp 0.6s 0.5s forwards;
-  }
-  .btn-primary {
-    background: var(--orange); color: #fff;
-    padding: 15px 38px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.97rem; font-weight: 600;
-    text-decoration: none; display: inline-block;
-    border: none; cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
-  .hero-note { font-size: 0.82rem; color: var(--muted); align-self: center; }
-  .hero-divider {
-    margin-top: 88px; border: none; border-top: 1px solid var(--border);
-    opacity: 0; animation: fadeIn 1s 0.75s forwards;
-  }
-
-  /* SHARED */
-  section { padding: 96px 6%; }
-  .label {
-    font-size: 0.71rem; font-weight: 600;
-    letter-spacing: 3.5px; text-transform: uppercase;
-    color: var(--orange); margin-bottom: 16px;
-  }
-  h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.4rem, 5vw, 3.9rem);
-    line-height: 0.97; letter-spacing: 0.3px;
-    max-width: 680px; margin-bottom: 18px;
-  }
-  .section-body {
-    font-size: 1rem; color: var(--body);
-    max-width: 540px; font-weight: 300; line-height: 1.72;
-  }
-
-  /* PROBLEM */
-  .problem { background: var(--gray); }
-  .problem-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1px; margin-top: 52px; background: var(--border);
-  }
-  .problem-card {
-    padding: 36px 30px; background: var(--gray); transition: background 0.2s;
-  }
-  .problem-card:hover { background: #1c1c1c; }
-  .problem-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem; color: var(--orange);
-    opacity: 0.4; line-height: 1; margin-bottom: 16px;
-  }
-  .problem-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem; letter-spacing: 0.5px;
-    color: var(--white); margin-bottom: 10px;
-  }
-  .problem-card p { font-size: 0.91rem; color: var(--body); line-height: 1.65; }
-
-  /* SOLUTION */
-  .solution { background: var(--black); }
-  .solution-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 72px; align-items: start; margin-top: 52px;
-  }
-  @media(max-width: 780px) { .solution-grid { grid-template-columns: 1fr; gap: 40px; } }
-  .solution-list { list-style: none; }
-  .solution-item {
-    display: flex; gap: 18px;
-    padding: 22px 0; border-bottom: 1px solid var(--border);
-  }
-  .solution-item:first-child { border-top: 1px solid var(--border); }
-  .dot {
-    width: 6px; height: 6px; background: var(--orange);
-    border-radius: 50%; flex-shrink: 0; margin-top: 10px;
-  }
-  .solution-item strong {
-    display: block; font-weight: 600; color: var(--white);
-    margin-bottom: 4px; font-size: 0.96rem;
-  }
-  .solution-item span { font-size: 0.91rem; color: var(--body); }
-
-  /* WHO */
-  .who { background: var(--gray); }
-  .who-grid {
-    margin-top: 44px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 12px;
-  }
-  .who-item {
-    padding: 15px 20px;
-    border: 1px solid var(--border);
-    font-size: 0.92rem; font-weight: 500;
-    color: rgba(244,241,235,0.78);
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .who-item:hover { border-color: var(--orange); color: var(--white); }
-  .who-note {
-    margin-top: 34px; font-size: 0.97rem;
-    color: var(--body); max-width: 520px; line-height: 1.7;
-  }
-  .who-note strong { color: var(--white); }
-
-  /* PRICING */
-  .pricing { background: var(--black); }
-  .pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px; margin-top: 52px; max-width: 860px;
-  }
-  .price-card {
-    padding: 40px 36px;
-    border: 1px solid var(--border);
-    background: var(--card); position: relative;
-  }
-  .price-card.featured { border-color: var(--orange); background: #180e08; }
-  .price-badge {
-    position: absolute; top: -11px; left: 28px;
-    background: var(--orange); color: #fff;
-    font-size: 0.67rem; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px;
-  }
-  .price-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.4rem; letter-spacing: 1px;
-    color: var(--white); margin-bottom: 14px;
-  }
-  .price-desc {
-    font-size: 0.90rem; color: var(--body);
-    line-height: 1.65; margin-bottom: 26px;
-    padding-bottom: 26px; border-bottom: 1px solid var(--border);
-  }
-  .price-range {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.8rem; line-height: 1; color: var(--white);
-    margin-bottom: 4px;
-  }
-  .price-cadence {
-    font-size: 0.79rem; color: var(--muted); margin-bottom: 26px;
-  }
-  .price-features {
-    list-style: none; border-top: 1px solid var(--border);
-    padding-top: 22px; display: flex; flex-direction: column; gap: 11px;
-  }
-  .price-features li {
-    font-size: 0.90rem; color: var(--body);
-    padding-left: 16px; position: relative; line-height: 1.55;
-  }
-  .price-features li::before {
-    content: ''; position: absolute; left: 0; top: 8px;
-    width: 5px; height: 5px; background: var(--orange); border-radius: 50%;
-  }
-  .price-required {
-    margin-top: 26px; padding: 14px 18px;
-    border: 1px solid rgba(217,79,10,0.35);
-    background: rgba(217,79,10,0.07);
-    font-size: 0.85rem; color: rgba(244,241,235,0.75);
-    line-height: 1.6;
-  }
-  .price-required strong { color: var(--white); font-weight: 600; }
-  .pricing-note {
-    margin-top: 28px; font-size: 0.84rem;
-    color: var(--muted); max-width: 520px; line-height: 1.65;
-  }
-
-  /* FINAL CTA */
-  .final-cta {
-    background: var(--orange); padding: 108px 6%; text-align: center;
-  }
-  .final-cta h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    color: #fff; line-height: 0.95;
-    max-width: 700px; margin: 0 auto 20px; letter-spacing: 0.5px;
-  }
-  .final-cta p {
-    font-size: 1.03rem; color: rgba(255,255,255,0.82);
-    max-width: 440px; margin: 0 auto 36px;
-    font-weight: 300; line-height: 1.7;
-  }
-  .btn-white {
-    background: #fff; color: var(--orange);
-    padding: 15px 42px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.97rem; font-weight: 700;
-    text-decoration: none; display: inline-block;
-    border: none; cursor: pointer;
-    transition: opacity 0.2s, transform 0.15s;
-  }
-  .btn-white:hover { opacity: 0.92; transform: translateY(-2px); }
-
-  /* FOOTER */
-  footer {
-    background: var(--black); padding: 28px 6%;
-    display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 10px;
-    border-top: 1px solid var(--border);
-  }
-  .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem; letter-spacing: 3px; color: var(--white);
-  }
-  .footer-logo span { color: var(--orange); }
-  footer small { font-size: 0.79rem; color: var(--muted); }
-
-  /* SMS DEMO SECTION */
-  .sms-demo { background: var(--gray); }
-  .sms-demo-inner {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 64px; align-items: center; margin-top: 52px;
-  }
-  @media(max-width: 780px) { .sms-demo-inner { grid-template-columns: 1fr; gap: 40px; } }
-  .sms-demo-cta-box {
-    padding: 40px 36px;
-    border: 1px solid rgba(217,79,10,0.4);
-    background: rgba(217,79,10,0.06);
-  }
-  .sms-demo-keyword {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem; line-height: 1;
-    color: var(--orange); letter-spacing: 4px;
-    margin-bottom: 6px;
-  }
-  .sms-demo-number {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.9rem; color: var(--white);
-    letter-spacing: 2px; margin-bottom: 20px;
-  }
-  .sms-demo-instruction {
-    font-size: 0.93rem; color: var(--body);
-    line-height: 1.65; margin-bottom: 0;
-  }
-  .sms-demo-disclosure {
-    margin-top: 22px; padding: 18px 20px;
-    border: 1px solid var(--border);
-    background: #111;
-    font-size: 0.82rem; color: var(--muted);
-    line-height: 1.7;
-  }
-  .sms-demo-disclosure strong { color: rgba(244,241,235,0.7); font-weight: 500; }
-  .sms-demo-links {
-    display: flex; gap: 14px; flex-wrap: wrap;
-    margin-top: 14px;
-  }
-  .sms-demo-links a {
-    font-size: 0.79rem; color: var(--orange);
-    text-decoration: none; transition: opacity 0.2s;
-  }
-  .sms-demo-links a:hover { opacity: 0.75; }
-  .sms-demo-links span {
-    font-size: 0.79rem; color: rgba(244,241,235,0.2);
-  }
-  .sms-demo-right h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem; letter-spacing: 0.5px;
-    color: var(--white); margin-bottom: 20px;
-  }
-  .sms-demo-steps { list-style: none; display: flex; flex-direction: column; }
-  .sms-demo-step {
-    display: flex; gap: 16px;
-    padding: 18px 0; border-bottom: 1px solid var(--border);
-  }
-  .sms-demo-step:first-child { border-top: 1px solid var(--border); }
-  .sms-demo-step-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem; color: var(--orange);
-    opacity: 0.5; flex-shrink: 0; width: 28px; line-height: 1.3;
-  }
-  .sms-demo-step strong {
-    display: block; font-weight: 600; color: var(--white);
-    margin-bottom: 3px; font-size: 0.94rem;
-  }
-  .sms-demo-step span { font-size: 0.89rem; color: var(--body); }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(22px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-  .reveal {
-    opacity: 0; transform: translateY(26px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* SERVICES SECTION */
-  .services { background: var(--black); }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px; margin-top: 52px;
-  }
-  .service-card {
-    padding: 36px 32px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    transition: border-color 0.2s;
-  }
-  .service-card:hover { border-color: var(--orange); }
-  .service-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.35rem; letter-spacing: 0.5px;
-    color: var(--white); margin-bottom: 12px;
-  }
-  .service-card p {
-    font-size: 0.91rem; color: var(--body); line-height: 1.65;
-  }
-  .service-tag {
-    display: inline-block; margin-top: 16px;
-    font-size: 0.69rem; font-weight: 600;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: var(--orange);
-  }
-
-  /* PORTFOLIO PLACEHOLDER */
-  .portfolio { background: var(--gray); }
-  .portfolio-coming {
-    margin-top: 52px;
-    padding: 52px 40px;
-    border: 1px dashed rgba(255,255,255,0.12);
-    text-align: center;
-  }
-  .portfolio-coming p {
-    font-size: 0.93rem; color: var(--muted); line-height: 1.7;
-  }
-  /* Future portfolio grid — uncomment when projects are ready
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px; margin-top: 52px;
-  }
-  .portfolio-card { border: 1px solid var(--border); background: var(--card); overflow: hidden; }
-  .portfolio-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-  .portfolio-card-body { padding: 24px 28px; }
-  .portfolio-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--white); margin-bottom: 8px; }
-  .portfolio-card p { font-size: 0.88rem; color: var(--body); line-height: 1.6; }
-  .portfolio-card a { display: inline-block; margin-top: 14px; font-size: 0.82rem; color: var(--orange); text-decoration: none; }
-  */
-
-  @media(max-width: 580px) {
-    .nav-cta { display: none; }
-    .hero h1 { font-size: 3rem; }
-    footer { flex-direction: column; align-items: flex-start; }
-  }
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+  padding: 130px 6% 90px; position: relative; overflow: hidden; background: var(--black);
+}
+.hero::after {
+  content: ''; position: absolute; top: -10%; right: -5%;
+  width: 55vw; height: 55vw; max-width: 700px;
+  background: radial-gradient(circle, rgba(217,79,10,0.10) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 0.73rem; font-weight: 600; letter-spacing: 3.5px; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 22px; opacity: 0; animation: fadeUp 0.5s 0.1s forwards;
+}
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.2rem, 8.5vw, 7.2rem);
+  line-height: 0.93; letter-spacing: 0.5px; max-width: 900px;
+  opacity: 0; animation: fadeUp 0.6s 0.22s forwards;
+}
+.hero-sub {
+  margin-top: 28px; font-size: 1.08rem; font-weight: 300;
+  color: var(--body); max-width: 540px; line-height: 1.72;
+  opacity: 0; animation: fadeUp 0.6s 0.36s forwards;
+}
+.hero-actions {
+  margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+  opacity: 0; animation: fadeUp 0.6s 0.5s forwards;
+}
+.hero-divider {
+  margin-top: 72px; border: none; border-top: 1px solid var(--border);
+  opacity: 0; animation: fadeIn 1s 0.7s forwards;
+}
+.hero-clients {
+  margin-top: 24px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.6s 0.62s forwards;
+}
+.hero-clients-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); }
+.hero-client-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.hero-client-tag { font-size: 0.78rem; font-weight: 500; color: var(--muted); padding: 4px 12px; border: 1px solid var(--border); }
+.services-section { background: var(--black); }
+.services-grid-4 {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border); margin-top: 52px;
+}
+.service-card-hp {
+  background: var(--card); padding: 40px 32px 36px;
+  border: 1px solid transparent; display: flex; flex-direction: column;
+  transition: background 0.2s, border-color 0.2s;
+}
+.service-card-hp:hover { background: var(--card-hover); border-color: var(--orange); }
+.service-card-hp .card-num { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--orange); opacity: 0.25; line-height: 1; margin-bottom: 24px; }
+.service-card-hp h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.5px; color: var(--white); margin-bottom: 14px; line-height: 1.1; }
+.service-card-hp p { font-size: 0.88rem; color: var(--body); line-height: 1.65; flex: 1; }
+.service-card-hp .card-link { margin-top: 22px; }
+.process-section { background: var(--gray); }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-top: 52px; }
+.process-step { background: var(--gray); padding: 40px 32px; }
+.process-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--orange); opacity: 0.2; line-height: 1; margin-bottom: 20px; }
+.process-step h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 0.5px; color: var(--white); margin-bottom: 10px; }
+.process-step p { font-size: 0.88rem; color: var(--body); line-height: 1.65; }
+.demo-teaser { background: var(--gray); }
+.demo-teaser-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 52px; }
+.demo-teaser-box { padding: 36px; border: 1px solid rgba(217,79,10,0.4); background: rgba(217,79,10,0.05); }
+.demo-keyword-display { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: var(--orange); letter-spacing: 6px; line-height: 1; margin-bottom: 4px; }
+.demo-number { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; color: var(--white); letter-spacing: 2px; margin-bottom: 18px; }
+.about-teaser { background: var(--black); }
+.about-teaser-inner { display: grid; grid-template-columns: 140px 1fr; gap: 52px; align-items: start; margin-top: 52px; }
+.about-intro h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 0.97; margin-bottom: 20px; }
+.about-intro p { font-size: 1rem; color: var(--body); line-height: 1.72; margin-bottom: 16px; max-width: 540px; }
+.about-intro p:last-of-type { margin-bottom: 28px; }
+@media (max-width: 1024px) {
+  .services-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero { padding: 110px 5% 72px; }
+  .hero h1 { font-size: clamp(2.8rem, 11vw, 4.8rem); }
+  .services-grid-4 { grid-template-columns: 1fr; background: transparent; }
+  .service-card-hp { border: 1px solid var(--border); }
+  .process-grid { grid-template-columns: 1fr; }
+  .demo-teaser-inner { grid-template-columns: 1fr; gap: 36px; }
+  .about-teaser-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn-primary, .hero-actions .btn-ghost { text-align: center; }
+}
 </style>
 </head>
 <body>
+<main id="main-content">
 
-<!-- NAV -->
-<header>
-  <nav aria-label="Main navigation">
-    <a class="nav-logo" href="/" aria-label="NTX Automation Co — Home">NTX <span>AUTOMATION</span> CO</a>
-    <a class="nav-cta" href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener">Book a Free Demo</a>
-  </nav>
-</header>
-
-<main>
-
-<!-- HERO -->
 <section class="hero" id="home" aria-labelledby="hero-heading">
-  <p class="hero-location">Denton &amp; North Texas</p>
-  <h1 id="hero-heading">Every Missed Call <em>Is a Lost Job.</em></h1>
-  <p class="hero-sub">NTX Automation Co builds <strong>custom websites and business automation systems</strong> for local businesses in Denton and North Texas — so you capture more customers without adding more work.</p>
+  <p class="hero-eyebrow">Denton &amp; North Texas</p>
+  <h1 id="hero-heading">Websites and Automation<br>Built for Local Businesses.</h1>
+  <p class="hero-sub">NTX Automation Co builds professional websites and smart customer-response systems for businesses across Denton and North Texas — helping you look credible, capture more leads, and spend less time chasing follow-ups.</p>
   <div class="hero-actions">
-    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Demo</a>
-    <span class="hero-note">Free 15-minute call. No pressure.</span>
+    <a href="/contact.html" class="btn-primary">Get a Free Quote</a>
+    <a href="/services.html" class="btn-ghost">Explore Our Services</a>
+  </div>
+  <div class="hero-clients">
+    <span class="hero-clients-label">Built for</span>
+    <div class="hero-client-tags">
+      <span class="hero-client-tag">Restaurants</span>
+      <span class="hero-client-tag">Salons</span>
+      <span class="hero-client-tag">Contractors</span>
+      <span class="hero-client-tag">Auto Shops</span>
+      <span class="hero-client-tag">Food Trucks</span>
+      <span class="hero-client-tag">Service Businesses</span>
+    </div>
   </div>
   <hr class="hero-divider"/>
 </section>
 
-<!-- PROBLEM -->
-<section class="problem" id="problem" aria-labelledby="problem-heading">
+<section class="services-section" id="services" aria-labelledby="services-heading">
   <div class="reveal">
-    <p class="label">The Problem</p>
-    <h2 id="problem-heading">You're Losing Jobs You Don't Even Know About</h2>
-    <p class="section-body">When you're working, you can't always pick up. That's just the reality. The problem is that most customers won't wait — and you have no way of knowing what you missed.</p>
+    <span class="label">What We Do</span>
+    <h2 class="section-heading" id="services-heading">The Right Foundation for Any Local Business.</h2>
+    <p class="section-body">A professional website is where it starts. Add AI-powered intake automation and you have a system that captures and responds to leads around the clock.</p>
   </div>
-  <div class="problem-grid reveal">
-    <div class="problem-card">
-      <div class="problem-num">01</div>
-      <h3>Missed Calls</h3>
-      <p>Most people won't call back or leave a voicemail. If no one picks up, they move on to the next shop on the list.</p>
+  <div class="services-grid-4">
+    <article class="service-card-hp reveal reveal-d1">
+      <div class="card-num">01</div>
+      <h3>Web Design &amp; Development</h3>
+      <p>Custom, mobile-friendly websites designed around the business, its customers, and its goals. Starting at $450.</p>
+      <a class="card-link" href="/web-design.html" aria-label="Learn more about Web Design and Development">Learn More →</a>
+    </article>
+    <article class="service-card-hp reveal reveal-d2">
+      <div class="card-num">02</div>
+      <h3>AI Intake &amp; Business Automation</h3>
+      <p>Automated systems that respond after missed calls, collect customer information, qualify leads, and move inquiries toward booking or owner follow-up.</p>
+      <a class="card-link" href="/automation.html" aria-label="Learn more about AI Intake and Business Automation">Learn More →</a>
+    </article>
+    <article class="service-card-hp reveal reveal-d3">
+      <div class="card-num">03</div>
+      <h3>Professional Photo &amp; Video</h3>
+      <p>Professional content coordinated through NTX's trusted creative partners for websites, Google Business Profiles, menus, and social media.</p>
+      <a class="card-link" href="/photo-video.html" aria-label="Learn more about Professional Photo and Video">Learn More →</a>
+    </article>
+    <article class="service-card-hp reveal reveal-d4">
+      <div class="card-num">04</div>
+      <h3>Website Care &amp; Management</h3>
+      <p>Hosting coordination, updates, maintenance, and technical support that keep a website online and working.</p>
+      <a class="card-link" href="/website-care.html" aria-label="Learn more about Website Care and Management">Learn More →</a>
+    </article>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<section class="process-section" id="process" aria-labelledby="process-heading">
+  <div class="reveal">
+    <span class="label">How It Works</span>
+    <h2 class="section-heading" id="process-heading">Working with NTX is Simple.</h2>
+    <p class="section-body">Tell us what your business needs. We handle every technical detail — from design to deployment to ongoing support.</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-step reveal reveal-d1">
+      <div class="process-num">01</div>
+      <h3>Tell Us About Your Business</h3>
+      <p>Fill out a quick quote form or book a free 15-minute call. Tell us what you do, who you serve, and what you're looking to build or improve.</p>
     </div>
-    <div class="problem-card">
-      <div class="problem-num">02</div>
-      <h3>Slow Replies</h3>
-      <p>A lead comes in at 6pm asking about pricing. By the time you see it the next morning, they've already booked someone else.</p>
+    <div class="process-step reveal reveal-d2">
+      <div class="process-num">02</div>
+      <h3>We Build Your Solution</h3>
+      <p>NTX designs and builds your website, automation system, or content package. You give feedback at key milestones — we handle the rest.</p>
     </div>
-    <div class="problem-card">
-      <div class="problem-num">03</div>
-      <h3>No Follow-Up</h3>
-      <p>Someone asks about a job and then goes quiet. Without a follow-up, that lead disappears — even if they still needed the work done.</p>
+    <div class="process-step reveal reveal-d3">
+      <div class="process-num">03</div>
+      <h3>Review &amp; Launch</h3>
+      <p>You review the finished product, request any final adjustments, and approve it. We handle deployment, domain setup, and going live.</p>
+    </div>
+    <div class="process-step reveal reveal-d4">
+      <div class="process-num">04</div>
+      <h3>We Keep It Running</h3>
+      <p>Ongoing hosting, maintenance, and support so your website and systems keep working — with no technical headaches on your end.</p>
     </div>
   </div>
 </section>
 
-<!-- SOLUTION -->
-<section class="solution" id="automation" aria-labelledby="solution-heading">
-  <div class="solution-grid">
+<hr class="section-rule"/>
+
+<section class="pricing-preview" id="pricing-preview" aria-labelledby="pp-heading">
+  <div class="reveal">
+    <span class="label">Pricing</span>
+    <h2 class="section-heading" id="pp-heading">Straightforward Pricing. No Surprises.</h2>
+    <p class="section-body">Fixed one-time prices for websites. Clear setup and monthly rates for the AI Intake Assistant.</p>
+  </div>
+  <div class="pricing-preview-grid reveal">
+    <div class="pp-card">
+      <div class="pp-category">Website</div>
+      <h3>Starter Website</h3>
+      <div class="pp-price">$450</div>
+      <p class="pp-cadence">one-time</p>
+    </div>
+    <div class="pp-card featured">
+      <div class="pp-badge">Most Popular</div>
+      <div class="pp-category">Website</div>
+      <h3>Business Website</h3>
+      <div class="pp-price">$650</div>
+      <p class="pp-cadence">one-time</p>
+    </div>
+    <div class="pp-card">
+      <div class="pp-category">AI Intake Assistant</div>
+      <h3>Standard Plan</h3>
+      <div class="pp-price">Starting at $750</div>
+      <p class="pp-cadence">setup + $149/month</p>
+    </div>
+  </div>
+  <div style="margin-top:32px;" class="reveal">
+    <a href="/packages.html" class="btn-ghost">View Full Pricing →</a>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<section class="demo-teaser" id="demo-teaser" aria-labelledby="demo-heading">
+  <div class="reveal">
+    <span class="label">Try It Yourself</span>
+    <h2 class="section-heading" id="demo-heading">See the AI Intake System in Action.</h2>
+    <p class="section-body">Text a single keyword and experience the NTX AI Intake Assistant firsthand — the same system we configure for local service businesses.</p>
+  </div>
+  <div class="demo-teaser-inner">
+    <div class="demo-teaser-box reveal">
+      <div class="demo-keyword-display">DEMO</div>
+      <div class="demo-number">Text to (817) 393-6339</div>
+      <p style="font-size:0.91rem;color:var(--body);line-height:1.65;margin-bottom:20px;">Walk through a live example of the NTX AI intake assistant — responding to a new lead, collecting information, and moving the conversation toward booking. Entirely automated.</p>
+      <div class="sms-disclosure">
+        By texting DEMO, you agree to receive conversational SMS messages from NTX Automation Co related to the NTX AI Intake Demo.
+        <strong> Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchase.</strong>
+        <div class="sms-disclosure-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <span style="color:rgba(244,241,235,0.2)">·</span>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+          <span style="color:rgba(244,241,235,0.2)">·</span>
+          <a href="/sms-consent.html">SMS Consent</a>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-d2">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--white);margin-bottom:20px;letter-spacing:0.5px;">What You'll Experience</h3>
+      <p style="font-size:0.93rem;color:var(--body);line-height:1.72;margin-bottom:16px;">The demo walks through a simulated lead intake conversation — the kind your customers would have when they contact a business running NTX automation.</p>
+      <p style="font-size:0.93rem;color:var(--body);line-height:1.72;margin-bottom:28px;">It collects information, keeps the conversation moving, and shows you what a properly automated response looks like from the customer's side.</p>
+      <a href="/demo.html" class="btn-ghost">View Full Demo Page →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule"/>
+
+<section class="about-teaser" id="about-teaser" aria-labelledby="about-teaser-heading">
+  <div class="about-teaser-inner">
     <div class="reveal">
-      <p class="label">How It Works</p>
-      <h2 id="solution-heading">The System Handles It While You Work</h2>
-      <p class="section-body">When a call comes in that you can't answer, the system takes over. It reaches out, collects the information you need, and keeps the conversation going — so the lead doesn't go cold before you have a chance to respond.</p>
+      <div class="founder-monogram" aria-hidden="true"><span>NM</span></div>
     </div>
-    <ul class="solution-list reveal">
-      <li class="solution-item">
-        <div class="dot"></div>
-        <div>
-          <strong>Missed Call Text-Back</strong>
-          <span>The moment you miss a call, the customer gets a text automatically. They know someone is aware of them — and they stay engaged instead of calling your competitor.</span>
-        </div>
-      </li>
-      <li class="solution-item">
-        <div class="dot"></div>
-        <div>
-          <strong>Collects Customer Info</strong>
-          <span>The system asks for their name, what they need, and any relevant details — like vehicle info for auto businesses. You get that information before you ever call them back.</span>
-        </div>
-      </li>
-      <li class="solution-item">
-        <div class="dot"></div>
-        <div>
-          <strong>Keeps the Conversation Moving</strong>
-          <span>It doesn't just send one message and stop. It keeps the exchange going at the right pace, so leads stay warm until they're ready to book.</span>
-        </div>
-      </li>
-      <li class="solution-item">
-        <div class="dot"></div>
-        <div>
-          <strong>Moves Them Toward Booking</strong>
-          <span>Once someone is ready, the system can direct them to your booking link or hand the conversation off to you — with all the context already in hand.</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- WHO IT'S FOR -->
-<section class="who" id="who" aria-labelledby="who-heading">
-  <div class="reveal">
-    <p class="label">Who This Is For</p>
-    <h2 id="who-heading">Local Businesses in Denton &amp; North Texas</h2>
-  </div>
-  <div class="who-grid reveal">
-    <div class="who-item">Auto Shops</div>
-    <div class="who-item">Barber Shops</div>
-    <div class="who-item">Auto Detailers</div>
-    <div class="who-item">General Contractors</div>
-    <div class="who-item">Landscapers</div>
-    <div class="who-item">Handymen</div>
-    <div class="who-item">Nail &amp; Beauty Salons</div>
-    <div class="who-item">Restaurants &amp; Food Trucks</div>
-    <div class="who-item">Home Service Businesses</div>
-    <div class="who-item">Local Retail</div>
-  </div>
-  <p class="who-note reveal">Whether you need a <strong>professional website, an automated lead system, or both</strong> — if you run a small business in Denton or North Texas, this is for you.</p>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services" aria-labelledby="services-heading">
-  <div class="reveal">
-    <p class="label">What We Do</p>
-    <h2 id="services-heading">Websites, Automation, and Everything In Between</h2>
-    <p class="section-body">We work with local businesses in Denton and North Texas to build the tools they actually need — a professional web presence, systems that capture leads automatically, or both.</p>
-  </div>
-  <div class="services-grid reveal">
-    <article class="service-card">
-      <h3>Website Design &amp; Development</h3>
-      <p>Custom, mobile-friendly websites built for local businesses — restaurants, food trucks, service companies, salons, contractors, and more. Designed to look professional, load fast, and convert visitors into customers.</p>
-      <span class="service-tag">Web Design &middot; Development</span>
-    </article>
-    <article class="service-card">
-      <h3>Business Automation</h3>
-      <p>Automated systems that respond to missed calls, collect customer information, follow up with leads, and help move inquiries toward a booking — running continuously without extra work on your end.</p>
-      <span class="service-tag">Lead Capture &middot; Automation</span>
-    </article>
-    <article class="service-card">
-      <h3>Professional Content</h3>
-      <p>Photography and video content can be incorporated into qualifying website and business packages, giving local businesses professional visuals to use across their site and social media.</p>
-      <span class="service-tag">Photography &middot; Video</span>
-    </article>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing" aria-labelledby="pricing-heading">
-  <div class="reveal">
-    <p class="label">Pricing</p>
-    <h2 id="pricing-heading">Straightforward. Based on Your Setup.</h2>
-    <p class="section-body">Pricing depends on your business and what needs to be connected. There are two parts: getting the system built, and keeping it running.</p>
-  </div>
-
-  <div class="pricing-cards reveal">
-
-    <div class="price-card">
-      <h3>Setup</h3>
-      <p class="price-desc">
-        This is a one-time fee that covers building and connecting your system — the missed call response, lead collection, follow-up flow, and any integrations specific to your business. Every setup is a little different depending on what you already have in place.
-      </p>
-      <div class="price-range">$150 – $500</div>
-      <p class="price-cadence">one-time, based on your setup</p>
-      <ul class="price-features">
-        <li>Full system built and configured for your business</li>
-        <li>Connected to your existing phone and tools</li>
-        <li>Tested before going live</li>
-        <li>Exact cost discussed on your free call</li>
-      </ul>
-    </div>
-
-    <div class="price-card featured">
-      <div class="price-badge">Required to Operate</div>
-      <h3>Monthly Service</h3>
-      <p class="price-desc">
-        The monthly service is what keeps the system active and responding to your customers. Without it, the system does not run. This is not a maintenance fee — it is what powers every automated response, follow-up, and lead capture.
-      </p>
-      <div class="price-range">From $50<span style="font-size:1.4rem">/mo</span></div>
-      <p class="price-cadence">billed monthly, cancel any time</p>
-      <ul class="price-features">
-        <li>System stays live and active around the clock</li>
-        <li>All responses and follow-ups running continuously</li>
-        <li>Adjustments and support included</li>
-        <li>System deactivates if service is cancelled</li>
-      </ul>
-      <div class="price-required">
-        <strong>Ongoing service is required to keep the system active and responding to customers.</strong> The setup gets everything built. The monthly service is what runs it.
-      </div>
-    </div>
-
-  </div>
-
-  <p class="pricing-note reveal">Pricing is discussed during the free call. There are no surprise fees and nothing gets started until you know exactly what you're paying for.</p>
-</section>
-
-<!-- PORTFOLIO (placeholder — add real projects when ready) -->
-<section class="portfolio" id="work" aria-labelledby="portfolio-heading">
-  <div class="reveal">
-    <p class="label">Our Work</p>
-    <h2 id="portfolio-heading">Recent Projects</h2>
-    <p class="section-body">A selection of websites and automation systems built for local businesses in Denton and North Texas.</p>
-  </div>
-  <div class="portfolio-coming reveal">
-    <p>Client projects coming soon. <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;">Book a call</a> to discuss your project.</p>
-  </div>
-  <!--
-    Future project cards — copy this block for each project:
-
-    <div class="portfolio-grid">
-      <article class="portfolio-card">
-        <img src="/work/project-name.jpg" alt="Screenshot of [Client Name] website" width="600" height="400"/>
-        <div class="portfolio-card-body">
-          <h3>[Client / Business Name]</h3>
-          <p>[Short project description — what was built and why it matters to the business.]</p>
-          <p><strong>Services:</strong> Website Design, Business Automation</p>
-          <a href="https://clientwebsite.com" target="_blank" rel="noopener">View live site</a>
-        </div>
-      </article>
-    </div>
-  -->
-</section>
-
-<!-- SMS DEMO -->
-<section class="sms-demo" id="demo" aria-labelledby="demo-heading">
-  <div class="reveal">
-    <p class="label">Try It Yourself</p>
-    <h2 id="demo-heading">Experience the NTX AI Intake Demo</h2>
-    <p class="section-body">Want to see exactly how this works before booking a call? Text the keyword below and go through the intake conversation yourself — the same experience your customers would have.</p>
-  </div>
-  <div class="sms-demo-inner reveal">
-    <div>
-      <div class="sms-demo-cta-box">
-        <div class="sms-demo-keyword">DEMO</div>
-        <div class="sms-demo-number">Text to (817) 393-6339</div>
-        <p class="sms-demo-instruction">You'll receive an automated response and go through a live example of the NTX AI intake assistant — the same system we set up for local service businesses.</p>
-      </div>
-      <div class="sms-demo-disclosure">
-        By texting DEMO, you agree to receive conversational SMS messages from NTX Automation Co related to the NTX AI Intake Demo. <strong>Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchase.</strong>
-        <div class="sms-demo-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <span>·</span>
-          <a href="terms.html">Terms &amp; Conditions</a>
-          <span>·</span>
-          <a href="sms-consent.html">SMS Consent</a>
-        </div>
-      </div>
-    </div>
-    <div class="sms-demo-right">
-      <h3>What to Expect</h3>
-      <ul class="sms-demo-steps">
-        <li class="sms-demo-step">
-          <div class="sms-demo-step-num">01</div>
-          <div>
-            <strong>Text DEMO to get started</strong>
-            <span>You initiate the conversation. Nothing happens until you send the first message.</span>
-          </div>
-        </li>
-        <li class="sms-demo-step">
-          <div class="sms-demo-step-num">02</div>
-          <div>
-            <strong>The AI assistant responds</strong>
-            <span>You'll see how the system greets a new lead, collects their information, and keeps the conversation moving.</span>
-          </div>
-        </li>
-        <li class="sms-demo-step">
-          <div class="sms-demo-step-num">03</div>
-          <div>
-            <strong>Walk through a simulated intake</strong>
-            <span>The demo asks qualifying questions — name, type of service, details about the request — just like it would for a real customer.</span>
-          </div>
-        </li>
-        <li class="sms-demo-step">
-          <div class="sms-demo-step-num">04</div>
-          <div>
-            <strong>See how it closes the loop</strong>
-            <span>The demo shows how the system moves toward a next step — booking, follow-up, or handoff to the business owner.</span>
-          </div>
-        </li>
-      </ul>
+    <div class="about-intro reveal reveal-d2">
+      <span class="label">About NTX</span>
+      <h2 id="about-teaser-heading">Built by Someone Who Understands Both Sides.</h2>
+      <p>NTX Automation Co was started by Nicholas Marshall to solve real problems local businesses face: outdated websites, missed leads, and customer follow-up that falls through the cracks.</p>
+      <p>Every project is direct work with NTX — no outsourced account management, no generic templates. We build professional websites, lead-capture systems, and automated customer communication tools that help businesses look credible and respond faster.</p>
+      <a href="/about.html" class="btn-ghost">Learn More About NTX</a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta" id="cta" aria-labelledby="cta-heading">
-  <h2 id="cta-heading">Find Out How Many Leads You're Missing</h2>
-  <p>Book a free 15-minute call. We'll look at your current setup and give you an honest picture of what's slipping through — and what it would take to fix it.</p>
-  <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" class="btn-white">Book a Free Demo</a>
+<section class="final-cta" aria-labelledby="final-cta-heading">
+  <h2 id="final-cta-heading">Ready to Build Something?</h2>
+  <p>Tell us about your business and we'll take it from there. Free quote. No pressure.</p>
+  <div class="final-cta-actions">
+    <a href="/contact.html" class="btn-white">Get a Free Quote</a>
+    <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener"
+       class="btn-ghost" style="border-color:rgba(255,255,255,0.4);color:#fff;">Book a Call</a>
+  </div>
 </section>
 
 </main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">NTX <span>AUTOMATION</span> CO</div>
-  <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
-    <small>Serving Denton &amp; North Texas &nbsp;&middot;&nbsp; &copy; 2026 NTX Automation Co</small>
-    <nav aria-label="Footer links" style="display:flex; gap:20px; flex-wrap:wrap;">
-      <a href="privacy.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Privacy Policy</a>
-      <a href="terms.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Terms &amp; Conditions</a>
-      <a href="sms-consent.html" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">SMS Consent</a>
-      <a href="mailto:support@ntxautomationco.com" style="font-size:0.79rem; color:rgba(244,241,235,0.46); text-decoration:none;" onmouseover="this.style.color='#f4f1eb'" onmouseout="this.style.color='rgba(244,241,235,0.46)'">Contact</a>
-    </nav>
-  </div>
-</footer>
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-</script>
+<script src="/components.js"></script>
 </body>
 </html>
