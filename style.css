@@ -110,6 +110,21 @@ section {
   text-decoration: none;
   flex-shrink: 0;
 }
+
+/* Shared logo assets */
+.nav-logo-img,
+.nav-mark-img,
+.footer-logo-img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+.nav-logo-img { height: 44px; }
+.nav-mark-img { height: 26px; }
+.footer-logo-img {
+  height: 44px;
+  margin-bottom: 12px;
+}
 .nav-logo-mark {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.6rem;
@@ -794,8 +809,15 @@ hr.section-rule {
 
 @media (max-width: 768px) {
   section { padding: 72px 6%; }
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
+  .nav-inner { padding: 0 5%; }
+  .nav-links,
+  .btn-nav { display: none; }
+  .nav-hamburger {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+  }
   .grid-3 { grid-template-columns: 1fr; gap: 16px; }
   .grid-2 { grid-template-columns: 1fr; gap: 16px; }
   .grid-4 { grid-template-columns: 1fr; background: transparent; gap: 1px; }
