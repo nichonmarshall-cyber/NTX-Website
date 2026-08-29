@@ -3,16 +3,25 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Website Care &amp; Management for Local Businesses | NTX Automation Co — Denton, TX</title>
-<meta name="description" content="Website hosting, maintenance, updates, and technical support for local businesses in Denton and North Texas. Keep your website live, secure, and working."/>
+<title>Website Care &amp; Local SEO Plans | NTX Automation Co — Denton, TX</title>
+<meta name="description" content="Optional monthly website plans from NTX Automation Co: Website Care at $49/month, Local SEO at $149/month, or Complete Care at $179/month."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://ntxautomationco.com/website-care.html"/>
 <meta name="theme-color" content="#d94f0a"/>
-<meta property="og:title" content="Website Care &amp; Management — NTX Automation Co, Denton TX"/>
-<meta property="og:description" content="Hosting, SSL, maintenance, and technical support so your website stays live and performing well. Serving local businesses in Denton and North Texas."/>
+<meta property="og:title" content="Website Care &amp; Local SEO — NTX Automation Co"/>
+<meta property="og:description" content="Website Care at $49/month, Local SEO at $149/month, or both with Complete Care at $179/month."/>
 <meta property="og:url" content="https://ntxautomationco.com/website-care.html"/>
+<meta property="og:image" content="https://ntxautomationco.com/assets/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:image" content="https://ntxautomationco.com/assets/og-image.jpg"/>
 <meta property="og:type" content="website"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48"/>
+<link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96"/>
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192"/>
+<link rel="icon" href="/assets/ntx-icon-512.png" type="image/png" sizes="512x512"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -63,6 +72,19 @@
 .care-item h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--white); margin-bottom: 10px; }
 .care-item p { font-size: 0.88rem; color: var(--body); line-height: 1.65; }
 
+.plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+.plan-card { position: relative; padding: 34px 28px; border: 1px solid var(--border); background: var(--card); display: flex; flex-direction: column; }
+.plan-card.featured { border-color: var(--orange); }
+.plan-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.45rem; color: var(--white); margin-bottom: 10px; }
+.plan-price { font-family: 'Bebas Neue', sans-serif; font-size: 2.7rem; color: var(--orange); line-height: 1; margin-bottom: 14px; }
+.plan-price span { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--body); }
+.plan-card p { font-size: 0.9rem; color: var(--body); line-height: 1.65; margin-bottom: 18px; }
+.plan-card ul { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+.plan-card li { position: relative; padding-left: 18px; font-size: 0.86rem; color: var(--body); line-height: 1.55; }
+.plan-card li::before { content: '\2713'; position: absolute; left: 0; color: var(--orange); font-weight: 600; }
+.plan-card .btn-primary, .plan-card .btn-ghost { margin-top: auto; align-self: flex-start; }
+.plan-badge { position: absolute; top: 0; right: 0; padding: 7px 12px; background: var(--orange); color: #fff; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
 .related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 44px; }
 .related-card {
   padding: 28px 24px; border: 1px solid var(--border); background: var(--card);
@@ -74,6 +96,7 @@
 
 @media (max-width: 900px) {
   .two-col { grid-template-columns: 1fr; gap: 40px; }
+  .plan-grid { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; gap: 12px; }
 }
 @media (max-width: 580px) { .service-page-hero { padding: 110px 5% 52px; } }
@@ -84,14 +107,67 @@
 <main id="main-content">
 
 <div class="service-page-hero">
-  <span class="label">Website Care &amp; Management</span>
+  <span class="label">Optional Monthly Services</span>
   <h1>Keep Your Website<br><em>Live and Working.</em></h1>
-  <p>Optional plans starting at $49/month for hosting, monitoring, maintenance, minor updates, and ongoing local-search growth.</p>
+  <p>Choose website management, ongoing Local SEO, or both. Website plans are optional and start at $49/month.</p>
   <div class="hero-actions">
-    <a href="/contact.html?pkg=website-care" class="btn-primary">Website Care — $49/month</a>
+    <a href="/contact.html?pkg=website-care" class="btn-primary">Get a Quote</a>
     <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener" class="btn-ghost">Book a Call</a>
   </div>
 </div>
+
+<!-- MONTHLY PLANS -->
+<section style="background:var(--black);" aria-labelledby="monthly-plans-heading">
+  <div class="reveal">
+    <span class="label">Clear Monthly Pricing</span>
+    <h2 class="section-heading" id="monthly-plans-heading">Choose Care, Growth, or Both.</h2>
+    <p class="section-body">These plans can be added to any website package. The website build remains a one-time purchase, and the client keeps ownership of the website and domain.</p>
+  </div>
+  <div class="plan-grid reveal">
+    <article class="plan-card">
+      <h3>Website Care</h3>
+      <div class="plan-price">$49<span>/month</span></div>
+      <p>Technical management that keeps the website hosted, available, maintained, and current.</p>
+      <ul>
+        <li>Website hosting</li>
+        <li>Monitoring, backups, SSL, and maintenance</li>
+        <li>Minor text, photo, hours, or service updates</li>
+        <li>Basic availability and indexing checks</li>
+      </ul>
+      <a href="/contact.html?pkg=website-care" class="btn-ghost">Choose Website Care</a>
+    </article>
+    <article class="plan-card">
+      <h3>Local SEO</h3>
+      <div class="plan-price">$149<span>/month</span></div>
+      <p>Ongoing work to help the website and business stay relevant for useful local searches.</p>
+      <ul>
+        <li>Local keyword and search-intent review</li>
+        <li>Page content and on-page SEO improvements</li>
+        <li>Search Console and indexing monitoring</li>
+        <li>Technical SEO corrections</li>
+        <li>Google Business Profile guidance when access is provided</li>
+        <li>Monthly performance summary</li>
+      </ul>
+      <a href="/contact.html?pkg=local-seo" class="btn-ghost">Choose Local SEO</a>
+    </article>
+    <article class="plan-card featured">
+      <div class="plan-badge">Best Value</div>
+      <h3>Complete Care</h3>
+      <div class="plan-price">$179<span>/month</span></div>
+      <p>Website management and ongoing Local SEO combined in one monthly plan.</p>
+      <ul>
+        <li>Everything in Website Care</li>
+        <li>Everything in Local SEO</li>
+        <li>Maintenance coordinated with SEO improvements</li>
+        <li>One plan and one point of contact</li>
+      </ul>
+      <a href="/contact.html?pkg=complete-care" class="btn-primary">Choose Complete Care</a>
+    </article>
+  </div>
+  <p class="section-body reveal" style="margin-top:24px;">Local SEO is ongoing optimization, not a guarantee of rankings, leads, or sales. NTX focuses on useful local-search improvements instead of publishing filler blog posts simply to create activity.</p>
+</section>
+
+<hr class="section-rule"/>
 
 <!-- WHAT'S INCLUDED -->
 <section style="background:var(--black);" aria-labelledby="wc-what-heading">
@@ -110,7 +186,7 @@
       <li><div class="feature-dot"></div><div><strong style="color:var(--white);">Software and dependency updates</strong> — so your site doesn't break over time.</div></li>
       <li><div class="feature-dot"></div><div><strong style="color:var(--white);">Performance monitoring</strong> — we watch for issues before they affect your visitors.</div></li>
       <li><div class="feature-dot"></div><div><strong style="color:var(--white);">Content updates</strong> — small changes, text updates, and additions handled for you.</div></li>
-      <li><div class="feature-dot"></div><div><strong style="color:var(--white);">Technical SEO review</strong> — basic checks to ensure your site stays indexable and findable.</div></li>
+      <li><div class="feature-dot"></div><div><strong style="color:var(--white);">Basic technical checks</strong> — checks that help keep the site available and indexable. Ongoing keyword and ranking work belongs to Local SEO.</div></li>
     </ul>
   </div>
 </section>
@@ -145,38 +221,9 @@
       <p>We watch for downtime, slow load times, and technical errors so issues get resolved before they affect your customers.</p>
     </div>
     <div class="care-item reveal reveal-d1">
-      <h3>Technical SEO</h3>
-      <p>Basic checks to ensure your site stays crawlable, indexable, and properly linked to your Google Business Profile.</p>
+      <h3>Basic Technical Checks</h3>
+      <p>Checks that help keep the site available and indexable. Ongoing keyword, content, and local-search work is part of the Local SEO plan.</p>
     </div>
-  </div>
-</section>
-
-<!-- CARE PLANS -->
-<section style="background:var(--gray);" id="care-plans" aria-labelledby="wc-plans-heading">
-  <div class="reveal">
-    <span class="label">Optional Monthly Plans</span>
-    <h2 class="section-heading" id="wc-plans-heading">Keep It Running &amp; Growing.</h2>
-    <p class="section-body">Monthly plans are optional. Clients own their domain and can purchase a website outright or let NTX continue managing and growing it.</p>
-  </div>
-  <div class="care-grid" style="margin-top:42px;">
-    <div class="care-item reveal">
-      <h3>Website Care — $49/month</h3>
-      <p>Hosting, monitoring, backups, maintenance, security, technical support, and minor updates to existing website content.</p>
-      <a href="/contact.html?pkg=website-care" class="card-link" style="display:inline-block;margin-top:18px;">Choose Website Care →</a>
-    </div>
-    <div class="care-item reveal reveal-d1">
-      <h3>Local SEO — $149/month</h3>
-      <p>Search Console monitoring, local keyword work, page improvements, Google Business optimization, and one useful page improvement or locally targeted article each month.</p>
-      <a href="/contact.html?pkg=local-seo" class="card-link" style="display:inline-block;margin-top:18px;">Choose Local SEO →</a>
-    </div>
-    <div class="care-item reveal reveal-d2" style="border:1px solid var(--orange);">
-      <h3>Complete Care — $179/month</h3>
-      <p>Everything in Website Care and Local SEO bundled together for businesses that want NTX to manage both the website and its ongoing search presence.</p>
-      <a href="/contact.html?pkg=complete-care" class="card-link" style="display:inline-block;margin-top:18px;">Choose Complete Care →</a>
-    </div>
-  </div>
-  <div class="pricing-disclosure reveal" style="margin-top:24px;">
-    New pages, redesigns, advanced development, extra articles, backlink campaigns, paid advertising, multi-location SEO, and third-party subscriptions require a separate quote. Search rankings are never guaranteed.
   </div>
 </section>
 
@@ -198,16 +245,16 @@
       <h3>Business Automation</h3>
       <p>Add automated lead intake and missed-call response to keep your business responding even when you can't.</p>
     </a>
-    <a href="/packages.html" class="related-card">
-      <h3>Pricing &amp; Monthly Plans</h3>
-      <p>Compare one-time website builds with optional Website Care, Local SEO, and Complete Care plans.</p>
+    <a href="/faq.html#seo" class="related-card">
+      <h3>SEO Explained</h3>
+      <p>Learn what comes with each website build, what Local SEO adds each month, and what no provider can honestly guarantee.</p>
     </a>
   </div>
 </section>
 
 <section class="final-cta" aria-labelledby="wc-cta-heading">
   <h2 id="wc-cta-heading">Let NTX Handle the Technical Side.</h2>
-  <p>Choose Website Care, Local SEO, Complete Care, or combine these services with a new website.</p>
+  <p>Choose Website Care, Local SEO, or Complete Care alongside any website project.</p>
   <div class="final-cta-actions">
     <a href="/contact.html?pkg=website-care" class="btn-white">Get a Free Quote</a>
     <a href="https://calendly.com/nichonmarshall/15min" target="_blank" rel="noopener"

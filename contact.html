@@ -4,16 +4,25 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Get a Free Quote | Contact NTX Automation Co — Denton, TX</title>
-<meta name="description" content="Contact NTX Automation Co for a website, optional Website Care, Local SEO, photography, or AI intake automation. Select multiple services in one quote request."/>
+<meta name="description" content="Contact NTX Automation Co for a website, optional Website Care or Local SEO, photography and video, or an AI intake system. Serving Denton and North Texas."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://ntxautomationco.com/contact.html"/>
 <meta name="theme-color" content="#d94f0a"/>
 <meta property="og:title" content="Contact NTX Automation Co — Get a Free Quote"/>
 <meta property="og:description" content="Ready to build something? Get a free quote from NTX Automation Co."/>
 <meta property="og:url" content="https://ntxautomationco.com/contact.html"/>
+<meta property="og:image" content="https://ntxautomationco.com/assets/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:image" content="https://ntxautomationco.com/assets/og-image.jpg"/>
 <meta property="og:type" content="website"/>
-<meta name="twitter:card" content="summary"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48"/>
+<link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96"/>
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192"/>
+<link rel="icon" href="/assets/ntx-icon-512.png" type="image/png" sizes="512x512"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -33,23 +42,6 @@
 .aside-divider { border: none; border-top: 1px solid var(--border); }
 @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 48px; } }
 @media (max-width: 580px) { .contact-layout { padding: 56px 5% 72px; } .contact-hero { padding: 110px 5% 52px; } }
-
-.service-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
-.service-fieldset legend { font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--body-strong); margin-bottom: 8px; }
-.selection-help { font-size: 0.84rem; color: var(--muted); line-height: 1.55; margin-bottom: 20px; }
-.service-option-group { margin-bottom: 22px; }
-.service-option-group h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.08rem; letter-spacing: 0.5px; color: var(--white); margin-bottom: 10px; }
-.service-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.service-option { position: relative; display: flex; gap: 11px; align-items: flex-start; padding: 14px 48px 14px 14px; border: 1px solid var(--border); background: var(--gray); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
-.service-option:hover, .service-option:has(input:checked) { border-color: var(--orange); background: rgba(217,79,10,0.06); }
-.service-option::after { content: ''; position: absolute; top: 50%; right: 14px; width: 22px; height: 22px; border: 1px solid rgba(255,255,255,0.28); border-radius: 50%; transform: translateY(-50%); display: grid; place-items: center; color: #fff; font-size: 0.8rem; font-weight: 700; }
-.service-option:has(input:checked)::after { content: '✓'; background: var(--orange); border-color: var(--orange); }
-.service-option input[type="checkbox"] { appearance: checkbox; -webkit-appearance: checkbox; width: 18px; height: 18px; padding: 0; margin: 2px 0 0; border: 0; accent-color: var(--orange); flex: 0 0 auto; }
-.service-option span { display: flex; flex-direction: column; gap: 4px; }
-.service-option strong { color: var(--white); font-size: 0.88rem; line-height: 1.3; }
-.service-option small { color: var(--muted); font-size: 0.76rem; line-height: 1.45; }
-.featured-option { border-color: rgba(217,79,10,0.45); }
-@media (max-width: 680px) { .service-options { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -70,15 +62,11 @@
       <strong>Thank you — we received your request.</strong><br/>
       We'll follow up within one business day to discuss your project. Talk soon.
     </div>
-    <div class="form-success" id="form-error" role="alert" aria-live="assertive" style="display:none;border-color:#c0392b;">
-      <strong>Your request could not be sent.</strong><br/>
-      Please try again or email <a href="mailto:support@ntxautomationco.com" style="color:var(--orange);">support@ntxautomationco.com</a>.
-    </div>
 
     <form
       name="quote-request"
       method="POST"
-      action="/"
+      action="/contact.html?success=true"
       data-netlify="true"
       netlify-honeypot="bot-field"
       id="quote-form"
@@ -134,48 +122,33 @@
           <input type="url" id="website" name="website" placeholder="https://yourbusiness.com"/>
         </div>
       </div>
-      <fieldset class="form-group service-fieldset" id="fg-pkg" aria-describedby="err-pkg">
-        <legend>Packages and Services <span style="color:var(--orange)" aria-hidden="true">*</span></legend>
-        <p class="selection-help">Choose everything you're interested in. You can select a website build and one or more ongoing services together.</p>
 
-        <div class="service-option-group">
-          <h3>Website Build — One-Time</h3>
-          <div class="service-options">
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="starter" data-exclusive-group="website"/><span><strong>Starter Website — $450</strong><small>Simple professional online presence</small></span></label>
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="business" data-exclusive-group="website"/><span><strong>Business Website — $650</strong><small>Most popular complete business website</small></span></label>
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="custom-website" data-exclusive-group="website"/><span><strong>Custom Website — Starting at $900</strong><small>Additional pages, integrations, or advanced functionality</small></span></label>
-          </div>
-        </div>
+      <div class="form-group" id="fg-pkg">
+        <label for="package">Main Project or Service <span style="color:var(--orange)" aria-hidden="true">*</span></label>
+        <select id="package" name="package" required aria-required="true" aria-describedby="err-pkg">
+          <option value="" disabled selected>Select a main project or service</option>
+          <option value="starter">Starter Website — $450</option>
+          <option value="business">Business Website — $650</option>
+          <option value="custom-website">Custom Website — Starting at $900</option>
+          <option value="ai-standard">Standard AI Intake — Starting at $750 setup + $149/month</option>
+          <option value="ai-integrated">Integrated AI Assistant — Starting at $1,000 setup + $199/month</option>
+          <option value="ai-custom">Custom AI System — Starting at $1,500 setup + $249/month</option>
+          <option value="photo-video">Photography / Video</option>
+          <option value="not-sure">Not Sure Yet</option>
+        </select>
+        <span class="field-error" id="err-pkg" role="alert">Please select a main project or service.</span>
+      </div>
 
-        <div class="service-option-group">
-          <h3>Optional Monthly Services</h3>
-          <div class="service-options">
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="website-care" data-care-option="care"/><span><strong>Website Care — $49/month</strong><small>Hosting, monitoring, maintenance, and minor updates</small></span></label>
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="local-seo" data-care-option="seo"/><span><strong>Local SEO — $149/month</strong><small>Ongoing local-search optimization and monthly content work</small></span></label>
-            <label class="service-option featured-option"><input type="checkbox" class="service-checkbox" name="services[]" value="complete-care" data-care-option="complete"/><span><strong>Complete Care — $179/month</strong><small>Website Care and Local SEO bundled together</small></span></label>
-          </div>
-        </div>
-
-        <div class="service-option-group">
-          <h3>AI Intake Assistant</h3>
-          <div class="service-options">
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="ai-standard" data-exclusive-group="ai"/><span><strong>Standard AI Intake</strong><small>Starting at $750 setup + $149/month</small></span></label>
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="ai-integrated" data-exclusive-group="ai"/><span><strong>Integrated AI Assistant</strong><small>Starting at $1,000 setup + $199/month</small></span></label>
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="ai-custom" data-exclusive-group="ai"/><span><strong>Custom AI System</strong><small>Starting at $1,500 setup + $249/month</small></span></label>
-          </div>
-        </div>
-
-        <div class="service-option-group">
-          <h3>Other</h3>
-          <div class="service-options">
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="photo-video"/><span><strong>Photography / Video</strong><small>Professional content coordinated through NTX</small></span></label>
-            <label class="service-option"><input type="checkbox" class="service-checkbox" name="services[]" value="not-sure"/><span><strong>Not Sure Yet</strong><small>Tell us what you need and we'll recommend a direction</small></span></label>
-          </div>
-        </div>
-
-        <span class="field-error" id="err-pkg" role="alert">Please select at least one package or service.</span>
-      </fieldset>
-
+      <div class="form-group">
+        <label for="monthly-plan">Optional Monthly Website Plan</label>
+        <select id="monthly-plan" name="monthly-plan">
+          <option value="none" selected>No monthly website plan</option>
+          <option value="website-care">Website Care — $49/month</option>
+          <option value="local-seo">Local SEO — $149/month</option>
+          <option value="complete-care">Complete Care — $179/month</option>
+        </select>
+        <p class="form-note" style="margin-top:8px;">Monthly website plans are optional. You can select one in addition to the main project above.</p>
+      </div>
 
       <div class="form-group">
         <label for="project-details">Tell Us About Your Business or Project</label>
@@ -218,15 +191,34 @@
 <script src="/components.js"></script>
 <script>
 (function () {
-  // Pre-select one or more services from ?pkg= values or a comma-separated value.
+  // Pre-select either the main project or an optional monthly plan from ?pkg=.
   var params = new URLSearchParams(window.location.search);
-  var requested = params.getAll('pkg').flatMap(function (value) { return value.split(','); });
-  var aliases = { 'seo': 'local-seo' };
-  requested.forEach(function (value) {
-    var normalized = aliases[value] || value;
-    var input = document.querySelector('input.service-checkbox[value="' + normalized + '"]');
-    if (input) input.checked = true;
-  });
+  var pkg = params.get('pkg');
+  if (pkg) {
+    var projectSelect = document.getElementById('package');
+    var monthlySelect = document.getElementById('monthly-plan');
+    var monthlyValues = ['website-care', 'local-seo', 'complete-care'];
+    var targetSelect = monthlyValues.indexOf(pkg) !== -1 ? monthlySelect : projectSelect;
+
+    if (targetSelect) {
+      for (var i = 0; i < targetSelect.options.length; i++) {
+        if (targetSelect.options[i].value === pkg) {
+          targetSelect.selectedIndex = i;
+          break;
+        }
+      }
+
+      // A monthly-plan CTA still needs a valid main-project selection.
+      if (targetSelect === monthlySelect && projectSelect) {
+        for (var j = 0; j < projectSelect.options.length; j++) {
+          if (projectSelect.options[j].value === 'not-sure') {
+            projectSelect.selectedIndex = j;
+            break;
+          }
+        }
+      }
+    }
+  }
 
   // Show success state
   if (params.get('success') === 'true') {
@@ -257,29 +249,7 @@
   document.getElementById('business').addEventListener('input', function(){ clearError('fg-business','err-business'); });
   document.getElementById('email').addEventListener('input', function(){ clearError('fg-email','err-email'); });
   document.getElementById('business-type').addEventListener('change', function(){ clearError('fg-btype','err-btype'); });
-  var serviceInputs = Array.from(document.querySelectorAll('input.service-checkbox'));
-  serviceInputs.forEach(function (input) {
-    input.addEventListener('change', function () {
-      clearError('fg-pkg','err-pkg');
-
-      var exclusiveGroup = input.getAttribute('data-exclusive-group');
-      if (input.checked && exclusiveGroup) {
-        serviceInputs.forEach(function (other) {
-          if (other !== input && other.getAttribute('data-exclusive-group') === exclusiveGroup) other.checked = false;
-        });
-      }
-
-      var careOption = input.getAttribute('data-care-option');
-      if (input.checked && careOption === 'complete') {
-        serviceInputs.forEach(function (other) {
-          if (other.getAttribute('data-care-option') === 'care' || other.getAttribute('data-care-option') === 'seo') other.checked = false;
-        });
-      } else if (input.checked && (careOption === 'care' || careOption === 'seo')) {
-        var complete = document.querySelector('input[data-care-option="complete"]');
-        if (complete) complete.checked = false;
-      }
-    });
-  });
+  document.getElementById('package').addEventListener('change', function(){ clearError('fg-pkg','err-pkg'); });
 
   form.addEventListener('submit', function (e) {
     var valid = true;
@@ -301,49 +271,16 @@
     if (!btype.value) { showError('fg-btype','err-btype'); valid = false; }
     else clearError('fg-btype','err-btype');
 
-    var selectedServices = document.querySelectorAll('input.service-checkbox:checked');
-    if (!selectedServices.length) { showError('fg-pkg','err-pkg'); valid = false; }
+    var pkg = document.getElementById('package');
+    if (!pkg.value) { showError('fg-pkg','err-pkg'); valid = false; }
     else clearError('fg-pkg','err-pkg');
 
     if (!valid) {
       e.preventDefault();
-      var firstErr = form.querySelector('.form-group.has-error input, .form-group.has-error select, fieldset.has-error input');
+      // Focus first error
+      var firstErr = form.querySelector('.form-group.has-error input, .form-group.has-error select');
       if (firstErr) firstErr.focus();
-      return;
     }
-
-    // Submit directly to Netlify without navigating away from the page.
-    e.preventDefault();
-    var submitButton = form.querySelector('button[type="submit"]');
-    var errorMessage = document.getElementById('form-error');
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = 'Sending…';
-    }
-    if (errorMessage) errorMessage.style.display = 'none';
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
-    })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Form submission failed');
-        var successMessage = document.getElementById('form-success');
-        form.style.display = 'none';
-        if (successMessage) {
-          successMessage.style.display = 'block';
-          successMessage.focus();
-          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      })
-      .catch(function () {
-        if (errorMessage) errorMessage.style.display = 'block';
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = 'Send My Quote Request';
-        }
-      });
   });
 })();
 </script>

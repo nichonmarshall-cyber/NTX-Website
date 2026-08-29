@@ -13,15 +13,14 @@
 <header class="site-header" role="banner">
   <div class="nav-inner">
 
-    <!-- Desktop logo -->
+    <!-- Desktop logo: full horizontal lockup -->
     <a class="nav-logo nav-logo-desktop" href="/" aria-label="NTX Automation Co — Home">
-      <span class="nav-logo-mark">NTX <span>AUTOMATION</span></span>
-      <span class="nav-logo-sub">CO.</span>
+      <img src="/assets/ntx-logo-lockup.png" alt="NTX Automation Co" class="nav-logo-img" width="590" height="160"/>
     </a>
 
-    <!-- Mobile logo (NTX mark only) -->
+    <!-- Mobile logo: NTX mark only -->
     <a class="nav-logo nav-logo-mobile" href="/" aria-label="NTX Automation Co — Home">
-      <span class="nav-logo-mark">NTX<span>.</span></span>
+      <img src="/assets/ntx-mark.png" alt="NTX Automation Co" class="nav-mark-img" width="462" height="90"/>
     </a>
 
     <!-- Desktop nav links -->
@@ -29,6 +28,7 @@
       <ul class="nav-links">
         <li><a href="/services.html">Services</a></li>
         <li><a href="/packages.html">Pricing</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
@@ -51,6 +51,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/services.html">Services</a></li>
       <li><a href="/packages.html">Pricing</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </ul>
@@ -75,7 +76,7 @@
 
     <!-- Brand column -->
     <div>
-      <div class="footer-brand-mark">NTX <span>AUTOMATION</span> CO.</div>
+      <img src="/assets/ntx-logo-lockup.png" alt="NTX Automation Co" class="footer-logo-img" width="590" height="160"/>
       <div class="footer-tagline">Automate. Elevate. Grow.</div>
       <p class="footer-desc">Professional websites and AI-powered customer intake systems for local businesses in Denton and North Texas.</p>
       <div class="footer-email"><a href="mailto:support@ntxautomationco.com">support@ntxautomationco.com</a></div>
@@ -98,6 +99,7 @@
       <h4>Company</h4>
       <ul>
         <li><a href="/packages.html">Pricing</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
         <li><a href="/about.html">About NTX</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
