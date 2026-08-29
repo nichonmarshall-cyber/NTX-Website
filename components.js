@@ -14,13 +14,13 @@
   <div class="nav-inner">
 
     <!-- Desktop logo: full horizontal lockup -->
-    <a class="nav-logo nav-logo-desktop" href="/" aria-label="Ntx Automation Co — Home">
-      <img src="/assets/ntx-logo-lockup.png" alt="Ntx Automation Co" class="nav-logo-img" width="590" height="160"/>
+    <a class="nav-logo nav-logo-desktop" href="/" aria-label="Ntx Automation Co. — Home">
+      <img src="/assets/ntx-logo-lockup.png" alt="Ntx Automation Co." class="nav-logo-img" width="590" height="160"/>
     </a>
 
     <!-- Mobile logo: Ntx mark only -->
-    <a class="nav-logo nav-logo-mobile" href="/" aria-label="Ntx Automation Co — Home">
-      <img src="/assets/ntx-mark.png" alt="Ntx Automation Co" class="nav-mark-img" width="462" height="90"/>
+    <a class="nav-logo nav-logo-mobile" href="/" aria-label="Ntx Automation Co. — Home">
+      <img src="/assets/ntx-mark.png" alt="Ntx Automation Co." class="nav-mark-img" width="462" height="90"/>
     </a>
 
     <!-- Desktop nav links -->
@@ -76,7 +76,7 @@
 
     <!-- Brand column -->
     <div>
-      <img src="/assets/ntx-logo-lockup.png" alt="Ntx Automation Co" class="footer-logo-img" width="590" height="160"/>
+      <img src="/assets/ntx-logo-lockup.png" alt="Ntx Automation Co." class="footer-logo-img" width="590" height="160"/>
       <div class="footer-tagline">Automate. Elevate. Grow.</div>
       <p class="footer-desc">Professional websites and AI-powered customer intake systems for local businesses in Denton and North Texas.</p>
       <div class="footer-email"><a href="mailto:support@ntxautomationco.com">support@ntxautomationco.com</a></div>
@@ -118,8 +118,8 @@
   </div>
 
   <div class="footer-bottom">
-    <small>Serving Denton &amp; North Texas &nbsp;&middot;&nbsp; &copy; 2026 Ntx Automation Co</small>
-    <small>Website by Ntx Automation Co</small>
+    <small>Serving Denton &amp; North Texas &nbsp;&middot;&nbsp; &copy; 2026 Ntx Automation Co.</small>
+    <small>Website by Ntx Automation Co.</small>
   </div>
 </footer>`;
 
