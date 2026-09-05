@@ -37,11 +37,52 @@
 .pricing-block-header { margin-bottom: 36px; }
 .pricing-block-header h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 0.97; margin-bottom: 10px; }
 .pricing-block-header p { font-size: 0.97rem; color: var(--body); line-height: 1.65; max-width: 620px; }
-.faq-list { display: flex; flex-direction: column; }
-.faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
-.faq-item:first-child { border-top: 1px solid var(--border); }
-.faq-item h3 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 10px; }
-.faq-item p { font-size: 0.91rem; color: var(--body); line-height: 1.65; max-width: 700px; }
+.faq-list { display: flex; flex-direction: column; gap: 42px; }
+.faq-group-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.8px;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.faq-group-items { border-top: 1px solid var(--border); }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  padding: 24px 58px 24px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.45;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 4px;
+  top: 18px;
+  color: var(--orange);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.9rem;
+  line-height: 1;
+  transition: transform 0.22s ease;
+}
+.faq-item[open] summary::after { content: '–'; }
+.faq-item summary:hover { color: var(--body-strong); }
+.faq-item summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
+.faq-answer {
+  max-width: 760px;
+  padding: 0 58px 24px 0;
+  animation: faqReveal 0.22s ease;
+}
+.faq-answer p { font-size: 0.91rem; color: var(--body); line-height: 1.68; }
+@keyframes faqReveal {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 @media (max-width: 580px) {
   .pricing-hero { padding: 110px 5% 52px; }
   .pricing-block { padding: 56px 5%; }
@@ -327,74 +368,99 @@
     <p>Plain-English answers about website SEO, monthly Local SEO, AI integrations, hosting, and ongoing costs.</p>
   </div>
   <div class="faq-list">
-    <div class="faq-item reveal">
-      <h3>What is SEO?</h3>
-      <p>SEO stands for search engine optimization. It is the work that helps Google and other search engines understand what a business does, where it operates, and which searches its pages are relevant to. SEO can improve visibility over time, but no honest provider can guarantee a top ranking.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What SEO comes with the $450 Starter Website?</h3>
-      <p>The Starter includes an SEO Foundation: primary service and location keywords, a clear page title and description, organized headings and content, mobile-friendly structure, image descriptions where appropriate, and basic speed and accessibility foundations. It prepares the page to be understood by search engines; it does not include sitemap submission, Search Console setup, or monthly optimization.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What additional SEO comes with the $650 Business Website?</h3>
-      <p>The Business package includes everything in the Starter SEO Foundation, plus an XML sitemap, Google Search Console setup when the client provides access, sitemap submission, and initial indexing requests for the site's main pages. Indexing requests tell Google the pages exist; Google still decides when and whether to index or rank them.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>How is the $149/month Local SEO plan different?</h3>
-      <p>A website build is the initial setup. Local SEO is ongoing work: reviewing how customers search, monitoring Search Console and indexing, improving page content and technical details, adjusting local keyword targeting, and reporting what changed. NTX focuses on useful improvements—not filler blog posts written only to make the plan look busy.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What is the difference between Website Care, Local SEO, and Complete Care?</h3>
-      <p>Website Care keeps the site hosted, maintained, monitored, backed up, and updated. Local SEO works on search visibility and does not include hosting. Complete Care combines both services for $179/month.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Are monthly website plans required?</h3>
-      <p>No. The Starter, Business, and Custom website builds are one-time purchases. Monthly Website Care or Local SEO can be added if the client wants NTX to keep managing or improving the site.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What does the Standard AI Intake system do?</h3>
-      <p>Standard is a customer-response system for one business, one location, one phone number, and one main intake workflow. It can text after a missed call, ask approved questions, collect lead details, and move the customer toward a booking link or owner follow-up. Setup starts at $750 and the required service is $149/month.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What is an AI intake workflow?</h3>
-      <p>A workflow is the approved path the assistant follows: which questions it asks, how it responds to common answers, what information it collects, and what happens next. For example, a roofer may collect the service address, type of damage, urgency, and preferred inspection time before sending the lead to the owner.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What does an integration mean?</h3>
-      <p>An integration connects the intake assistant to another supported system so information can move automatically. Examples include creating a calendar event, sending a lead to a CRM, triggering a supported booking flow, or delivering structured lead data through a webhook. The Integrated plan includes one supported connection; availability depends on what the third-party platform allows.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What makes an integration custom?</h3>
-      <p>A custom integration needs special API or webhook logic, connects multiple systems, maps unusual data, or follows business-specific routing rules. That work is scoped separately because every platform and workflow is different.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What does Custom or Multi-Location mean?</h3>
-      <p>It covers systems with more than one location, phone number, brand, department, or intake workflow. It can also include advanced routing, dashboards, reporting, higher message volume, CRM synchronization, or specialized integrations. Setup starts at $1,500 and monthly service starts at $249.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Why is monthly service required for AI plans?</h3>
-      <p>The assistant needs active hosting, monitoring, maintenance, phone and messaging infrastructure, and ongoing technical support to operate. If the monthly service is canceled, the hosted automation is deactivated at the end of the paid billing period.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>How many text messages are included?</h3>
-      <p>Standard includes up to 500 SMS segments per month. A long message may use more than one segment. Higher usage can cost more and is quoted based on expected or actual volume.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What can be billed separately?</h3>
-      <p>Domain registration, paid plugins, third-party subscriptions, Twilio phone-number charges, carrier fees, A2P registration, higher messaging volume, extra phone numbers or locations, major workflow changes, dashboards, and specialized integrations may be billed separately when they are not included in the approved scope.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Can I combine a website package with a monthly plan or AI system?</h3>
-      <p>Yes. A client can buy a website and separately add Website Care, Local SEO, Complete Care, or an AI Intake system. The quote form separates the main project from the optional monthly website plan so both can be selected.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Can NTX guarantee rankings, leads, or sales?</h3>
-      <p>No. NTX can build the foundation, improve the site, monitor search performance, and operate the agreed automation, but search engines, competition, customer demand, and third-party platforms are outside NTX's control.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What if my project does not fit a listed package?</h3>
-      <p>Request a custom quote. NTX will define the pages, features, integrations, recurring services, third-party costs, and exact price before work begins.</p>
-    </div>
+
+    <section class="faq-group" aria-labelledby="faq-web-seo">
+      <h3 class="faq-group-title" id="faq-web-seo">Website SEO</h3>
+      <div class="faq-group-items">
+        <details class="faq-item reveal" open>
+          <summary>What is SEO?</summary>
+          <div class="faq-answer"><p>SEO stands for search engine optimization. It is the work that helps Google and other search engines understand what a business does, where it operates, and which searches its pages are relevant to. SEO can improve visibility over time, but no honest provider can guarantee a top ranking.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What SEO comes with the $450 Starter Website?</summary>
+          <div class="faq-answer"><p>The Starter includes an SEO Foundation: primary service and location keywords, a clear page title and description, organized headings and content, mobile-friendly structure, image descriptions where appropriate, and basic speed and accessibility foundations. It prepares the page to be understood by search engines; it does not include sitemap submission, Search Console setup, or monthly optimization.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What additional SEO comes with the $650 Business Website?</summary>
+          <div class="faq-answer"><p>The Business package includes everything in the Starter SEO Foundation, plus an XML sitemap, Google Search Console setup when the client provides access, sitemap submission, and initial indexing requests for the site's main pages. Indexing requests tell Google the pages exist; Google still decides when and whether to index or rank them.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How is the $149/month Local SEO plan different?</summary>
+          <div class="faq-answer"><p>A website build is the initial setup. Local SEO is ongoing work: reviewing how customers search, monitoring Search Console and indexing, improving page content and technical details, adjusting local keyword targeting, and reporting what changed. NTX focuses on useful improvements, not filler blog posts written only to make the plan look busy.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group" aria-labelledby="faq-monthly-plans">
+      <h3 class="faq-group-title" id="faq-monthly-plans">Monthly Plans</h3>
+      <div class="faq-group-items">
+        <details class="faq-item reveal" open>
+          <summary>What is the difference between Website Care, Local SEO, and Complete Care?</summary>
+          <div class="faq-answer"><p>Website Care keeps the site hosted, maintained, monitored, backed up, and updated. Local SEO works on search visibility and does not include hosting. Complete Care combines both services for $179/month.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Are monthly website plans required?</summary>
+          <div class="faq-answer"><p>No. The Starter, Business, and Custom website builds are one-time purchases. Monthly Website Care or Local SEO can be added if the client wants NTX to keep managing or improving the site.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group" aria-labelledby="faq-ai-intake">
+      <h3 class="faq-group-title" id="faq-ai-intake">AI Intake</h3>
+      <div class="faq-group-items">
+        <details class="faq-item reveal" open>
+          <summary>What does the Standard AI Intake system do?</summary>
+          <div class="faq-answer"><p>Standard is a customer-response system for one business, one location, one phone number, and one main intake workflow. It can text after a missed call, ask approved questions, collect lead details, and move the customer toward a booking link or owner follow-up. Setup starts at $750 and the required service is $149/month.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What is an AI intake workflow?</summary>
+          <div class="faq-answer"><p>A workflow is the approved path the assistant follows: which questions it asks, how it responds to common answers, what information it collects, and what happens next. For example, a roofer may collect the service address, type of damage, urgency, and preferred inspection time before sending the lead to the owner.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What does an integration mean?</summary>
+          <div class="faq-answer"><p>An integration connects the intake assistant to another supported system so information can move automatically. Examples include creating a calendar event, sending a lead to a CRM, triggering a supported booking flow, or delivering structured lead data through a webhook. The Integrated plan includes one supported connection; availability depends on what the third-party platform allows.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What makes an integration custom?</summary>
+          <div class="faq-answer"><p>A custom integration needs special API or webhook logic, connects multiple systems, maps unusual data, or follows business-specific routing rules. That work is scoped separately because every platform and workflow is different.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What does Custom or Multi-Location mean?</summary>
+          <div class="faq-answer"><p>It covers systems with more than one location, phone number, brand, department, or intake workflow. It can also include advanced routing, dashboards, reporting, higher message volume, CRM synchronization, or specialized integrations. Setup starts at $1,500 and monthly service starts at $249.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Why is monthly service required for AI plans?</summary>
+          <div class="faq-answer"><p>The assistant needs active hosting, monitoring, maintenance, phone and messaging infrastructure, and ongoing technical support to operate. If the monthly service is canceled, the hosted automation is deactivated at the end of the paid billing period.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How many text messages are included?</summary>
+          <div class="faq-answer"><p>Standard includes up to 500 SMS segments per month. A long message may use more than one segment. Higher usage can cost more and is quoted based on expected or actual volume.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group" aria-labelledby="faq-billing-scope">
+      <h3 class="faq-group-title" id="faq-billing-scope">Billing and Scope</h3>
+      <div class="faq-group-items">
+        <details class="faq-item reveal" open>
+          <summary>What can be billed separately?</summary>
+          <div class="faq-answer"><p>Domain registration, paid plugins, third-party subscriptions, Twilio phone-number charges, carrier fees, A2P registration, higher messaging volume, extra phone numbers or locations, major workflow changes, dashboards, and specialized integrations may be billed separately when they are not included in the approved scope.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Can I combine a website package with a monthly plan or AI system?</summary>
+          <div class="faq-answer"><p>Yes. A client can buy a website and separately add Website Care, Local SEO, Complete Care, or an AI Intake system. The quote form separates the main project from the optional monthly website plan so both can be selected.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Can NTX guarantee rankings, leads, or sales?</summary>
+          <div class="faq-answer"><p>No. NTX can build the foundation, improve the site, monitor search performance, and operate the agreed automation, but search engines, competition, customer demand, and third-party platforms are outside NTX's control.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What if my project does not fit a listed package?</summary>
+          <div class="faq-answer"><p>Request a custom quote. NTX will define the pages, features, integrations, recurring services, third-party costs, and exact price before work begins.</p></div>
+        </details>
+      </div>
+    </section>
+
   </div>
   <div style="margin-top:32px;" class="reveal">
     <a href="/faq.html" class="btn-ghost">Read the Full Company FAQ →</a>
