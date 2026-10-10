@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const GA_MEASUREMENT_ID = "G-VB2LJ8U91P";
+  const GA_MEASUREMENT_ID = "G-VB2LJ80J1F";
   if (!document.querySelector(`script[src*="${GA_MEASUREMENT_ID}"]`)) {
     const gaScript = document.createElement("script");
     gaScript.async = true;
