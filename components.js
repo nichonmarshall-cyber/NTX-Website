@@ -40,6 +40,7 @@
     <nav aria-label="Primary navigation">
       <ul class="nav-links">
         <li><a href="/services.html">Services</a></li>
+        <li><a href="/portfolio.html">Our Work</a></li>
         <li><a href="/packages.html">Pricing</a></li>
         <li><a href="/faq.html">FAQ</a></li>
         <li><a href="/about.html">About</a></li>
@@ -63,6 +64,7 @@
     <ul class="nav-overlay-primary">
       <li><a href="/">Home</a></li>
       <li><a href="/services.html">Services</a></li>
+      <li><a href="/portfolio.html">Our Work</a></li>
       <li><a href="/packages.html">Pricing</a></li>
       <li><a href="/faq.html">FAQ</a></li>
       <li><a href="/about.html">About</a></li>
@@ -112,6 +114,7 @@
       <h4>Company</h4>
       <ul>
         <li><a href="/packages.html">Pricing</a></li>
+        <li><a href="/portfolio.html">Our Work</a></li>
         <li><a href="/faq.html">FAQ</a></li>
         <li><a href="/about.html">About NTX</a></li>
         <li><a href="/contact.html">Contact</a></li>

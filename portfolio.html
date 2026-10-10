@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Our Work | Ntx Automation Co. — Web Design Portfolio, Denton TX</title>
-<meta name="description" content="Websites and digital systems built by Ntx Automation Co. for local businesses in Denton and North Texas. View our portfolio of web design and automation projects."/>
-<meta name="robots" content="noindex, nofollow"/>
+<title>Our Work | NTX Automation Co. — Web Design Portfolio, Denton TX</title>
+<meta name="description" content="Websites and digital systems built by NTX Automation Co. for local businesses in Denton and North Texas. View our portfolio of web design and automation projects."/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
 <link rel="canonical" href="https://ntxautomationco.com/portfolio.html"/>
 <meta name="theme-color" content="#d94f0a"/>
-<meta property="og:title" content="Our Work — Ntx Automation Co. Portfolio"/>
+<meta property="og:title" content="Our Work — NTX Automation Co. Portfolio"/>
 <meta property="og:description" content="Websites and digital systems built for local businesses in Denton and North Texas."/>
 <meta property="og:url" content="https://ntxautomationco.com/portfolio.html"/>
 <meta property="og:type" content="website"/>
@@ -57,6 +57,17 @@
   overflow: hidden; flex-shrink: 0;
 }
 .port-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.port-img--dashboard { aspect-ratio: auto; padding: 18px; background: #101010; }
+.port-img--dashboard .dashboard-showcase { width: 100%; }
+.port-card--wide { grid-column: 1 / -1; }
+.port-preview-label {
+  position: absolute; left: 16px; bottom: 16px;
+  padding: 6px 10px; border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(12,12,12,0.86); backdrop-filter: blur(8px);
+  color: #fff; font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 1.4px; text-transform: uppercase;
+}
+.port-img { position: relative; }
 
 .port-body { padding: 28px 28px 24px; flex: 1; display: flex; flex-direction: column; }
 .port-industry {
@@ -104,6 +115,7 @@
 
 @media (max-width: 900px) {
   .portfolio-grid { grid-template-columns: 1fr; }
+  .port-card--wide { grid-column: auto; }
 }
 @media (max-width: 580px) { .portfolio-hero { padding: 110px 5% 52px; } }
 </style>
@@ -115,7 +127,7 @@
 <div class="portfolio-hero">
   <span class="label">Our Work</span>
   <h1>Built for Real Businesses.</h1>
-  <p>A growing portfolio of websites and digital systems Ntx has built for local businesses in Denton and North Texas. Projects are featured here after completion and client approval.</p>
+  <p>A growing portfolio of websites and digital systems NTX has built for local businesses in Denton and North Texas. Projects are featured here after completion and client approval.</p>
 </div>
 
 <section class="portfolio-main" aria-labelledby="port-list-heading">
@@ -124,136 +136,92 @@
   </div>
 
   <div class="portfolio-grid">
-
-    <!--
-    ═══════════════════════════════════════════════════════════════
-    PROJECT CARD — HAIRSTYLIST (AWAITING CLIENT APPROVAL)
-    Replace all [bracketed] content with real project data.
-    Uncomment the <img> tag and replace the placeholder-block once
-    a real screenshot is available.
-    ═══════════════════════════════════════════════════════════════
-    -->
     <article class="port-card reveal">
       <div class="port-img">
-        <div class="placeholder-block" style="width:100%;height:100%;">
-          <span class="ph-label">Preview Pending Approval</span>
-          <p>Desktop screenshot will appear here after client permission is confirmed</p>
-        </div>
-        <!--
-        <img
-          src="/work/[client-slug]-desktop.jpg"
-          alt="Screenshot of [Client Business Name] website designed by Ntx Automation Co."
-          width="800" height="450"
-          loading="lazy"
-        />
-        -->
+        <img src="https://haleysplacecreations.com/assets/images/haleys-hair-hero.png" alt="Haley’s Place website preview showing the hair styling brand experience" width="800" height="450" loading="lazy"/>
+        <span class="port-preview-label">Live Website</span>
       </div>
       <div class="port-body">
-        <p class="port-industry">Hair &amp; Beauty</p>
-        <h2>[Client Name — Pending Approval]</h2>
-        <p>Custom website designed and built for a local hairstylist in Denton, TX. Full project details, screenshots, and live site link will be published after client permission is confirmed.</p>
+        <p class="port-industry">Beauty &amp; Food</p>
+        <h2>Haley’s Place Creations</h2>
+        <p>A two-sided service website that brings hair appointments, homemade food, cookies, and customer ordering into one polished brand experience.</p>
         <div class="port-services">
-          <span class="port-tag">Web Design</span>
-          <span class="port-tag">Development</span>
+          <span class="port-tag">Web Design</span><span class="port-tag">Booking</span><span class="port-tag">Admin Tools</span>
         </div>
         <div class="port-meta">
-          <div class="port-meta-item">
-            <span class="port-meta-label">Location</span>
-            <span class="port-meta-val">Denton, TX</span>
-          </div>
-          <div class="port-meta-item">
-            <span class="port-meta-label">Services</span>
-            <span class="port-meta-val">Website Design &amp; Development</span>
-          </div>
-          <div class="port-meta-item">
-            <span class="port-meta-label">Status</span>
-            <span class="port-meta-val">Awaiting client approval to publish</span>
-          </div>
+          <div class="port-meta-item"><span class="port-meta-label">Location</span><span class="port-meta-val">Dallas, TX</span></div>
+          <div class="port-meta-item"><span class="port-meta-label">Built for</span><span class="port-meta-val">Hair services, food, and cookies</span></div>
         </div>
-        <div class="port-actions">
-          <span style="font-size:0.82rem;color:var(--muted);">Live site link coming soon</span>
-        </div>
-        <!--
-        TESTIMONIAL — uncomment and fill in when available:
-        <div class="port-testimonial">
-          <p>"[Exact client quote — nothing fabricated.]"</p>
-          <div class="port-testimonial-author">[Client Name] — [Business Name]</div>
-        </div>
-        -->
+        <div class="port-actions"><a href="https://haleysplacecreations.com/" target="_blank" rel="noopener">View Live Site →</a></div>
       </div>
     </article>
 
-    <!--
-    ═══════════════════════════════════════════════════════════════
-    PLACEHOLDER SLOT — NEXT PROJECT
-    Copy this entire <article> block and fill in real details
-    when the next project is completed and approved.
-    ═══════════════════════════════════════════════════════════════
-    -->
     <article class="port-card reveal reveal-d2">
       <div class="port-img">
-        <div class="placeholder-block" style="width:100%;height:100%;">
-          <span class="ph-label">Next Project</span>
-          <p>New projects are added here after completion and client approval</p>
-        </div>
+        <img src="https://ginascreationdolls.com/assets/og-ginas-creation-dolls.jpg" alt="Gina’s Creation Dolls website preview featuring a handmade fabric doll" width="800" height="450" loading="lazy"/>
+        <span class="port-preview-label">Live Website</span>
       </div>
       <div class="port-body">
-        <p class="port-industry">Coming Soon</p>
-        <h2>Your Business Could Be Here</h2>
-        <p>Ntx is actively working with local businesses across Denton and North Texas. Completed projects are featured here after client approval. Interested in working with Ntx? Get a free quote.</p>
+        <p class="port-industry">Handmade Goods</p>
+        <h2>Gina’s Creation Dolls</h2>
+        <p>A warm, story-led portfolio for a handmade doll artist, with custom imagery, product galleries, ordering guidance, and nationwide shipping information.</p>
         <div class="port-services">
-          <span class="port-tag">Available Now</span>
-        </div>
-        <div class="port-actions">
-          <a href="/contact.html">Get a Free Quote →</a>
-        </div>
-      </div>
-    </article>
-
-    <!--
-    ═══════════════════════════════════════════════════════════════
-    REAL PROJECT TEMPLATE — copy this for each new project:
-
-    <article class="port-card">
-      <div class="port-img">
-        <img
-          src="/work/[slug]-desktop.jpg"
-          alt="Screenshot of [Business Name] website designed by Ntx Automation Co."
-          width="800" height="450"
-          loading="lazy"
-        />
-      </div>
-      <div class="port-body">
-        <p class="port-industry">[Industry — e.g. Restaurant, Auto Shop, Salon]</p>
-        <h2>[Business Name]</h2>
-        <p>[1–2 sentence description of the project and what was built.]</p>
-        <div class="port-services">
-          <span class="port-tag">Web Design</span>
-          <span class="port-tag">Automation</span>
-          [add/remove as appropriate]
+          <span class="port-tag">Web Design</span><span class="port-tag">Photography Layout</span><span class="port-tag">SEO</span>
         </div>
         <div class="port-meta">
-          <div class="port-meta-item">
-            <span class="port-meta-label">Location</span>
-            <span class="port-meta-val">[City, TX]</span>
-          </div>
-          <div class="port-meta-item">
-            <span class="port-meta-label">Services</span>
-            <span class="port-meta-val">[Services provided]</span>
-          </div>
+          <div class="port-meta-item"><span class="port-meta-label">Business</span><span class="port-meta-val">Custom handmade dolls</span></div>
+          <div class="port-meta-item"><span class="port-meta-label">Built for</span><span class="port-meta-val">Storytelling, gallery browsing, and inquiries</span></div>
         </div>
-        <div class="port-actions">
-          <a href="https://[clientwebsite.com]" target="_blank" rel="noopener">View Live Site →</a>
-        </div>
-        <div class="port-testimonial">
-          <p>"[Exact client quote.]"</p>
-          <div class="port-testimonial-author">[Name] — [Business Name]</div>
-        </div>
+        <div class="port-actions"><a href="https://ginascreationdolls.com/" target="_blank" rel="noopener">View Live Site →</a></div>
       </div>
     </article>
-    ═══════════════════════════════════════════════════════════════
-    -->
 
+    <article class="port-card port-card--wide reveal">
+      <div class="port-img port-img--dashboard">
+        <div class="dashboard-showcase" aria-label="Sanitized preview of the NTX client dashboard">
+          <aside class="dashboard-showcase__sidebar">
+            <img class="dashboard-showcase__brand" src="/assets/ntx-logo-lockup.png" alt="NTX Automation Co."/>
+            <div class="dashboard-showcase__nav-label">Business</div>
+            <span class="dashboard-showcase__nav-item is-active">Overview</span>
+            <span class="dashboard-showcase__nav-item">Leads</span>
+            <span class="dashboard-showcase__nav-item">Conversations</span>
+            <span class="dashboard-showcase__nav-item">Appointments</span>
+            <div class="dashboard-showcase__nav-label">Growth</div>
+            <span class="dashboard-showcase__nav-item">Local SEO</span>
+            <span class="dashboard-showcase__nav-item">Reviews</span>
+          </aside>
+          <div class="dashboard-showcase__main">
+            <div class="dashboard-showcase__topbar"><strong>North Texas Demo Co.</strong><span class="dashboard-showcase__user"><span class="dashboard-showcase__avatar">ND</span>Demo account</span></div>
+            <div class="dashboard-showcase__content">
+              <h3>Overview</h3><p>Your intake assistant at a glance.</p>
+              <div class="dashboard-showcase__stats">
+                <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">◆</span><span><strong>12</strong><span>New leads</span></span></div>
+                <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">◌</span><span><strong>4</strong><span>Open conversations</span></span></div>
+                <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">◷</span><span><strong>3</strong><span>Pending approval</span></span></div>
+                <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">↗</span><span><strong>18</strong><span>Missed calls handled</span></span></div>
+              </div>
+              <div class="dashboard-showcase__grid">
+                <div class="dashboard-showcase__panel"><div class="dashboard-showcase__panel-head">Recent leads</div><div class="dashboard-showcase__table">
+                  <div class="dashboard-showcase__row"><strong>Jordan M.</strong><span>Roof inspection</span><span class="dashboard-showcase__badge">New</span></div>
+                  <div class="dashboard-showcase__row"><strong>Taylor R.</strong><span>Brake service</span><span class="dashboard-showcase__badge">Contacted</span></div>
+                  <div class="dashboard-showcase__row"><strong>Morgan S.</strong><span>Event catering</span><span class="dashboard-showcase__badge">Qualified</span></div>
+                </div></div>
+                <div class="dashboard-showcase__panel"><div class="dashboard-showcase__panel-head">Lead activity · 7 days</div><div class="dashboard-showcase__chart"><svg viewBox="0 0 240 90" aria-hidden="true"><path class="dashboard-showcase__chart-grid" d="M0 20H240M0 45H240M0 70H240"/><path class="dashboard-showcase__chart-area" d="M5 72 L42 60 L80 65 L118 37 L156 46 L195 24 L235 31 L235 84 L5 84Z"/><polyline class="dashboard-showcase__chart-line" points="5,72 42,60 80,65 118,37 156,46 195,24 235,31"/></svg></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="port-body">
+        <p class="port-industry">Business Automation Platform</p>
+        <h2>NTX Lead &amp; Intake Dashboard</h2>
+        <p>The same client-facing system NTX delivers with automation services: lead tracking, conversations, appointment requests, source reporting, Local SEO, reviews, website health, and business-specific access. The preview uses fictional data and exposes no client credentials.</p>
+        <div class="port-services">
+          <span class="port-tag">AI Intake</span><span class="port-tag">Lead Management</span><span class="port-tag">Analytics</span><span class="port-tag">Multi-Tenant Access</span>
+        </div>
+        <div class="port-actions"><a href="/demo.html#dashboard-tour">Explore the Demo &amp; Dashboard →</a></div>
+      </div>
+    </article>
   </div>
 </section>
 

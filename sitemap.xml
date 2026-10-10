@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://ntxautomationco.com/</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -73,9 +73,16 @@
 
   <url>
     <loc>https://ntxautomationco.com/demo.html</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ntxautomationco.com/portfolio.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
@@ -98,7 +105,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
-
-  <!-- portfolio.html is noindex and intentionally excluded from this sitemap -->
 
 </urlset>

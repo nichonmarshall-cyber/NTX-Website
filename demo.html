@@ -100,6 +100,21 @@
 }
 .about-system-grid p { font-size: 1rem; color: var(--body); line-height: 1.75; margin-bottom: 16px; }
 
+.dashboard-tour { background: var(--gray); }
+.dashboard-tour__intro {
+  display: grid; grid-template-columns: 0.75fr 1.25fr;
+  gap: 64px; align-items: end; margin-bottom: 46px;
+}
+.dashboard-tour__points {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.dashboard-tour__point {
+  padding: 18px; border: 1px solid var(--border); background: #121212;
+}
+.dashboard-tour__point strong { display:block; color:var(--white); font-size:0.9rem; margin-bottom:4px; }
+.dashboard-tour__point span { color:var(--body); font-size:0.82rem; line-height:1.5; }
+.demo-privacy-note { margin-top:18px; color:var(--muted); font-size:0.78rem; text-align:center; }
+
 .ref-table {
   width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem;
 }
@@ -120,8 +135,10 @@
 @media (max-width: 900px) {
   .demo-layout { grid-template-columns: 1fr; gap: 40px; }
   .about-system-grid { grid-template-columns: 1fr; gap: 36px; }
+  .dashboard-tour__intro { grid-template-columns: 1fr; gap: 28px; }
   .ref-table td:first-child { white-space: normal; width: 40%; }
 }
+@media (max-width: 580px) { .dashboard-tour__points { grid-template-columns: 1fr; } }
 @media (max-width: 580px) { .demo-hero { padding: 110px 5% 52px; } }
 </style>
 </head>
@@ -241,6 +258,60 @@
       </table>
     </div>
   </div>
+</section>
+
+<hr class="section-rule"/>
+
+<section class="dashboard-tour" id="dashboard-tour" aria-labelledby="dashboard-tour-heading">
+  <div class="dashboard-tour__intro">
+    <div class="reveal">
+      <span class="label">After the Conversation</span>
+      <h2 class="section-heading" id="dashboard-tour-heading">See What the Business Receives.</h2>
+      <p class="section-body">The text-message demo shows the customer experience. This dashboard shows the business side: captured leads, conversations, appointment requests, and growth tools in one place.</p>
+    </div>
+    <div class="dashboard-tour__points reveal reveal-d2">
+      <div class="dashboard-tour__point"><strong>Lead capture</strong><span>Contact details, service needs, source, and status without digging through text threads.</span></div>
+      <div class="dashboard-tour__point"><strong>Conversation history</strong><span>See what the assistant collected before your team follows up.</span></div>
+      <div class="dashboard-tour__point"><strong>Appointment requests</strong><span>Review requested dates and approve the next step without promising unavailable times.</span></div>
+      <div class="dashboard-tour__point"><strong>Business growth</strong><span>Optional Local SEO, reviews, analytics, and website-health modules appear only when enabled.</span></div>
+    </div>
+  </div>
+
+  <div class="dashboard-showcase reveal" aria-label="Sanitized preview of the NTX client dashboard">
+    <aside class="dashboard-showcase__sidebar">
+      <img class="dashboard-showcase__brand" src="/assets/ntx-logo-lockup.png" alt="NTX Automation Co."/>
+      <div class="dashboard-showcase__nav-label">Business</div>
+      <span class="dashboard-showcase__nav-item is-active">Overview</span>
+      <span class="dashboard-showcase__nav-item">Leads</span>
+      <span class="dashboard-showcase__nav-item">Conversations</span>
+      <span class="dashboard-showcase__nav-item">Appointments</span>
+      <div class="dashboard-showcase__nav-label">Growth</div>
+      <span class="dashboard-showcase__nav-item">Local SEO</span>
+      <span class="dashboard-showcase__nav-item">Reviews</span>
+      <span class="dashboard-showcase__nav-item">Website</span>
+    </aside>
+    <div class="dashboard-showcase__main">
+      <div class="dashboard-showcase__topbar"><strong>North Texas Demo Co.</strong><span class="dashboard-showcase__user"><span class="dashboard-showcase__avatar">ND</span>Demo account</span></div>
+      <div class="dashboard-showcase__content">
+        <h3>Overview</h3><p>Your intake assistant at a glance.</p>
+        <div class="dashboard-showcase__stats">
+          <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">◆</span><span><strong>12</strong><span>New leads</span></span></div>
+          <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">◌</span><span><strong>4</strong><span>Open conversations</span></span></div>
+          <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">◷</span><span><strong>3</strong><span>Pending approval</span></span></div>
+          <div class="dashboard-showcase__stat"><span class="dashboard-showcase__stat-icon">↗</span><span><strong>18</strong><span>Missed calls handled</span></span></div>
+        </div>
+        <div class="dashboard-showcase__grid">
+          <div class="dashboard-showcase__panel"><div class="dashboard-showcase__panel-head">Recent leads</div><div class="dashboard-showcase__table">
+            <div class="dashboard-showcase__row"><strong>Jordan M.</strong><span>Roof inspection</span><span class="dashboard-showcase__badge">New</span></div>
+            <div class="dashboard-showcase__row"><strong>Taylor R.</strong><span>Brake service</span><span class="dashboard-showcase__badge">Contacted</span></div>
+            <div class="dashboard-showcase__row"><strong>Morgan S.</strong><span>Event catering</span><span class="dashboard-showcase__badge">Qualified</span></div>
+          </div></div>
+          <div class="dashboard-showcase__panel"><div class="dashboard-showcase__panel-head">Lead activity · 7 days</div><div class="dashboard-showcase__chart"><svg viewBox="0 0 240 90" aria-hidden="true"><path class="dashboard-showcase__chart-grid" d="M0 20H240M0 45H240M0 70H240"/><path class="dashboard-showcase__chart-area" d="M5 72 L42 60 L80 65 L118 37 L156 46 L195 24 L235 31 L235 84 L5 84Z"/><polyline class="dashboard-showcase__chart-line" points="5,72 42,60 80,65 118,37 156,46 195,24 235,31"/></svg></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="demo-privacy-note">Fictional demo data shown. Client dashboards require a secure account and display only that business’s information.</p>
 </section>
 
 <section class="final-cta" aria-labelledby="demo-cta-heading">
