@@ -6,6 +6,19 @@
 (function () {
   'use strict';
 
+  const GA_MEASUREMENT_ID = "G-VB2LJ8U91P";
+  if (!document.querySelector(`script[src*="${GA_MEASUREMENT_ID}"]`)) {
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(gaScript);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID);
+  }
+
+
   /* ── NAV HTML ── */
   const NAV_HTML = `
 <a class="skip-link" href="#main-content">Skip to main content</a>
